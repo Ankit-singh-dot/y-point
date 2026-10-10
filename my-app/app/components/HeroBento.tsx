@@ -42,7 +42,7 @@ export default function HeroBento() {
       rotate: 0,
       transition: {
         duration: 1.2,
-        ease: [0.16, 1, 0.3, 1]
+        ease: [0.16, 1, 0.3, 1] as [number, number, number, number]
       },
     },
   };
