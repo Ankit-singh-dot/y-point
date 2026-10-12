@@ -167,13 +167,13 @@ export default function InstitutionalPage() {
                 />
               </div>
 
-              <div className="pt-2 flex items-center justify-between">
-                <span className="font-mono text-[11px] text-zinc-500">
+              <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <span className="font-mono text-xs text-zinc-400">
                   Target Corpus: ₹250 Cr · Term: 10 Years
                 </span>
                 <button
                   type="submit"
-                  className="rounded-full bg-white px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-black hover:bg-zinc-200 transition-all flex items-center gap-2 shadow-md"
+                  className="rounded-full bg-white px-8 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-black hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 shadow-md w-full sm:w-auto"
                 >
                   <Send className="h-4 w-4" />
                   <span>Request an Introduction</span>
