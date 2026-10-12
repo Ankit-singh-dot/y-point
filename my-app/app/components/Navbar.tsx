@@ -43,16 +43,17 @@ export default function Navbar() {
       >
         {/* Brand Identity / Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative h-7 sm:h-8 w-auto flex items-center">
+          <div className="relative h-11 sm:h-12 md:h-13 w-auto flex items-center">
             {/* Logo adapts blending based on theme if needed, but since it's a jpeg we'll use mix-blend-multiply in light mode and mix-blend-lighten in dark mode */}
             <Image 
               src="/logo.jpeg" 
               alt="Y-Point Logo" 
-              width={100} 
-              height={32} 
-              className={`object-contain h-full w-auto opacity-90 transition-opacity group-hover:opacity-100 ${
+              width={160} 
+              height={52} 
+              className={`object-contain h-full w-auto opacity-95 transition-opacity group-hover:opacity-100 ${
                 mounted && isDark ? "invert hue-rotate-180 mix-blend-screen" : "mix-blend-multiply"
               }`} 
+              priority
             />
           </div>
         </Link>
@@ -60,7 +61,7 @@ export default function Navbar() {
         {/* Center: Minimal Menu Trigger */}
         <button
           onClick={() => setMobileMenuOpen(true)}
-          className="absolute left-1/2 -translate-x-1/2 text-[11px] sm:text-xs font-sans font-medium tracking-[0.15em] text-black/60 hover:text-black dark:text-white/70 dark:hover:text-white uppercase transition-colors"
+          className="absolute left-1/2 -translate-x-1/2 text-sm sm:text-sm font-sans font-semibold tracking-[0.2em] text-black/80 hover:text-black dark:text-white/90 dark:hover:text-white uppercase transition-colors py-1.5 px-3"
         >
           Menu
         </button>
@@ -69,7 +70,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4 sm:gap-6">
           <Link
             href="/apply"
-            className="text-[11px] sm:text-xs font-sans font-medium tracking-[0.15em] text-black/60 hover:text-black dark:text-white/70 dark:hover:text-white uppercase transition-colors hidden sm:block"
+            className="text-xs sm:text-sm font-sans font-semibold tracking-[0.2em] text-black/70 hover:text-black dark:text-white/80 dark:hover:text-white uppercase transition-colors hidden sm:block"
           >
             Apply
           </Link>
@@ -78,10 +79,10 @@ export default function Navbar() {
           {mounted && (
             <button 
               onClick={() => setTheme(isDark ? "light" : "dark")}
-              className="text-black/60 hover:text-black dark:text-white/70 dark:hover:text-white transition-colors p-1"
+              className="text-black/70 hover:text-black dark:text-white/80 dark:hover:text-white transition-colors p-2"
               aria-label="Toggle Dark Mode"
             >
-              {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
           )}
 
