@@ -111,22 +111,22 @@ export default function EdgeBento() {
                       </div>
                     </div>
 
-                    <h3 className="font-display font-light text-xl sm:text-3xl lg:text-4xl text-black dark:text-white leading-tight max-w-2xl">
+                    <h3 className="font-display font-light text-2xl sm:text-3xl lg:text-4xl text-black dark:text-white leading-tight max-w-2xl">
                       {pillar.title}
                     </h3>
 
-                    <p className="font-sans font-light text-xs sm:text-base lg:text-lg text-black/60 dark:text-white/60 leading-relaxed max-w-3xl">
+                    <p className="font-sans font-light text-sm sm:text-base lg:text-lg text-black/70 dark:text-white/70 leading-relaxed max-w-3xl">
                       {pillar.body}
                     </p>
                   </div>
 
                   <div className="pt-4 sm:pt-6 border-t border-black/5 dark:border-white/5 flex flex-row items-center justify-between gap-4">
-                    <span className="font-sans text-[10px] sm:text-xs uppercase tracking-widest text-black/40 dark:text-white/40">
+                    <span className="font-sans text-xs sm:text-xs uppercase tracking-widest text-black/50 dark:text-white/50 font-medium">
                       SINE & IIT Bombay
                     </span>
                     <Link
                       href="/platform"
-                      className="group inline-flex items-center gap-1.5 font-sans text-[10px] sm:text-xs uppercase tracking-widest text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors"
+                      className="group inline-flex items-center gap-1.5 font-sans text-xs sm:text-xs uppercase tracking-widest text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors font-semibold"
                     >
                       <span>Read Pillar</span>
                       <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -149,7 +149,7 @@ export default function EdgeBento() {
               What We Ask In Return
             </h3>
           </div>
-          <p className="font-sans font-light text-xs sm:text-base text-black/50 dark:text-white/50 leading-relaxed">
+          <p className="font-sans font-light text-sm sm:text-base text-black/60 dark:text-white/60 leading-relaxed">
             Unusual, and non-negotiable. We believe obligations run in both directions.
           </p>
         </div>
@@ -157,37 +157,37 @@ export default function EdgeBento() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           
           <div className="space-y-2 sm:space-y-3 p-4 sm:p-0 rounded-xl bg-black/[0.02] sm:bg-transparent dark:bg-white/[0.02] sm:dark:bg-transparent">
-            <span className="font-sans text-[10px] sm:text-xs uppercase tracking-widest text-black/50 dark:text-white/40 font-medium block">
+            <span className="font-sans text-xs sm:text-xs uppercase tracking-widest text-black/60 dark:text-white/50 font-bold block">
               01 Bad news early
             </span>
-            <p className="font-sans font-light text-xs sm:text-sm text-black/80 dark:text-white/80 leading-relaxed">
+            <p className="font-sans font-light text-sm text-black/80 dark:text-white/80 leading-relaxed">
               We have never once been able to help more by hearing about a problem later.
             </p>
           </div>
 
           <div className="space-y-2 sm:space-y-3 p-4 sm:p-0 rounded-xl bg-black/[0.02] sm:bg-transparent dark:bg-white/[0.02] sm:dark:bg-transparent">
-            <span className="font-sans text-[10px] sm:text-xs uppercase tracking-widest text-black/50 dark:text-white/40 font-medium block">
+            <span className="font-sans text-xs sm:text-xs uppercase tracking-widest text-black/60 dark:text-white/50 font-bold block">
               02 Technical honesty
             </span>
-            <p className="font-sans font-light text-xs sm:text-sm text-black/80 dark:text-white/80 leading-relaxed">
+            <p className="font-sans font-light text-sm text-black/80 dark:text-white/80 leading-relaxed">
               Tell us what is not working. We have already assumed something is.
             </p>
           </div>
 
           <div className="space-y-2 sm:space-y-3 p-4 sm:p-0 rounded-xl bg-black/[0.02] sm:bg-transparent dark:bg-white/[0.02] sm:dark:bg-transparent">
-            <span className="font-sans text-[10px] sm:text-xs uppercase tracking-widest text-black/50 dark:text-white/40 font-medium block">
+            <span className="font-sans text-xs sm:text-xs uppercase tracking-widest text-black/60 dark:text-white/50 font-bold block">
               03 Usable reporting
             </span>
-            <p className="font-sans font-light text-xs sm:text-sm text-black/80 dark:text-white/80 leading-relaxed">
+            <p className="font-sans font-light text-sm text-black/80 dark:text-white/80 leading-relaxed">
               A short, regular, truthful update beats a polished quarterly deck every time.
             </p>
           </div>
 
           <div className="space-y-2 sm:space-y-3 p-4 sm:p-0 rounded-xl bg-black/[0.02] sm:bg-transparent dark:bg-white/[0.02] sm:dark:bg-transparent">
-            <span className="font-sans text-[10px] sm:text-xs uppercase tracking-widest text-black/50 dark:text-white/40 font-medium block">
+            <span className="font-sans text-xs sm:text-xs uppercase tracking-widest text-black/60 dark:text-white/50 font-bold block">
               04 Respect ecosystem
             </span>
-            <p className="font-sans font-light text-xs sm:text-sm text-black/80 dark:text-white/80 leading-relaxed">
+            <p className="font-sans font-light text-sm text-black/80 dark:text-white/80 leading-relaxed">
               Treat the ecosystem as a resource rather than an entitlement. It took two decades to build.
             </p>
           </div>
