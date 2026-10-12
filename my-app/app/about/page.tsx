@@ -137,7 +137,7 @@ export default function AboutPage() {
                 Fund Fact Sheet
               </h2>
             </div>
-            <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 font-medium">
+            <span className="font-sans text-xs uppercase tracking-wider text-black/60 dark:text-white/60 font-semibold">
               SEBI Reg. IN/AIF2/25-26/1937
             </span>
           </motion.div>
@@ -146,16 +146,16 @@ export default function AboutPage() {
             {/* Split facts into two columns for editorial look */}
             <div className="space-y-0 divide-y divide-black/5 dark:divide-white/5 border-b md:border-b-0 border-black/5 dark:border-white/5">
               {fundFacts.slice(0, 7).map((fact, idx) => (
-                <div key={idx} className="grid grid-cols-1 sm:grid-cols-3 py-6 text-sm gap-4">
-                  <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40">{fact.item}</span>
+                <div key={idx} className="grid grid-cols-1 sm:grid-cols-3 py-6 text-sm sm:text-base gap-4">
+                  <span className="font-sans text-xs uppercase tracking-wider text-black/50 dark:text-white/50 font-semibold">{fact.item}</span>
                   <span className="sm:col-span-2 text-black/80 dark:text-white/80 font-light leading-relaxed">{fact.value}</span>
                 </div>
               ))}
             </div>
             <div className="space-y-0 divide-y divide-black/5 dark:divide-white/5">
               {fundFacts.slice(7).map((fact, idx) => (
-                <div key={idx} className="grid grid-cols-1 sm:grid-cols-3 py-6 text-sm gap-4">
-                  <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40">{fact.item}</span>
+                <div key={idx} className="grid grid-cols-1 sm:grid-cols-3 py-6 text-sm sm:text-base gap-4">
+                  <span className="font-sans text-xs uppercase tracking-wider text-black/50 dark:text-white/50 font-semibold">{fact.item}</span>
                   <span className="sm:col-span-2 text-black/80 dark:text-white/80 font-light leading-relaxed">{fact.value}</span>
                 </div>
               ))}
@@ -173,7 +173,7 @@ export default function AboutPage() {
           className="space-y-16"
         >
           <motion.div variants={fadeInUp} className="space-y-4 max-w-2xl border-b border-black/10 dark:border-white/10 pb-8">
-            <div className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/60 dark:text-white/60 font-medium">
+            <div className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-bold">
               OPERATORS & INVESTORS
             </div>
             <h2 className="font-display font-light text-4xl sm:text-5xl text-black dark:text-white">
@@ -193,7 +193,7 @@ export default function AboutPage() {
               >
                 <div>
                   <h3 className="font-display font-light text-3xl sm:text-4xl text-black dark:text-white">{member.name}</h3>
-                  <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 block mt-4">
+                  <span className="font-sans text-xs uppercase tracking-wider text-black/50 dark:text-white/50 block mt-4 font-semibold">
                     {member.role}
                   </span>
                 </div>
@@ -217,7 +217,7 @@ export default function AboutPage() {
           className="space-y-16"
         >
           <motion.div variants={fadeInUp} className="space-y-4 max-w-3xl border-b border-black/10 dark:border-white/10 pb-8">
-            <div className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/60 dark:text-white/60 font-medium">
+            <div className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-bold">
               INDEPENDENT OVERSIGHT & SECTOR AUTHORITY
             </div>
             <h2 className="font-display font-light text-4xl sm:text-5xl text-black dark:text-white">
@@ -237,12 +237,12 @@ export default function AboutPage() {
               >
                 <div className="space-y-4">
                   <h3 className="font-display font-light text-2xl sm:text-3xl text-black dark:text-white">{ic.name}</h3>
-                  <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 block">{ic.title}</span>
+                  <span className="font-sans text-xs uppercase tracking-wider text-black/50 dark:text-white/50 block font-semibold">{ic.title}</span>
                 </div>
                 <p className="font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 leading-relaxed">
                   {ic.desc}
                 </p>
-                <div className="pt-6 border-t border-black/5 dark:border-white/5 font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40">
+                <div className="pt-6 border-t border-black/5 dark:border-white/5 font-sans text-xs uppercase tracking-wider text-black/50 dark:text-white/50 font-medium">
                   Two-stage IC evaluation protocol
                 </div>
               </motion.div>
@@ -278,7 +278,7 @@ export default function AboutPage() {
             <p>
               Investment decisions are taken by a six-member investment committee through a two-stage review: an initial approval that authorises a term sheet, and a final approval following detailed diligence and a meeting between the founders and the committee.
             </p>
-            <div className="inline-flex rounded-full bg-white dark:bg-black border border-black/10 dark:border-white/20 px-6 py-3 font-sans text-[10px] uppercase tracking-[0.2em] text-black/60 dark:text-white/60">
+            <div className="inline-flex rounded-full bg-white dark:bg-black border border-black/10 dark:border-white/20 px-6 py-3 font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-semibold">
               The Fund&apos;s establishment was formally approved by the Board of Governors of IIT Bombay.
             </div>
           </div>
