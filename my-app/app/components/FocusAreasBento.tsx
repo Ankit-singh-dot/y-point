@@ -16,22 +16,22 @@ export default function FocusAreasBento() {
         {/* Header */}
         <div className="mb-12 sm:mb-16 lg:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-10">
           <div className="max-w-2xl space-y-4 sm:space-y-6">
-            <div className="font-sans text-[11px] sm:text-xs uppercase tracking-widest text-black/50 dark:text-white/40 font-medium">
+            <div className="font-sans text-xs uppercase tracking-widest text-black/60 dark:text-white/50 font-semibold">
               Where We Invest
             </div>
             <h2 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight text-black dark:text-white leading-[1.1]">
               Six sectors. One common condition.
             </h2>
-            <p className="font-sans font-light text-sm sm:text-base text-black/60 dark:text-white/50 leading-relaxed max-w-lg">
+            <p className="font-sans font-light text-base sm:text-base text-black/70 dark:text-white/60 leading-relaxed max-w-lg">
               The hard part is the technology, and it has been proven but not yet productised. No single sector will exceed roughly a fifth of the portfolio. We are building a concentrated fund, not an index.
             </p>
           </div>
           <Link
             href="/focus-areas"
-            className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-black/80 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors border-b border-black/20 dark:border-white/20 pb-1 w-max"
+            className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-black/90 dark:text-white/80 hover:text-black dark:hover:text-white transition-colors border-b border-black/20 dark:border-white/20 pb-1 w-max font-medium"
           >
             <span>Explore All Theses</span>
-            <ArrowUpRight className="h-3.5 w-3.5" />
+            <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>
 
@@ -59,17 +59,17 @@ export default function FocusAreasBento() {
                   
                   {/* Category Number & Icon Pill */}
                   <div className="absolute top-3 left-3 flex items-center gap-2">
-                    <span className="font-sans font-medium text-[10px] tracking-widest text-white/90 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
+                    <span className="font-sans font-semibold text-xs tracking-widest text-white/95 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
                       0{idx + 1}
                     </span>
-                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white">
-                      <Icon className="h-3.5 w-3.5" />
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white">
+                      <Icon className="h-4 w-4" />
                     </div>
                   </div>
 
                   {/* Headline Tag */}
                   <div className="absolute bottom-2.5 left-3 right-3">
-                    <span className="font-sans text-[9px] uppercase tracking-wider text-white/90 font-medium line-clamp-1">
+                    <span className="font-sans text-xs uppercase tracking-wider text-white font-semibold line-clamp-1">
                       {area.headline}
                     </span>
                   </div>
@@ -78,19 +78,19 @@ export default function FocusAreasBento() {
                 {/* Content */}
                 <div className="space-y-3 flex-1 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <h3 className="font-display font-light text-xl sm:text-2xl text-black dark:text-white leading-tight">
+                    <h3 className="font-display font-light text-2xl sm:text-3xl text-black dark:text-white leading-tight">
                       {area.title}
                     </h3>
-                    <p className="font-sans font-light text-xs sm:text-sm text-black/60 dark:text-white/60 line-clamp-2 leading-relaxed">
+                    <p className="font-sans font-light text-[15px] sm:text-base text-black/75 dark:text-white/75 line-clamp-3 leading-relaxed">
                       &ldquo;{area.thesis}&rdquo;
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-black/5 dark:border-white/5 flex items-center justify-between text-xs font-sans text-black/50 dark:text-white/50">
-                    <span className="text-[10px] uppercase tracking-wider">TRL 4–7 Entry</span>
-                    <span className="inline-flex items-center gap-1 font-medium text-black dark:text-white uppercase tracking-wider text-[10px]">
+                  <div className="pt-3 border-t border-black/5 dark:border-white/5 flex items-center justify-between font-sans text-black/70 dark:text-white/70">
+                    <span className="text-xs uppercase tracking-wider font-semibold">TRL 4–7 Entry</span>
+                    <span className="inline-flex items-center gap-1 font-semibold text-black dark:text-white uppercase tracking-wider text-xs sm:text-sm">
                       <span>Read Thesis</span>
-                      <ArrowUpRight className="h-3 w-3" />
+                      <ArrowUpRight className="h-4 w-4" />
                     </span>
                   </div>
                 </div>
