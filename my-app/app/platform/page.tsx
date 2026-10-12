@@ -83,7 +83,7 @@ export default function PlatformPage() {
             />
           </motion.div>
           <div className="absolute bottom-8 left-8 right-8">
-            <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-white bg-black/40 px-4 py-2 rounded-full border border-white/10 backdrop-blur-md">
+            <span className="font-sans text-xs uppercase tracking-wider text-white font-semibold bg-black/60 px-4 py-2 rounded-full border border-white/20 backdrop-blur-md">
               IIT Bombay Ecosystem Integration
             </span>
           </div>
@@ -101,7 +101,7 @@ export default function PlatformPage() {
             className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start"
           >
             <div className="md:col-span-5 space-y-4 md:sticky md:top-32">
-              <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 font-medium">
+              <span className="font-sans text-xs uppercase tracking-wider text-black/60 dark:text-white/60 font-bold">
                 01 — OWNERSHIP STRUCTURE
               </span>
               <h2 className="font-display font-light text-3xl sm:text-5xl text-black dark:text-white leading-tight">
@@ -135,7 +135,7 @@ export default function PlatformPage() {
             className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start"
           >
             <div className="md:col-span-5 space-y-4 md:sticky md:top-32">
-              <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 font-medium">
+              <span className="font-sans text-xs uppercase tracking-wider text-black/60 dark:text-white/60 font-bold">
                 02 — TECHNICAL RIGOR
               </span>
               <h2 className="font-display font-light text-3xl sm:text-5xl text-black dark:text-white leading-tight">
@@ -166,7 +166,7 @@ export default function PlatformPage() {
             className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start"
           >
             <div className="md:col-span-5 space-y-4 md:sticky md:top-32">
-              <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 font-medium">
+              <span className="font-sans text-xs uppercase tracking-wider text-black/60 dark:text-white/60 font-bold">
                 03 — PRACTITIONER DECISION-MAKERS
               </span>
               <h2 className="font-display font-light text-3xl sm:text-5xl text-black dark:text-white leading-tight">
@@ -197,7 +197,7 @@ export default function PlatformPage() {
             className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start"
           >
             <div className="md:col-span-5 space-y-4 md:sticky md:top-32">
-              <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 font-medium">
+              <span className="font-sans text-xs uppercase tracking-wider text-black/60 dark:text-white/60 font-bold">
                 04 — COMMERCIAL ACCESS & RESERVES
               </span>
               <h2 className="font-display font-light text-3xl sm:text-5xl text-black dark:text-white leading-tight">
@@ -243,19 +243,19 @@ export default function PlatformPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
             <div className="space-y-2">
-              <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/60 dark:text-white/60 font-medium">Bad news early</span>
+              <span className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-bold">Bad news early</span>
               <p className="font-sans font-light text-sm sm:text-base text-black/80 dark:text-white/80 leading-relaxed">We have never once been able to help more by hearing about a problem later.</p>
             </div>
             <div className="space-y-2">
-              <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/60 dark:text-white/60 font-medium">Technical honesty</span>
+              <span className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-bold">Technical honesty</span>
               <p className="font-sans font-light text-sm sm:text-base text-black/80 dark:text-white/80 leading-relaxed">Tell us what is not working. We have already assumed something is.</p>
             </div>
             <div className="space-y-2">
-              <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/60 dark:text-white/60 font-medium">Reporting we can use</span>
+              <span className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-bold">Reporting we can use</span>
               <p className="font-sans font-light text-sm sm:text-base text-black/80 dark:text-white/80 leading-relaxed">A short, regular, truthful update beats a polished quarterly deck every single time.</p>
             </div>
             <div className="space-y-2">
-              <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/60 dark:text-white/60 font-medium">Respect the ecosystem</span>
+              <span className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-bold">Respect the ecosystem</span>
               <p className="font-sans font-light text-sm sm:text-base text-black/80 dark:text-white/80 leading-relaxed">Treat the ecosystem as a resource rather than an entitlement. It was built over two decades.</p>
             </div>
           </div>
