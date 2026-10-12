@@ -45,10 +45,10 @@ export default function PositioningBento() {
           style={{ opacity: isMobile ? 1 : opacity }}
           className="md:col-span-4 flex flex-col justify-start pt-2"
         >
-          <div className="font-sans text-[11px] sm:text-xs uppercase tracking-widest text-black/40 dark:text-white/50 mb-2 font-medium">
+          <div className="font-sans text-xs uppercase tracking-widest text-black/50 dark:text-white/60 mb-2 font-semibold">
             Strategic Premise
           </div>
-          <div className="font-display font-light text-2xl sm:text-3xl text-black/80 dark:text-white/80">
+          <div className="font-display font-light text-2xl sm:text-3xl text-black/90 dark:text-white/90">
             Translational Capital
           </div>
         </motion.div>
@@ -56,13 +56,13 @@ export default function PositioningBento() {
         {/* Right: Elegant Typography Content (Software / Editorial Style) */}
         <motion.div 
           style={{ y: y2, opacity: isMobile ? 1 : opacity }}
-          className="md:col-span-8 flex flex-col space-y-8 sm:space-y-12"
+          className="md:col-span-8 flex flex-col space-y-6 sm:space-y-12"
         >
-          <h3 className="font-display font-light text-3xl sm:text-5xl lg:text-7xl leading-[1.15] tracking-tight text-black dark:text-white">
+          <h3 className="font-display font-light text-3xl sm:text-5xl lg:text-7xl leading-[1.2] tracking-tight text-black dark:text-white">
             India produces world-class research and world-class venture capital. Very little connects the two.
           </h3>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12 font-sans font-light text-sm sm:text-base text-black/60 dark:text-white/60 leading-relaxed">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12 font-sans font-light text-base text-black/75 dark:text-white/75 leading-relaxed">
             <p>
               Y-Point invests at the point where a technology stops being a research result and has to become a company. We are the venture capital arm of SINE, the technology business incubator of IIT Bombay, and we write pre-seed and seed cheques into ventures emerging from India's premier research institutions.
             </p>
@@ -71,7 +71,7 @@ export default function PositioningBento() {
             </p>
           </div>
           
-          <div className="pt-6 sm:pt-8 border-t border-black/10 dark:border-white/10 flex flex-wrap items-center gap-4 sm:gap-6 text-xs font-sans uppercase tracking-[0.2em] text-black/50 dark:text-white/40">
+          <div className="pt-6 sm:pt-8 border-t border-black/10 dark:border-white/10 flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-xs font-sans uppercase tracking-wider text-black/70 dark:text-white/60 font-semibold">
             <span>Entry: TRL 4–7</span>
             <span>·</span>
             <span>Deep Tech Focus</span>
