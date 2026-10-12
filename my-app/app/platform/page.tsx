@@ -33,29 +33,29 @@ export default function PlatformPage() {
   };
 
   return (
-    <div ref={containerRef} className="min-h-screen pt-32 pb-24">
-      <div className="mx-auto max-w-6xl px-6 sm:px-12 space-y-32">
+    <div ref={containerRef} className="min-h-screen pt-20 sm:pt-28 lg:pt-32 pb-14 sm:pb-20 lg:pb-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-12 space-y-14 sm:space-y-24 lg:space-y-32">
         
         {/* Page Hero */}
         <motion.div 
           variants={staggerContainer}
           initial="hidden"
           animate="show"
-          className="space-y-8"
+          className="space-y-6 sm:space-y-8"
         >
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-4 py-1.5 text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-3.5 py-1 text-[11px] sm:text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
             <span>Platform · The Y-Point Edge</span>
           </motion.div>
 
-          <motion.h1 variants={fadeInUp} className="font-display font-light text-5xl sm:text-7xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1] max-w-4xl">
+          <motion.h1 variants={fadeInUp} className="font-display font-light text-4xl sm:text-6xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1] max-w-4xl">
             HOW WE WORK WITH FOUNDERS
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="font-display font-light text-2xl sm:text-4xl text-black/40 dark:text-white/40">
+          <motion.p variants={fadeInUp} className="font-display font-light text-xl sm:text-3xl lg:text-4xl text-black/40 dark:text-white/40">
             Capital is the least differentiated thing we bring.
           </motion.p>
 
-          <motion.div variants={fadeInUp} className="max-w-3xl space-y-6 pt-12 border-l border-black/10 dark:border-white/20 pl-6 sm:pl-10 text-black/70 dark:text-white/70 font-sans font-light text-lg leading-relaxed">
+          <motion.div variants={fadeInUp} className="max-w-3xl space-y-4 sm:space-y-6 pt-6 sm:pt-10 border-l border-black/10 dark:border-white/20 pl-4 sm:pl-10 text-black/70 dark:text-white/70 font-sans font-light text-base sm:text-lg leading-relaxed">
             <p>
               Deep tech companies do not fail because a term sheet was two crore too small. They fail because a qualification cycle took eighteen months instead of six, because a grant application was filed at the wrong stage, because the first customer needed a certification nobody had budgeted for, or because a technical risk everyone had privately noticed was never properly addressed.
             </p>

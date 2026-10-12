@@ -37,13 +37,13 @@ export default function Navbar() {
   return (
     <>
       <div 
-        className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 sm:px-12 py-6 transition-all duration-500 ${
-          scrolled ? "bg-white dark:bg-black py-4 border-b border-black/5 dark:border-white/5 shadow-sm" : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 sm:px-8 lg:px-12 py-4 sm:py-6 transition-all duration-500 ${
+          scrolled ? "bg-white/95 dark:bg-black/95 backdrop-blur-md py-3 sm:py-4 border-b border-black/5 dark:border-white/5 shadow-sm" : "bg-transparent"
         }`}
       >
         {/* Brand Identity / Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative h-8 w-auto flex items-center">
+          <div className="relative h-7 sm:h-8 w-auto flex items-center">
             {/* Logo adapts blending based on theme if needed, but since it's a jpeg we'll use mix-blend-multiply in light mode and mix-blend-lighten in dark mode */}
             <Image 
               src="/logo.jpeg" 
@@ -60,16 +60,16 @@ export default function Navbar() {
         {/* Center: Minimal Menu Trigger */}
         <button
           onClick={() => setMobileMenuOpen(true)}
-          className="absolute left-1/2 -translate-x-1/2 text-xs font-sans font-medium tracking-[0.15em] text-black/60 hover:text-black dark:text-white/70 dark:hover:text-white uppercase transition-colors"
+          className="absolute left-1/2 -translate-x-1/2 text-[11px] sm:text-xs font-sans font-medium tracking-[0.15em] text-black/60 hover:text-black dark:text-white/70 dark:hover:text-white uppercase transition-colors"
         >
           Menu
         </button>
 
         {/* Right Actions */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 sm:gap-6">
           <Link
             href="/apply"
-            className="text-xs font-sans font-medium tracking-[0.15em] text-black/60 hover:text-black dark:text-white/70 dark:hover:text-white uppercase transition-colors hidden sm:block"
+            className="text-[11px] sm:text-xs font-sans font-medium tracking-[0.15em] text-black/60 hover:text-black dark:text-white/70 dark:hover:text-white uppercase transition-colors hidden sm:block"
           >
             Apply
           </Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
           {mounted && (
             <button 
               onClick={() => setTheme(isDark ? "light" : "dark")}
-              className="text-black/60 hover:text-black dark:text-white/70 dark:hover:text-white transition-colors"
+              className="text-black/60 hover:text-black dark:text-white/70 dark:hover:text-white transition-colors p-1"
               aria-label="Toggle Dark Mode"
             >
               {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
@@ -90,25 +90,25 @@ export default function Navbar() {
 
       {/* Full Screen Overlay Menu */}
       <div 
-        className={`fixed inset-0 z-[60] bg-white dark:bg-[#030303] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-center px-6 sm:px-24 ${
+        className={`fixed inset-0 z-[60] bg-white dark:bg-[#030303] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-center px-6 sm:px-16 lg:px-24 ${
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <button 
           onClick={() => setMobileMenuOpen(false)}
-          className="absolute top-6 right-6 sm:top-12 sm:right-12 text-black/40 hover:text-black dark:text-white/50 dark:hover:text-white p-4 transition-colors"
+          className="absolute top-4 right-4 sm:top-8 sm:right-8 text-black/40 hover:text-black dark:text-white/50 dark:hover:text-white p-3 transition-colors"
         >
-          <X className="h-8 w-8 font-light" />
+          <X className="h-7 w-7 sm:h-8 sm:w-8 font-light" />
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto w-full">
-          <div className="flex flex-col space-y-4 sm:space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto w-full">
+          <div className="flex flex-col space-y-3 sm:space-y-6">
             {navLinks.map((item, idx) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="group flex items-center gap-4 text-4xl sm:text-6xl font-display font-light text-black/40 hover:text-black dark:text-white/40 dark:hover:text-white transition-colors"
+                className="group flex items-center gap-4 text-3xl sm:text-5xl lg:text-6xl font-display font-light text-black/40 hover:text-black dark:text-white/40 dark:hover:text-white transition-colors"
                 style={{ transitionDelay: mobileMenuOpen ? `${idx * 50}ms` : '0ms' }}
               >
                 <span>{item.name}</span>

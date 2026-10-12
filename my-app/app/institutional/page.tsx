@@ -20,8 +20,8 @@ export default function InstitutionalPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#000000] py-28 sm:py-36">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-16">
+    <div className="min-h-screen bg-[#000000] py-20 sm:py-28 lg:py-36">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
         
         {/* Compliance Warning Header Bento */}
         <div className="rounded-2xl border border-white/15 bg-zinc-950 p-4 flex items-center gap-3 text-xs text-zinc-400">
@@ -33,19 +33,19 @@ export default function InstitutionalPage() {
 
         {/* 16.1 Public-Facing Copy */}
         <div className="space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-mono uppercase tracking-widest text-zinc-300">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3.5 py-1 text-[11px] sm:text-xs font-mono uppercase tracking-widest text-zinc-300">
             <span>FOR INSTITUTIONS AND PARTNERS · SECTION 16</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
             FOR INSTITUTIONS AND PARTNERS
           </h1>
 
-          <p className="font-mono text-xl sm:text-2xl text-white">
+          <p className="font-mono text-lg sm:text-2xl text-white">
             Y-Point exists because of a structural gap in how India funds its own research.
           </p>
 
-          <div className="box-editorial-bw p-6 sm:p-8 rounded-r-2xl space-y-4 text-zinc-300 text-base leading-relaxed">
+          <div className="box-editorial-bw p-5 sm:p-8 rounded-r-2xl space-y-4 text-zinc-300 text-sm sm:text-base leading-relaxed">
             <p>
               The country&apos;s institutions produce technically exceptional companies. Its venture industry is built to underwrite consumer adoption and software margins. The mismatch is not a matter of appetite — it is a matter of capability, access and time horizon, and it leaves a category of company systematically under-funded at the point where capital is most decisive.
             </p>
@@ -72,7 +72,7 @@ export default function InstitutionalPage() {
           </div>
 
           {/* Mandatory Non-Solicitation Notice (Section 16.1) */}
-          <div className="rounded-2xl border border-white/10 bg-zinc-950 p-5 text-xs text-zinc-400 space-y-2">
+          <div className="rounded-2xl border border-white/10 bg-zinc-950 p-4 sm:p-5 text-xs text-zinc-400 space-y-2">
             <p>
               This page is for information only. It does not constitute an offer of, or an invitation to subscribe for, units in the Fund. Any offer is made solely through the Fund&apos;s private placement memorandum to eligible investors.
             </p>
@@ -80,7 +80,7 @@ export default function InstitutionalPage() {
         </div>
 
         {/* 16.2 Gated Material / Introduction Request Form Bento */}
-        <div className="bento-card p-8 sm:p-12 rounded-3xl space-y-6">
+        <div className="bento-card p-5 sm:p-10 lg:p-12 rounded-2xl sm:rounded-3xl space-y-6">
           <div className="flex items-center justify-between border-b border-white/10 pb-4">
             <div className="flex items-center gap-2">
               <Lock className="h-5 w-5 text-white" />

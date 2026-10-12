@@ -40,14 +40,14 @@ export default async function VerticalDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="min-h-screen pt-32 pb-24">
-      <div className="mx-auto max-w-7xl px-6 sm:px-12 space-y-24">
+    <div className="min-h-screen pt-20 sm:pt-28 lg:pt-32 pb-14 sm:pb-20 lg:pb-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 space-y-12 sm:space-y-16 lg:space-y-24">
         
         {/* Navigation Breadcrumb */}
         <div>
           <Link
             href="/focus-areas"
-            className="group inline-flex items-center gap-3 font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors"
+            className="group inline-flex items-center gap-2.5 font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors"
           >
             <ArrowLeft className="h-3 w-3 transition-transform group-hover:-translate-x-1" />
             <span>Back to All Focus Areas</span>
@@ -55,22 +55,22 @@ export default async function VerticalDetailPage({ params }: Props) {
         </div>
 
         {/* Hero */}
-        <div className="space-y-8 max-w-5xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-4 py-1.5 text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
+        <div className="space-y-6 sm:space-y-8 max-w-5xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-3.5 py-1 text-[11px] sm:text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
             <span>Vertical Thesis · TRL 4–7 Entry</span>
           </div>
 
-          <h1 className="font-display font-light text-5xl sm:text-7xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1]">
+          <h1 className="font-display font-light text-3xl sm:text-6xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1]">
             {vertical.heroHeadline}
           </h1>
 
-          <p className="font-display font-light text-2xl sm:text-4xl text-black/40 dark:text-white/40">
+          <p className="font-display font-light text-lg sm:text-3xl lg:text-4xl text-black/40 dark:text-white/40">
             {vertical.name} — &ldquo;{vertical.oneLineThesis}&rdquo;
           </p>
         </div>
 
         {/* Featured Visual Header */}
-        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-3xl bg-black">
+        <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full overflow-hidden rounded-2xl sm:rounded-3xl bg-black">
           <Image
             src={vertical.image}
             alt={vertical.name}
@@ -80,14 +80,14 @@ export default async function VerticalDetailPage({ params }: Props) {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <div className="absolute bottom-6 left-6 right-6">
-            <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-white bg-black/40 px-4 py-2 rounded-full border border-white/10 backdrop-blur-md">
+          <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
+            <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-white bg-black/40 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/10 backdrop-blur-md">
               IIT Bombay &amp; SINE Backed Diligence
             </span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
           
           <div className="lg:col-span-8 space-y-24">
             {/* Block 2: What We Believe */}

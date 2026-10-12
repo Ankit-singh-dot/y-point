@@ -56,30 +56,30 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#000000] py-28 sm:py-36">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 space-y-16">
+    <div className="min-h-screen bg-[#000000] py-20 sm:py-28 lg:py-36">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
         
         {/* Page Header */}
         <div className="space-y-4">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-mono uppercase tracking-widest text-zinc-300">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3.5 py-1 text-[11px] sm:text-xs font-mono uppercase tracking-widest text-zinc-300">
             <span>ROUTED INBOXES · SECTION 17</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
             CONTACT &amp; DIRECT ROUTES
           </h1>
 
-          <p className="text-zinc-400 text-sm sm:text-base max-w-2xl">
+          <p className="text-zinc-400 text-xs sm:text-base max-w-2xl">
             We use routed inboxes so your inquiry reaches the right person immediately without languishing in a generic catch-all inbox.
           </p>
         </div>
 
         {/* Routes Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {routes.map((route, idx) => (
             <div
               key={idx}
-              className="bento-card flex flex-col justify-between rounded-3xl p-6 sm:p-8 space-y-4 hover:-translate-y-1"
+              className="bento-card flex flex-col justify-between rounded-2xl sm:rounded-3xl p-5 sm:p-8 space-y-4 hover:-translate-y-1"
             >
               <div className="space-y-2">
                 <span className="font-mono text-xs uppercase tracking-wider text-white font-bold block">
@@ -107,7 +107,7 @@ export default function ContactPage() {
         </div>
 
         {/* Registered Office Bento */}
-        <div className="bento-card p-8 sm:p-12 rounded-3xl space-y-6">
+        <div className="bento-card p-6 sm:p-10 lg:p-12 rounded-2xl sm:rounded-3xl space-y-6">
           <div className="flex items-center gap-3">
             <MapPin className="h-6 w-6 text-white" />
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white">

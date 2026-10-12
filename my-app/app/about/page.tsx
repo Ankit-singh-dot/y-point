@@ -87,29 +87,29 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-24">
-      <div className="mx-auto max-w-7xl px-6 sm:px-12 space-y-32">
+    <div className="min-h-screen pt-20 sm:pt-28 lg:pt-32 pb-14 sm:pb-20 lg:pb-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 space-y-14 sm:space-y-24 lg:space-y-32">
         
         {/* Page Hero */}
         <motion.div 
           variants={staggerContainer}
           initial="hidden"
           animate="show"
-          className="space-y-8 max-w-5xl"
+          className="space-y-6 sm:space-y-8 max-w-5xl"
         >
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-4 py-1.5 text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-3.5 py-1 text-[11px] sm:text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
             <span>Mandate & Institutional Backing</span>
           </motion.div>
 
-          <motion.h1 variants={fadeInUp} className="font-display font-light text-5xl sm:text-7xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1]">
+          <motion.h1 variants={fadeInUp} className="font-display font-light text-4xl sm:text-6xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1]">
             THE FUND
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="font-display font-light text-2xl sm:text-4xl text-black/40 dark:text-white/40">
+          <motion.p variants={fadeInUp} className="font-display font-light text-xl sm:text-3xl lg:text-4xl text-black/40 dark:text-white/40">
             India&apos;s first deep technology venture fund managed by an academia-linked incubator.
           </motion.p>
 
-          <motion.div variants={fadeInUp} className="max-w-3xl space-y-6 pt-12 border-l border-black/10 dark:border-white/20 pl-6 sm:pl-10 text-black/70 dark:text-white/70 font-sans font-light text-lg leading-relaxed">
+          <motion.div variants={fadeInUp} className="max-w-3xl space-y-4 sm:space-y-6 pt-6 sm:pt-10 border-l border-black/10 dark:border-white/20 pl-4 sm:pl-10 text-black/70 dark:text-white/70 font-sans font-light text-base sm:text-lg leading-relaxed">
             <p>
               The Fund was established by <strong>SINE</strong> — the Society for Innovation and Entrepreneurship, the technology business incubator of <strong>IIT Bombay</strong> — to address a gap that two decades of incubation had made impossible to ignore. India&apos;s research institutions were producing technically outstanding companies that could not raise the patient, technically literate capital needed at the point where a proven technology has to become a manufacturable product.
             </p>
@@ -128,7 +128,7 @@ export default function AboutPage() {
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="rounded-3xl bg-black/5 dark:bg-[#0a0a0a] p-12 sm:p-24 space-y-12"
+          className="rounded-2xl sm:rounded-3xl bg-black/5 dark:bg-[#0a0a0a] p-6 sm:p-14 lg:p-24 space-y-8 sm:space-y-12"
         >
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row sm:items-end justify-between gap-8 border-b border-black/10 dark:border-white/10 pb-8">
             <div className="flex items-center gap-4">

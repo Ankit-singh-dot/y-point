@@ -33,36 +33,36 @@ export default function FocusAreasHub() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-24">
-      <div className="mx-auto max-w-7xl px-6 sm:px-12 space-y-32">
+    <div className="min-h-screen pt-20 sm:pt-28 lg:pt-32 pb-14 sm:pb-20 lg:pb-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 space-y-14 sm:space-y-24 lg:space-y-32">
         
         {/* Page Hero */}
         <motion.div 
           variants={staggerContainer}
           initial="hidden"
           animate="show"
-          className="space-y-8 max-w-5xl"
+          className="space-y-6 sm:space-y-8 max-w-5xl"
         >
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-4 py-1.5 text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-3.5 py-1 text-[11px] sm:text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
             <span>Sector Mandates · Portfolio Concentration</span>
           </motion.div>
 
-          <motion.h1 variants={fadeInUp} className="font-display font-light text-5xl sm:text-7xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1]">
+          <motion.h1 variants={fadeInUp} className="font-display font-light text-4xl sm:text-6xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1]">
             WHERE WE INVEST.
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="font-display font-light text-2xl sm:text-4xl text-black/40 dark:text-white/40">
+          <motion.p variants={fadeInUp} className="font-display font-light text-xl sm:text-3xl lg:text-4xl text-black/40 dark:text-white/40">
             Six sectors. One common condition: the hard part is the technology, and it has been proven but not yet productised.
           </motion.p>
 
-          <motion.div variants={fadeInUp} className="max-w-3xl space-y-6 pt-12 border-l border-black/10 dark:border-white/20 pl-6 sm:pl-10 text-black/70 dark:text-white/70 font-sans font-light text-lg leading-relaxed">
+          <motion.div variants={fadeInUp} className="max-w-3xl space-y-4 sm:space-y-6 pt-6 sm:pt-10 border-l border-black/10 dark:border-white/20 pl-4 sm:pl-10 text-black/70 dark:text-white/70 font-sans font-light text-base sm:text-lg leading-relaxed">
             <p>
               We organise around domains rather than business models, because deep tech companies rarely fit a model at the point we meet them. A team with a novel material may end up selling a component, a licence or a finished system, and which of those it becomes is often the most consequential decision of the first three years. We want to be in the room for it.
             </p>
             <p>
               Each page states what we believe about the sector, what we are actively looking for, and the bar a company needs to clear. We have also written down what gets a fast no. We would rather lose a meeting than waste a founder&apos;s month.
             </p>
-            <p className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 pt-4">
+            <p className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 pt-2">
               No single sector will exceed roughly a fifth of the portfolio (~20% limit). We are building a concentrated fund, not an index.
             </p>
           </motion.div>
@@ -74,7 +74,7 @@ export default function FocusAreasHub() {
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-24"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 lg:gap-x-16 gap-y-12 sm:gap-y-16 lg:gap-y-24"
         >
           {verticalsList.map((vert) => {
             const Icon = verticalIcons[vert.slug] || Cpu;

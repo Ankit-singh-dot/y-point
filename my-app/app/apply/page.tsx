@@ -49,30 +49,30 @@ export default function ApplyPage() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-24">
-      <div className="mx-auto max-w-7xl px-6 sm:px-12 space-y-32">
+    <div className="min-h-screen pt-20 sm:pt-28 lg:pt-32 pb-14 sm:pb-20 lg:pb-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 space-y-14 sm:space-y-24 lg:space-y-32">
         
         {/* Page Hero */}
         <motion.div 
           variants={staggerContainer}
           initial="hidden"
           animate="show"
-          className="space-y-8 max-w-5xl"
+          className="space-y-6 sm:space-y-8 max-w-5xl"
         >
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-4 py-1.5 text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-3.5 py-1 text-[11px] sm:text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
             <span>For Founders · 10-Day Commitment</span>
           </motion.div>
 
-          <motion.h1 variants={fadeInUp} className="font-display font-light text-5xl sm:text-7xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1]">
+          <motion.h1 variants={fadeInUp} className="font-display font-light text-4xl sm:text-6xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1]">
             TELL US WHAT YOU ARE BUILDING.
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="font-display font-light text-2xl sm:text-4xl text-black/40 dark:text-white/40">
+          <motion.p variants={fadeInUp} className="font-display font-light text-xl sm:text-3xl lg:text-4xl text-black/40 dark:text-white/40">
             We read everything that comes in, and we reply — including when the answer is no.
           </motion.p>
 
-          <motion.div variants={fadeInUp} className="max-w-3xl space-y-6 pt-12 border-l border-black/10 dark:border-white/20 pl-6 sm:pl-10 text-black/70 dark:text-white/70 font-sans font-light text-lg leading-relaxed">
-            <h2 className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 mb-4">WHO WE BACK</h2>
+          <motion.div variants={fadeInUp} className="max-w-3xl space-y-4 sm:space-y-6 pt-6 sm:pt-10 border-l border-black/10 dark:border-white/20 pl-4 sm:pl-10 text-black/70 dark:text-white/70 font-sans font-light text-base sm:text-lg leading-relaxed">
+            <h2 className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 mb-2">WHO WE BACK</h2>
             <p>
               Pre-seed and seed stage companies in India where the hard part is the technology. Most of our companies come out of IIT Bombay or another research institution, but that is not a requirement. What matters is that the science is demonstrated, real engineering risk remains, and the team is capable of retiring it. In TRL terms, that is roughly <strong>4 to 7</strong>.
             </p>
@@ -88,51 +88,51 @@ export default function ApplyPage() {
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="rounded-3xl bg-black/5 dark:bg-[#0a0a0a] p-12 sm:p-24 space-y-16"
+          className="rounded-2xl sm:rounded-3xl bg-black/5 dark:bg-[#0a0a0a] p-6 sm:p-14 lg:p-20 space-y-10 sm:space-y-16"
         >
-          <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row sm:items-end justify-between gap-8 border-b border-black/10 dark:border-white/10 pb-8">
-            <h3 className="font-display font-light text-4xl sm:text-5xl text-black dark:text-white">
+          <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-black/10 dark:border-white/10 pb-6 sm:pb-8">
+            <h3 className="font-display font-light text-3xl sm:text-5xl text-black dark:text-white">
               What happens next
             </h3>
-            <span className="flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-black/60 dark:text-white/60 bg-black/5 dark:bg-white/5 px-4 py-2 rounded-full">
+            <span className="flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-black/60 dark:text-white/60 bg-black/5 dark:bg-white/5 px-4 py-2 rounded-full w-max">
               <Clock className="h-4 w-4" />
               <span>10 Working Days SLA</span>
             </span>
           </motion.div>
 
-          <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 text-black/70 dark:text-white/70">
-            <div className="space-y-4">
+          <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 sm:gap-y-16 text-black/70 dark:text-white/70">
+            <div className="space-y-2 sm:space-y-4">
               <span className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 block">01 We read it</span>
-              <p className="font-sans font-light leading-relaxed">Every submission is reviewed directly by an investment team member, not an automated filter.</p>
+              <p className="font-sans font-light text-sm sm:text-base leading-relaxed">Every submission is reviewed directly by an investment team member, not an automated filter.</p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-2 sm:space-y-4">
               <span className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 block">02 10-day response</span>
-              <p className="font-sans font-light leading-relaxed">We respond within 10 working days, either way. We do not leave founders in indefinite limbo.</p>
+              <p className="font-sans font-light text-sm sm:text-base leading-relaxed">We respond within 10 working days, either way. We do not leave founders in indefinite limbo.</p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-2 sm:space-y-4">
               <span className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 block">03 First discussion</span>
-              <p className="font-sans font-light leading-relaxed">If there is a fit, we schedule a technical discussion rather than a traditional sales pitch.</p>
+              <p className="font-sans font-light text-sm sm:text-base leading-relaxed">If there is a fit, we schedule a technical discussion rather than a traditional sales pitch.</p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-2 sm:space-y-4">
               <span className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 block">04 Term sheet at Level 1 IC</span>
-              <p className="font-sans font-light leading-relaxed">Unlike most funds, term sheets are authorised at initial IC stage, not postponed to the very end.</p>
+              <p className="font-sans font-light text-sm sm:text-base leading-relaxed">Unlike most funds, term sheets are authorised at initial IC stage, not postponed to the very end.</p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-2 sm:space-y-4">
               <span className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 block">05 Detailed diligence</span>
-              <p className="font-sans font-light leading-relaxed">Independent expert validation of technology, characterisation data, and IP. (6–10 weeks).</p>
+              <p className="font-sans font-light text-sm sm:text-base leading-relaxed">Independent expert validation of technology, characterisation data, and IP. (6–10 weeks).</p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-2 sm:space-y-4">
               <span className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 block">06 In-person IC meeting</span>
-              <p className="font-sans font-light leading-relaxed">You interrogate the committee as much as they evaluate you before any final cheque.</p>
+              <p className="font-sans font-light text-sm sm:text-base leading-relaxed">You interrogate the committee as much as they evaluate you before any final cheque.</p>
             </div>
           </motion.div>
 
-          <motion.div variants={fadeInUp} className="pt-8 text-xs font-sans font-light text-black/40 dark:text-white/40 border-t border-black/10 dark:border-white/10">
+          <motion.div variants={fadeInUp} className="pt-6 sm:pt-8 text-xs font-sans font-light text-black/40 dark:text-white/40 border-t border-black/10 dark:border-white/10">
             <strong>Note on NDAs:</strong> We are not able to sign non-disclosure agreements before a first conversation due to high volume of adjacent technologies. We treat all submissions with strict internal confidentiality.
           </motion.div>
         </motion.div>
@@ -143,7 +143,7 @@ export default function ApplyPage() {
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
-          className="rounded-3xl border border-black/10 dark:border-white/10 p-8 sm:p-24"
+          className="rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/10 p-5 sm:p-12 lg:p-20"
         >
           {submitted ? (
             <div className="text-center py-24 space-y-8">
