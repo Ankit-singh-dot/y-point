@@ -62,7 +62,7 @@ export default function FocusAreasHub() {
             <p>
               Each page states what we believe about the sector, what we are actively looking for, and the bar a company needs to clear. We have also written down what gets a fast no. We would rather lose a meeting than waste a founder&apos;s month.
             </p>
-            <p className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 pt-2">
+            <p className="font-sans text-xs uppercase tracking-wider font-semibold text-black/50 dark:text-white/50 pt-2">
               No single sector will exceed roughly a fifth of the portfolio (~20% limit). We are building a concentrated fund, not an index.
             </p>
           </motion.div>
@@ -100,7 +100,7 @@ export default function FocusAreasHub() {
                   </div>
 
                   <div className="absolute bottom-6 left-6 right-6">
-                    <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-white font-medium bg-black/40 px-4 py-2 rounded-full border border-white/10 backdrop-blur-md">
+                    <span className="font-sans text-xs uppercase tracking-wider text-white font-semibold bg-black/50 px-4 py-2 rounded-full border border-white/20 backdrop-blur-md">
                       {vert.heroHeadline}
                     </span>
                   </div>
@@ -122,14 +122,14 @@ export default function FocusAreasHub() {
 
                   <div className="space-y-6 pt-6 border-t border-black/10 dark:border-white/10">
                     <div className="rounded-xl border border-red-500/20 bg-red-500/5 p-4 space-y-2">
-                      <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-red-500 dark:text-red-400 block">Fast No</span>
+                      <span className="font-sans text-xs font-bold uppercase tracking-wider text-red-500 dark:text-red-400 block">Fast No</span>
                       <span className="font-sans font-light text-sm text-black/80 dark:text-white/80 line-clamp-2 leading-relaxed">{vert.fastNo[0]}</span>
                     </div>
 
                     <div className="flex justify-end">
                       <Link
                         href={`/focus-areas/${vert.slug}`}
-                        className="inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.2em] text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors"
+                        className="inline-flex items-center gap-3 font-sans text-xs sm:text-sm uppercase tracking-wider text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors font-semibold"
                       >
                         <span>Read Thesis</span>
                         <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
