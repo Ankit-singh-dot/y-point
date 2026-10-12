@@ -83,7 +83,7 @@ export default function HeroBento() {
             variants={letterContainer}
             initial="hidden"
             animate="show"
-            className="font-display font-light text-5xl sm:text-7xl md:text-8xl lg:text-[9vw] tracking-tighter text-black dark:text-white leading-none flex overflow-hidden"
+            className="font-display font-light text-[16vw] sm:text-7xl md:text-8xl lg:text-[9vw] tracking-tighter text-black dark:text-white leading-none flex overflow-hidden"
           >
             {"Y-POINT".split("").map((char, index) => (
               <motion.span key={index} variants={letterAnim} className="inline-block origin-bottom-left">
@@ -123,7 +123,7 @@ export default function HeroBento() {
             variants={letterContainer}
             initial="hidden"
             animate="show"
-            className="font-display font-light text-5xl sm:text-7xl md:text-8xl lg:text-[9vw] tracking-tighter text-black dark:text-white leading-none flex overflow-hidden"
+            className="font-display font-light text-[16vw] sm:text-7xl md:text-8xl lg:text-[9vw] tracking-tighter text-black dark:text-white leading-none flex overflow-hidden"
           >
             {"CAPITAL".split("").map((char, index) => (
               <motion.span key={index} variants={letterAnim} className="inline-block origin-bottom-left">
@@ -134,7 +134,7 @@ export default function HeroBento() {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } }}
-            className="font-sans font-medium text-[9px] sm:text-xs uppercase tracking-[0.35em] sm:tracking-[0.4em] text-black/40 dark:text-white/40 mt-4 sm:mt-6 text-center"
+            className="font-sans font-semibold text-xs sm:text-sm uppercase tracking-[0.25em] sm:tracking-[0.35em] text-black/60 dark:text-white/60 mt-4 sm:mt-6 text-center"
           >
             Translational Science Fund
           </motion.p>
