@@ -69,7 +69,7 @@ export default function ContactPage() {
             CONTACT &amp; DIRECT ROUTES
           </h1>
 
-          <p className="text-zinc-400 text-xs sm:text-base max-w-2xl">
+          <p className="text-zinc-400 text-sm sm:text-base max-w-2xl leading-relaxed">
             We use routed inboxes so your inquiry reaches the right person immediately without languishing in a generic catch-all inbox.
           </p>
         </div>
@@ -85,10 +85,10 @@ export default function ContactPage() {
                 <span className="font-mono text-xs uppercase tracking-wider text-white font-bold block">
                   {route.channel}
                 </span>
-                <div className="font-mono text-sm font-semibold text-zinc-200">
+                <div className="font-mono text-sm sm:text-base font-semibold text-zinc-200">
                   {route.dest}
                 </div>
-                <p className="text-xs text-zinc-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
                   {route.action}
                 </p>
               </div>
@@ -96,10 +96,10 @@ export default function ContactPage() {
               <div className="pt-4 border-t border-white/10">
                 <Link
                   href={route.link}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono text-white hover:underline"
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono text-white hover:underline font-semibold"
                 >
                   <span>{route.buttonText}</span>
-                  <ArrowUpRight className="h-3 w-3" />
+                  <ArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             </div>
@@ -116,27 +116,27 @@ export default function ContactPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <div className="space-y-3 text-sm text-zinc-300">
+            <div className="space-y-3 text-sm sm:text-base text-zinc-300">
               <p className="font-semibold text-white">
                 Y-Point Investment Advisors Private Limited
               </p>
-              <p className="text-xs leading-relaxed text-zinc-400">
+              <p className="text-xs sm:text-sm leading-relaxed text-zinc-400">
                 Investment Manager to Y-Point Venture Capital Fund-I<br />
                 SINE Office, 5th Floor, RBTIC Building, A S Marg<br />
                 Indian Institute of Technology Bombay, Powai<br />
                 Mumbai 400076, Maharashtra, India
               </p>
-              <div className="pt-2 font-mono text-xs text-white">
+              <div className="pt-2 font-mono text-xs sm:text-sm text-white">
                 Campus Location: RBTIC Building, IIT Bombay Main Campus
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-zinc-950 p-6 space-y-3 text-xs text-zinc-400">
+            <div className="rounded-2xl border border-white/10 bg-zinc-950 p-6 space-y-3 text-xs sm:text-sm text-zinc-400">
               <div className="flex items-center gap-2 text-white font-mono">
                 <Building className="h-4 w-4 text-white" />
-                <span>Visiting Protocol</span>
+                <span className="font-semibold">Visiting Protocol</span>
               </div>
-              <p>
+              <p className="leading-relaxed">
                 Visitors to the SINE office within IIT Bombay campus must register at the main campus security gate with valid government photo identification. Prior appointment required.
               </p>
             </div>
