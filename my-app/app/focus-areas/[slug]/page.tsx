@@ -47,9 +47,9 @@ export default async function VerticalDetailPage({ params }: Props) {
         <div>
           <Link
             href="/focus-areas"
-            className="group inline-flex items-center gap-2.5 font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors"
+            className="group inline-flex items-center gap-2.5 font-sans text-xs uppercase tracking-wider text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors font-medium"
           >
-            <ArrowLeft className="h-3 w-3 transition-transform group-hover:-translate-x-1" />
+            <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1" />
             <span>Back to All Focus Areas</span>
           </Link>
         </div>
@@ -81,7 +81,7 @@ export default async function VerticalDetailPage({ params }: Props) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
-            <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-white bg-black/40 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/10 backdrop-blur-md">
+            <span className="font-sans text-xs uppercase tracking-wider font-semibold text-white bg-black/60 px-4 py-2 rounded-full border border-white/20 backdrop-blur-md">
               IIT Bombay &amp; SINE Backed Diligence
             </span>
           </div>
@@ -92,7 +92,7 @@ export default async function VerticalDetailPage({ params }: Props) {
           <div className="lg:col-span-8 space-y-24">
             {/* Block 2: What We Believe */}
             <div className="space-y-8">
-              <div className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 font-medium">
+              <div className="font-sans text-xs uppercase tracking-wider text-black/60 dark:text-white/60 font-bold">
                 01 · PERSPECTIVE &amp; WORLDVIEW
               </div>
               <h2 className="font-display font-light text-4xl sm:text-5xl text-black dark:text-white">
@@ -107,7 +107,7 @@ export default async function VerticalDetailPage({ params }: Props) {
 
             {/* Block 3: Where We Are Looking */}
             <div className="space-y-8">
-              <div className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 font-medium">
+              <div className="font-sans text-xs uppercase tracking-wider text-black/60 dark:text-white/60 font-bold">
                 02 · PIPELINE FOCUS
               </div>
               <h2 className="font-display font-light text-4xl sm:text-5xl text-black dark:text-white">
@@ -128,7 +128,7 @@ export default async function VerticalDetailPage({ params }: Props) {
 
             {/* Block 4: What a Fundable Company Looks Like Here */}
             <div className="space-y-8">
-              <div className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 font-medium">
+              <div className="font-sans text-xs uppercase tracking-wider text-black/60 dark:text-white/60 font-bold">
                 03 · THE INVESTMENT BAR
               </div>
               <h2 className="font-display font-light text-4xl sm:text-5xl text-black dark:text-white">
@@ -146,7 +146,7 @@ export default async function VerticalDetailPage({ params }: Props) {
 
             {/* Block 5: What Gets a Fast No */}
             <div className="space-y-8">
-              <div className="font-sans text-[10px] uppercase tracking-[0.2em] text-red-500 font-medium">
+              <div className="font-sans text-xs uppercase tracking-wider text-red-500 font-bold">
                 04 · DISQUALIFYING CONDITIONS
               </div>
               <h2 className="font-display font-light text-4xl sm:text-5xl text-black dark:text-white flex items-center gap-4">
@@ -155,7 +155,7 @@ export default async function VerticalDetailPage({ params }: Props) {
               </h2>
               
               <div className="rounded-3xl border border-red-500/20 bg-red-500/5 p-8 sm:p-12 space-y-6">
-                <p className="font-sans text-[10px] uppercase tracking-[0.2em] font-medium text-red-500/80">
+                <p className="font-sans text-xs uppercase tracking-wider font-semibold text-red-500/90">
                   We publish our disqualifying conditions to cut unqualified inbound, respect founder time, and signal domain rigor.
                 </p>
                 <div className="space-y-6 pt-4 border-t border-red-500/10">
@@ -176,18 +176,18 @@ export default async function VerticalDetailPage({ params }: Props) {
             <div className="rounded-3xl bg-black/5 dark:bg-[#0a0a0a] p-8 space-y-6 border border-black/10 dark:border-white/5">
               <div className="flex items-center gap-3 border-b border-black/10 dark:border-white/10 pb-4">
                 <ShieldCheck className="h-5 w-5 text-black dark:text-white" />
-                <h3 className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/60 dark:text-white/60">
+                <h3 className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-semibold">
                   Ecosystem Reference
                 </h3>
               </div>
-              <p className="font-sans font-light text-sm text-black/60 dark:text-white/60 leading-relaxed">
+              <p className="font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 leading-relaxed">
                 {vertical.ecosystemReference.disclaimer}
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {vertical.ecosystemReference.companies.map((co, idx) => (
                   <span
                     key={idx}
-                    className="rounded-full border border-black/10 dark:border-white/20 bg-white dark:bg-black px-3.5 py-1.5 font-sans text-[10px] uppercase tracking-[0.1em] text-black/80 dark:text-white/80"
+                    className="rounded-full border border-black/10 dark:border-white/20 bg-white dark:bg-black px-3.5 py-1.5 font-sans text-xs uppercase tracking-wider text-black/80 dark:text-white/80 font-medium"
                   >
                     {co}
                   </span>
@@ -199,18 +199,18 @@ export default async function VerticalDetailPage({ params }: Props) {
             <div className="rounded-3xl bg-black/5 dark:bg-[#0a0a0a] p-8 space-y-6 border border-black/10 dark:border-white/5">
               <div className="flex items-center gap-3 border-b border-black/10 dark:border-white/10 pb-4">
                 <Users className="h-5 w-5 text-black dark:text-white" />
-                <h3 className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/60 dark:text-white/60">
+                <h3 className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-semibold">
                   Team Coverage
                 </h3>
               </div>
-              <div className="space-y-6 text-sm">
+              <div className="space-y-6 text-sm sm:text-base">
                 <div className="space-y-2">
-                  <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 block">Investment Team Lead:</span>
-                  <span className="font-sans font-light text-black/80 dark:text-white/80">{vertical.teamCoverage.lead}</span>
+                  <span className="font-sans text-xs uppercase tracking-wider text-black/50 dark:text-white/50 block font-semibold">Investment Team Lead:</span>
+                  <span className="font-sans font-light text-black/90 dark:text-white/90">{vertical.teamCoverage.lead}</span>
                 </div>
                 <div className="space-y-2 pt-4 border-t border-black/5 dark:border-white/5">
-                  <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/40 block">IC &amp; Domain Reviewers:</span>
-                  <span className="font-sans font-light text-black/80 dark:text-white/80 leading-relaxed block">{vertical.teamCoverage.icMembers.join(" · ")}</span>
+                  <span className="font-sans text-xs uppercase tracking-wider text-black/50 dark:text-white/50 block font-semibold">IC &amp; Domain Reviewers:</span>
+                  <span className="font-sans font-light text-black/90 dark:text-white/90 leading-relaxed block">{vertical.teamCoverage.icMembers.join(" · ")}</span>
                 </div>
               </div>
             </div>
