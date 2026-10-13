@@ -7,7 +7,6 @@ import {
   ArrowLeft, 
   ArrowUpRight, 
   CheckCircle2, 
-  AlertOctagon, 
   ShieldCheck, 
   Users
 } from "lucide-react";
@@ -144,30 +143,7 @@ export default async function VerticalDetailPage({ params }: Props) {
               </div>
             </div>
 
-            {/* Block 5: What Gets a Fast No */}
-            <div className="space-y-8">
-              <div className="font-sans text-xs uppercase tracking-wider text-red-500 font-bold">
-                04 · DISQUALIFYING CONDITIONS
-              </div>
-              <h2 className="font-display font-light text-4xl sm:text-5xl text-black dark:text-white flex items-center gap-4">
-                <span>What gets a fast no</span>
-                <AlertOctagon className="h-8 w-8 text-red-500" />
-              </h2>
-              
-              <div className="rounded-3xl border border-red-500/20 bg-red-500/5 p-8 sm:p-12 space-y-6">
-                <p className="font-sans text-xs uppercase tracking-wider font-semibold text-red-500/90">
-                  We publish our disqualifying conditions to cut unqualified inbound, respect founder time, and signal domain rigor.
-                </p>
-                <div className="space-y-6 pt-4 border-t border-red-500/10">
-                  {vertical.fastNo.map((noItem, idx) => (
-                    <div key={idx} className="flex items-start gap-4 text-black/80 dark:text-white/80">
-                      <span className="font-sans text-xs font-bold text-red-500 mt-1">✕</span>
-                      <span className="font-sans font-light text-lg leading-relaxed">{noItem}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+
 
           </div>
           

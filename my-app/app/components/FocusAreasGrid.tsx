@@ -195,7 +195,7 @@ export default function FocusAreasGrid() {
                     </div>
                   </div>
 
-                  {/* Fast No Sneak Peek & Card Link */}
+                  {/* Card Link & Stage Info */}
                   <div className="pt-4 border-t border-[#181f2c] flex items-center justify-between">
                     <span className="font-mono text-[11px] text-zinc-400">
                       Pre-seed & Seed · TRL 4–7

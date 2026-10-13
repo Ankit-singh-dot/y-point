@@ -23,18 +23,8 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Focus Areas", href: "/focus-areas" },
-    { name: "Platform", href: "/platform" },
-    { name: "Lab to Market", href: "/lab-to-market" },
-    { name: "Insights", href: "/insights" },
-    { name: "About", href: "/about" },
-  ];
-
   const drawerLinks = [
     { name: "Focus Areas", href: "/focus-areas" },
-    { name: "Platform", href: "/platform" },
-    { name: "Lab to Market", href: "/lab-to-market" },
     { name: "Insights", href: "/insights" },
     { name: "About", href: "/about" },
     { name: "Apply for Capital", href: "/apply" },
