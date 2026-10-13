@@ -28,10 +28,10 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <div className="relative h-14 sm:h-16 md:h-18 w-auto flex items-center">
                 <Image 
-                  src="/logo.jpeg" 
+                  src="/logo-cropped.png" 
                   alt="Y-Point Logo" 
-                  width={220} 
-                  height={70} 
+                  width={240} 
+                  height={84} 
                   className="object-contain h-full w-auto opacity-95 hover:opacity-100 transition-opacity mix-blend-multiply dark:invert dark:hue-rotate-180 dark:mix-blend-screen" 
                 />
               </div>
