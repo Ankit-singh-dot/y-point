@@ -79,13 +79,13 @@ export default function HeroBento() {
         {/* Top Typography */}
         <motion.div 
           style={{ y: textTopY, opacity: textOpacity }}
-          className="absolute top-[clamp(4.25rem,7.5vh,6rem)] w-full flex justify-center px-4 pointer-events-none select-none z-0"
+          className="absolute top-[clamp(5.5rem,12vh,7.5rem)] w-full flex justify-center px-4 pointer-events-none select-none z-0"
         >
           <motion.h1 
             variants={letterContainer}
             initial="hidden"
             animate="show"
-            className="font-display font-light text-[15vw] sm:text-7xl md:text-8xl lg:text-[clamp(4.5rem,8.5vw,8.25rem)] tracking-tighter text-black dark:text-white leading-none flex overflow-hidden"
+            className="font-display font-extralight md:font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] tracking-tight text-black dark:text-white leading-[1.05] flex overflow-visible py-1"
           >
             {"Y-POINT".split("").map((char, index) => (
               <motion.span key={index} variants={letterAnim} className="inline-block origin-bottom-left">
@@ -119,13 +119,13 @@ export default function HeroBento() {
         {/* Bottom Typography */}
         <motion.div 
           style={{ y: textBottomY, opacity: textOpacity }}
-          className="absolute bottom-[clamp(3.75rem,7vh,5.5rem)] w-full flex flex-col items-center px-4 pointer-events-none select-none z-0"
+          className="absolute bottom-[clamp(3.5rem,8vh,5.5rem)] w-full flex flex-col items-center px-4 pointer-events-none select-none z-0"
         >
           <motion.h2 
             variants={letterContainer}
             initial="hidden"
             animate="show"
-            className="font-display font-light text-[15vw] sm:text-7xl md:text-8xl lg:text-[clamp(4.5rem,8.5vw,8.25rem)] tracking-tighter text-black dark:text-white leading-none flex overflow-hidden"
+            className="font-display font-extralight md:font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] tracking-tight text-black dark:text-white leading-[1.05] flex overflow-visible py-1"
           >
             {"CAPITAL".split("").map((char, index) => (
               <motion.span key={index} variants={letterAnim} className="inline-block origin-bottom-left">
@@ -136,7 +136,7 @@ export default function HeroBento() {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } }}
-            className="font-sans font-semibold text-xs sm:text-sm uppercase tracking-[0.25em] sm:tracking-[0.35em] text-black/60 dark:text-white/60 mt-3 sm:mt-5 text-center"
+            className="font-sans font-medium text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-black/50 dark:text-white/50 mt-3 sm:mt-4 text-center"
           >
             Translational Science Fund
           </motion.p>
