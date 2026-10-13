@@ -1,164 +1,144 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { TRL_STAGES } from "./TrlGraphic";
+import React from "react";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+
+const CONTINUUM_STAGES = [
+  {
+    range: "TRL 1–3",
+    tag: "Academia & Grants",
+    title: "Fundamental Research",
+    focus: "Lab proof-of-concept & scientific papers",
+    capital: "Grants (< ₹2 Cr)",
+    role: "Pre-Venture (SINE incubation)",
+    highlight: false,
+  },
+  {
+    range: "TRL 4–5",
+    tag: "✦ Y-Point Entry Point",
+    title: "Validation & Prototyping",
+    focus: "Validated components & test characterisation",
+    capital: "₹3–5 Cr Pre-Seed & Seed",
+    role: "First Institutional Cheque",
+    highlight: true,
+  },
+  {
+    range: "TRL 6–7",
+    tag: "✦ Follow-On Reserve",
+    title: "Pilots & Manufacturing",
+    focus: "Customer trials & operational qualification",
+    capital: "Pre-Series A (₹10–25 Cr)",
+    role: "~40% Fund Reserve",
+    highlight: true,
+  },
+  {
+    range: "TRL 8–9",
+    tag: "Traditional Growth VC",
+    title: "Commercial Scale",
+    focus: "Repeatable production & market expansion",
+    capital: "Series A & Beyond (> ₹25 Cr)",
+    role: "Growth Syndication",
+    highlight: false,
+  },
+];
 
 export default function TrlBentoRoadmap() {
-  const containerRef = useRef<HTMLElement>(null);
-  const [activeIdx, setActiveIdx] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-  
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
-  });
-
-  // Map scroll progress to active stage index (0 to 3)
-  const activeIdxFloat = useTransform(scrollYProgress, [0, 1], [0, 3.99]);
-
-  // Sync scroll with state
-  useEffect(() => {
-    return activeIdxFloat.on("change", (v) => {
-      setActiveIdx(Math.min(3, Math.floor(v)));
-    });
-  }, [activeIdxFloat]);
-
-  const handleStageSelect = (idx: number) => {
-    setActiveIdx(idx);
-    if (containerRef.current) {
-      const containerTop = containerRef.current.offsetTop;
-      const containerHeight = containerRef.current.offsetHeight;
-      const targetScroll = containerTop + (idx / 3.5) * (containerHeight - window.innerHeight);
-      window.scrollTo({ top: targetScroll, behavior: "smooth" });
-    }
-  };
-
   return (
-    <section 
-      ref={containerRef} 
-      className="relative bg-white dark:bg-[#030303]"
-      style={{ height: isMobile ? "250vh" : "400vh" }}
-    >
-      
-      {/* Sticky Viewport */}
-      <div className="sticky top-0 h-screen w-full flex flex-col justify-center overflow-hidden px-4 sm:px-8 lg:px-12 py-12 sm:py-16">
+    <section id="trl-continuum" className="relative bg-white dark:bg-[#030303] py-16 sm:py-24 lg:py-28 border-t border-black/5 dark:border-white/5">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 space-y-12 sm:space-y-16">
         
-        <div className="relative z-10 max-w-7xl mx-auto w-full">
-          
-          {/* Header & Interactive Scrubber Pills */}
-          <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-black/10 dark:border-white/10 pb-4">
-            <div className="flex items-center gap-3">
-              <span className="font-sans text-xs sm:text-xs uppercase tracking-widest text-black/60 dark:text-white/60 font-semibold">
-                Translational Continuum · TRL 1–9
-              </span>
+        {/* Header: Concise & Punchy */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-10">
+          <div className="max-w-2xl space-y-3 sm:space-y-4">
+            <div className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-3 py-1 text-[11px] sm:text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60 font-semibold">
+              <span>Translational Continuum · TRL 1–9</span>
             </div>
-
-            {/* Stage Selector Pills (Touch-enabled for mobile & desktop) */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
-              {TRL_STAGES.map((stage, idx) => (
-                <button
-                  key={stage.range}
-                  onClick={() => handleStageSelect(idx)}
-                  className={`px-3.5 py-1.5 rounded-full font-sans text-xs sm:text-xs uppercase tracking-wider transition-all whitespace-nowrap shrink-0 ${
-                    activeIdx === idx
-                      ? "bg-black text-white dark:bg-white dark:text-black font-semibold shadow-sm"
-                      : "bg-black/5 text-black/70 dark:bg-white/5 dark:text-white/70 hover:bg-black/10 dark:hover:bg-white/10"
-                  }`}
-                >
-                  {stage.range}
-                  {stage.isYPointActive && (
-                    <span className="ml-1.5 inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  )}
-                </button>
-              ))}
-            </div>
+            <h2 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight text-black dark:text-white leading-[1.1]">
+              Where We Enter. Where We Bridge.
+            </h2>
+            <p className="font-sans font-light text-base sm:text-base text-black/70 dark:text-white/60 leading-relaxed max-w-xl">
+              Traditional venture capital waits for commercial traction. Y-Point enters at TRL 4–7 where the science is proven and translation begins.
+            </p>
           </div>
 
-          {/* Responsive Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-20 items-start">
-            
-            {/* Left: TRL Stage Number Display */}
-            <div className="lg:col-span-5 flex flex-col">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeIdx}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-                  className="space-y-3"
-                >
-                  <div className="flex items-center gap-4">
-                    <h3 className="font-display font-light text-6xl sm:text-7xl lg:text-[7rem] tracking-tighter text-black dark:text-white leading-none">
-                      {TRL_STAGES[activeIdx].range}
-                    </h3>
-                    {TRL_STAGES[activeIdx].isYPointActive && (
-                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 dark:bg-white/10 border border-black/10 dark:border-white/20">
-                        <span className="relative flex h-2 w-2">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                        </span>
-                        <span className="font-sans text-[11px] sm:text-xs font-bold uppercase tracking-wider text-black dark:text-white">
-                          Y-Point Entry Point
-                        </span>
-                      </div>
-                    )}
-                  </div>
+          <Link
+            href="/apply"
+            className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-black/90 dark:text-white/80 hover:text-black dark:hover:text-white transition-colors border-b border-black/20 dark:border-white/20 pb-1 w-max font-medium"
+          >
+            <span>Apply for TRL 4–7 Capital</span>
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        </div>
 
-                  <p className="font-display font-light text-xl sm:text-2xl lg:text-3xl text-black/80 dark:text-white/80">
-                    {TRL_STAGES[activeIdx].label}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
+        {/* Unified 4-Stage Visual Continuum Track (No 400vh Scroll-jack) */}
+        <div className="space-y-4">
+          
+          {/* Visual Highlight Band */}
+          <div className="hidden lg:grid grid-cols-4 gap-4 px-2 text-center text-xs font-mono uppercase tracking-wider">
+            <div className="text-black/40 dark:text-white/40">Lab Discovery</div>
+            <div className="col-span-2 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 font-semibold">
+              ← Y-Point Active Investment Zone (TRL 4–7) →
             </div>
+            <div className="text-black/40 dark:text-white/40">Market Scale</div>
+          </div>
 
-            {/* Right: Detailed Content */}
-            <div className="lg:col-span-7 relative w-full lg:border-l lg:border-black/10 lg:dark:border-white/10 lg:pl-12">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeIdx}
-                  initial={{ opacity: 0, x: 15 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -15 }}
-                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-                  className="space-y-6 sm:space-y-8"
-                >
-                  <p className="font-sans font-light text-base sm:text-lg lg:text-xl text-black/85 dark:text-white/85 leading-relaxed">
-                    {TRL_STAGES[activeIdx].detail}
-                  </p>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 bg-black/[0.02] dark:bg-white/[0.02] p-4 sm:p-6 rounded-2xl border border-black/5 dark:border-white/5">
-                    <div className="space-y-1">
-                      <span className="font-sans text-xs uppercase tracking-wider text-black/50 dark:text-white/50 block font-semibold">Dominant Risk</span>
-                      <span className="font-sans font-medium text-sm text-black dark:text-white block">{TRL_STAGES[activeIdx].risk}</span>
-                    </div>
-                    <div className="space-y-1">
-                      <span className="font-sans text-xs uppercase tracking-wider text-black/50 dark:text-white/50 block font-semibold">Capital Fit</span>
-                      <span className="font-sans font-medium text-sm text-black dark:text-white block">{TRL_STAGES[activeIdx].capital}</span>
-                    </div>
+          {/* 4 Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {CONTINUUM_STAGES.map((stage) => (
+              <div
+                key={stage.range}
+                className={`flex flex-col justify-between rounded-2xl p-5 sm:p-6 transition-all duration-300 relative ${
+                  stage.highlight
+                    ? "bg-emerald-500/[0.03] dark:bg-emerald-500/[0.04] border-2 border-emerald-500/30 dark:border-emerald-400/30 shadow-[0_4px_30px_rgba(16,185,129,0.06)]"
+                    : "bg-black/[0.02] dark:bg-white/[0.02] border border-black/8 dark:border-white/10"
+                }`}
+              >
+                {/* Top Badge & TRL Range */}
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-display font-light text-2xl sm:text-3xl tracking-tight text-black dark:text-white">
+                      {stage.range}
+                    </span>
+                    <span
+                      className={`font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ${
+                        stage.highlight
+                          ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20"
+                          : "bg-black/5 dark:bg-white/5 text-black/50 dark:text-white/50"
+                      }`}
+                    >
+                      {stage.tag}
+                    </span>
                   </div>
 
-                  <div className="space-y-1 pt-4 border-t border-black/5 dark:border-white/5">
-                    <span className="font-sans text-xs uppercase tracking-wider text-black/50 dark:text-white/50 block font-semibold">Who Invests Here</span>
-                    <p className="font-sans font-light text-sm text-black/70 dark:text-white/70">
-                      {TRL_STAGES[activeIdx].whoInvests}
+                  {/* Title & Core Focus */}
+                  <div className="space-y-1.5 pt-1">
+                    <h3 className="font-display font-light text-lg sm:text-xl text-black dark:text-white leading-snug">
+                      {stage.title}
+                    </h3>
+                    <p className="font-sans font-light text-xs sm:text-sm text-black/60 dark:text-white/60 leading-relaxed">
+                      {stage.focus}
                     </p>
                   </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
+                </div>
 
+                {/* Bottom Key Metrics Dock */}
+                <div className="pt-5 mt-5 border-t border-black/5 dark:border-white/5 space-y-2">
+                  <div className="flex items-center justify-between text-xs font-sans">
+                    <span className="text-black/45 dark:text-white/45">Capital Fit</span>
+                    <span className="font-semibold text-black/90 dark:text-white/90">{stage.capital}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs font-sans">
+                    <span className="text-black/45 dark:text-white/45">Role</span>
+                    <span className="font-medium text-black/75 dark:text-white/75">{stage.role}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
 
         </div>
+
       </div>
     </section>
   );

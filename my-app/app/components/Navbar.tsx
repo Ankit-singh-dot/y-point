@@ -23,6 +23,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
   const drawerLinks = [
     { name: "Focus Areas", href: "/focus-areas" },
     { name: "Insights", href: "/insights" },
@@ -36,29 +37,27 @@ export default function Navbar() {
 
   return (
     <>
-      {/* 3 Individual Floating Glassmorphic Islands */}
-      <header className="fixed top-3 sm:top-5 md:top-6 inset-x-0 z-50 px-4 sm:px-6 md:px-8 pointer-events-none">
-        <div className="max-w-7xl mx-auto flex items-center justify-between relative">
+      {/* Seamless Floating Header: Logo Merged Left + Full Navigation Suite Right */}
+      <header className="fixed top-3 sm:top-5 md:top-6 inset-x-0 z-50 px-4 sm:px-8 lg:px-12 pointer-events-none">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
           
-          {/* Island 1 (Left): Individual Brand Logo Island */}
+          {/* Left: Brand Identity (Seamlessly merged with the video, no opaque pill) */}
           <div className="pointer-events-auto flex items-center">
             <Link 
               href="/" 
-              className={`flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full backdrop-blur-2xl border border-black/[0.08] dark:border-white/[0.12] transition-all duration-300 hover:border-black/20 dark:hover:border-white/30 hover:scale-[1.02] active:scale-95 group ${
-                scrolled
-                  ? "bg-white/90 dark:bg-[#080808]/90 shadow-[0_8px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.6)]"
-                  : "bg-white/75 dark:bg-[#080808]/75 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.3)]"
-              }`}
-              aria-label="Home"
+              className="flex items-center group transition-transform hover:scale-[1.02] active:scale-95 py-1"
+              aria-label="Y-Point Home"
             >
-              <div className="relative h-6 sm:h-7 md:h-8 w-auto flex items-center">
+              <div className="relative h-8 sm:h-9 md:h-10 w-auto flex items-center">
                 <Image 
                   src="/logo-transparent.png" 
                   alt="Y-Point Logo" 
-                  width={180} 
-                  height={60} 
-                  className={`object-contain h-full w-auto transition-all ${
-                    mounted && isDark ? "invert hue-rotate-180" : ""
+                  width={200} 
+                  height={70} 
+                  className={`object-contain h-full w-auto transition-all duration-300 ${
+                    scrolled 
+                      ? (mounted && isDark ? "brightness-0 invert" : "") 
+                      : "brightness-0 invert drop-shadow-[0_2px_14px_rgba(0,0,0,0.9)]"
                   }`} 
                   priority
                 />
@@ -66,57 +65,49 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Island 2 (Center): Individual Menu Island (Locked to exact horizontal center) */}
-          <div className="pointer-events-auto absolute left-1/2 -translate-x-1/2 flex items-center">
-            <button
-              onClick={() => setMobileMenuOpen(true)}
-              className={`group flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full backdrop-blur-2xl border border-black/[0.08] dark:border-white/[0.12] transition-all duration-300 hover:border-black/20 dark:hover:border-white/30 hover:scale-[1.03] active:scale-95 ${
-                scrolled
-                  ? "bg-white/90 dark:bg-[#080808]/90 shadow-[0_8px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.6)]"
-                  : "bg-white/75 dark:bg-[#080808]/75 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.3)]"
-              }`}
-              aria-label="Open Navigation Menu"
-            >
-              {/* Swiss-style micro indicator lines */}
-              <div className="flex flex-col gap-[3.5px] items-center justify-center w-3.5">
-                <span className="block h-[1.5px] w-3.5 bg-black/80 dark:bg-white/80 rounded-full transition-all group-hover:scale-x-110" />
-                <span className="block h-[1.5px] w-2.5 bg-black/80 dark:bg-white/80 rounded-full transition-all group-hover:w-3.5" />
-              </div>
-              <span className="text-[11px] sm:text-xs font-sans font-semibold tracking-[0.22em] uppercase text-black/80 dark:text-white/85 group-hover:text-black dark:group-hover:text-white transition-colors">
-                Menu
-              </span>
-            </button>
-          </div>
-
-          {/* Island 3 (Right): Individual Actions Island (Apply CTA + Theme Toggle) */}
+          {/* Right Corner: Only Menu & Theme Toggle */}
           <div className="pointer-events-auto flex items-center">
             <div 
-              className={`flex items-center gap-1.5 sm:gap-2 p-1 sm:p-1.5 pl-1.5 sm:pl-2 rounded-full backdrop-blur-2xl border border-black/[0.08] dark:border-white/[0.12] transition-all duration-300 hover:border-black/20 dark:hover:border-white/30 ${
+              className={`flex items-center gap-1.5 sm:gap-2 p-1 sm:p-1.5 pl-2 sm:pl-2.5 rounded-full backdrop-blur-2xl transition-all duration-500 ${
                 scrolled
-                  ? "bg-white/90 dark:bg-[#080808]/90 shadow-[0_8px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.6)]"
-                  : "bg-white/75 dark:bg-[#080808]/75 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.3)]"
+                  ? "bg-white/90 dark:bg-[#0a0a0a]/90 border border-black/[0.08] dark:border-white/[0.12] shadow-[0_8px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.6)]"
+                  : "bg-black/45 hover:bg-black/60 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
               }`}
             >
-              {/* Apply CTA Capsule */}
-              <Link
-                href="/apply"
-                className="group inline-flex items-center gap-1.5 bg-black dark:bg-white text-white dark:text-black hover:bg-black/85 dark:hover:bg-white/90 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-sans uppercase tracking-[0.16em] font-semibold transition-all active:scale-95 shadow-xs"
+              {/* Menu Trigger Button (Opens full-screen index drawer) */}
+              <button
+                onClick={() => setMobileMenuOpen(true)}
+                className={`group flex items-center gap-2 px-3 py-1.5 rounded-full transition-all active:scale-95 ${
+                  scrolled
+                    ? "hover:bg-black/5 dark:hover:bg-white/10 text-black/80 dark:text-white/85"
+                    : "hover:bg-white/15 text-white/90"
+                }`}
+                aria-label="Open Full Navigation Menu"
               >
-                <span>Apply</span>
-                <ArrowUpRight className="h-3 w-3 sm:h-3.5 sm:w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
-              
+                <div className="flex flex-col gap-1 items-center justify-center w-3.5">
+                  <span className={`block h-[1.5px] w-3.5 rounded-full transition-transform group-hover:scale-x-110 ${scrolled ? "bg-black/80 dark:bg-white/80" : "bg-white"}`} />
+                  <span className={`block h-[1.5px] w-2.5 rounded-full ml-auto transition-all group-hover:w-3.5 ${scrolled ? "bg-black/80 dark:bg-white/80" : "bg-white"}`} />
+                </div>
+                <span className="text-xs font-sans font-semibold tracking-[0.22em] uppercase">
+                  Menu
+                </span>
+              </button>
+
               {/* Theme Toggle Button */}
               {mounted ? (
                 <button 
                   onClick={() => setTheme(isDark ? "light" : "dark")}
-                  className="h-7 w-7 sm:h-8 sm:w-8 rounded-full border border-black/8 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.05] hover:bg-black/8 dark:hover:bg-white/15 flex items-center justify-center transition-all text-black/70 dark:text-white/80 active:scale-90"
+                  className={`h-7 w-7 sm:h-8 sm:w-8 rounded-full flex items-center justify-center transition-all active:scale-90 ${
+                    scrolled
+                      ? "border border-black/8 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.05] hover:bg-black/8 dark:hover:bg-white/15 text-black/70 dark:text-white/80"
+                      : "border border-white/15 bg-white/10 hover:bg-white/20 text-white"
+                  }`}
                   aria-label="Toggle Dark Mode"
                 >
-                  {isDark ? <Sun className="h-3.5 w-3.5 sm:h-3.5 sm:w-3.5" /> : <Moon className="h-3.5 w-3.5 sm:h-3.5 sm:w-3.5" />}
+                  {isDark ? <Sun className="h-3.5 w-3.5" /> : <Moon className="h-3.5 w-3.5" />}
                 </button>
               ) : (
-                <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-full border border-black/8 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.05]" />
+                <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-full border border-white/10 bg-white/5" />
               )}
             </div>
           </div>

@@ -2,7 +2,6 @@ import React from "react";
 import HeroBento from "./components/HeroBento";
 import PositioningBento from "./components/PositioningBento";
 import FocusAreasBento from "./components/FocusAreasBento";
-import TrlBentoRoadmap from "./components/TrlBentoRoadmap";
 import EdgeBento from "./components/EdgeBento";
 import ConversionBento from "./components/ConversionBento";
 
@@ -17,9 +16,6 @@ export default function Home() {
 
       {/* 7.5 & 8 Focus Areas Floating Bento Grid */}
       <FocusAreasBento />
-
-      {/* 11 Lab to Market / TRL 1–9 Interactive Bento Roadmap */}
-      <TrlBentoRoadmap />
 
       {/* 7.6 & 10 The Y-Point Edge Bento: What You Get Beyond the Cheque */}
       <EdgeBento />

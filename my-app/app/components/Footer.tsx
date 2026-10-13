@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ShieldCheck, MapPin, Building2 } from "lucide-react";
+import { ArrowRight, MapPin, Building2 } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Footer() {
@@ -153,35 +153,6 @@ export default function Footer() {
           </div>
         </motion.div>
       </Link>
-
-      {/* Regulatory Bottom Band */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 mt-10 sm:mt-16 lg:mt-24">
-        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12">
-          
-          <div className="max-w-2xl space-y-3">
-            <div className="flex items-center gap-3">
-              <ShieldCheck className="h-5 w-5 text-black/60 dark:text-white/60" />
-              <span className="font-sans font-semibold text-xs sm:text-xs uppercase tracking-[0.2em] text-black/70 dark:text-white/70">
-                SEBI Reg. IN/AIF2/25-26/1937
-              </span>
-            </div>
-            <p className="font-sans font-light text-xs sm:text-xs leading-relaxed text-black/60 dark:text-white/60">
-              Y-Point Venture Capital Fund-I is a scheme of Y-Point Venture Capital Trust, a Category II Alternative Investment Fund registered with the Securities and Exchange Board of India. The Fund is managed by Y-Point Investment Advisors Private Limited (wholly owned by SINE). Nothing on this website constitutes an offer to sell, or a solicitation of an offer to buy, any securities or units of the Fund.
-            </p>
-          </div>
-
-          <div className="flex flex-col md:items-end justify-between gap-4 font-sans text-xs uppercase tracking-[0.2em] text-black/50 dark:text-white/50">
-            <div className="flex flex-wrap gap-6 sm:gap-8">
-              <Link href="/contact" className="hover:text-black dark:hover:text-white transition-colors">Contact</Link>
-              <a href="mailto:compliance@y-point.vc" className="hover:text-black dark:hover:text-white transition-colors">Compliance</a>
-            </div>
-            <div>
-              © 2026 Y-Point Venture Capital
-            </div>
-          </div>
-
-        </div>
-      </div>
 
     </footer>
   );

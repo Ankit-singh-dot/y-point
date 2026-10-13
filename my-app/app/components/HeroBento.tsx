@@ -1,147 +1,94 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useRef, useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
 
 export default function HeroBento() {
-  const containerRef = useRef<HTMLElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-  
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
-
-  // Responsive Transforms
-  // On mobile, video starts wider (84vw) so it doesn't look like a tiny slit surrounded by empty space.
-  // On desktop / big screens, video starts at a refined 28vh height and 40vw width with capped typography,
-  // preventing the video from attaching or sticking to the text on large or wide monitors.
-  const videoHeight = useTransform(scrollYProgress, (v) => {
-    const start = isMobile ? 26 : 28;
-    return `${start + v * (100 - start)}vh`;
-  });
-  const videoWidth = useTransform(scrollYProgress, (v) => {
-    const start = isMobile ? 84 : 40;
-    return `${start + v * (100 - start)}vw`;
-  });
-  const videoRadius = useTransform(scrollYProgress, (v) => {
-    const start = isMobile ? 24 : 48;
-    return `${Math.max(0, start * (1 - v * 1.5))}px`;
-  });
-  
-  // Text translates out of the viewport cleanly and dissolves before the video expands to full viewport
-  const textTopY = useTransform(scrollYProgress, (v) => `${-v * 55}vh`);
-  const textBottomY = useTransform(scrollYProgress, (v) => `${v * 55}vh`);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.35], [1, 0]);
-  
-  // Letter animation variants
-  const letterContainer = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.08,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const letterAnim = {
-    hidden: { opacity: 0, y: 100, rotate: 10 },
-    show: {
-      opacity: 1,
-      y: 0,
-      rotate: 0,
-      transition: {
-        duration: 1.2,
-        ease: [0.16, 1, 0.3, 1] as [number, number, number, number]
-      },
-    },
+  const toggleSound = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
   };
 
   return (
-    <section 
-      ref={containerRef}
-      className="relative w-full bg-[#f4f4f5] dark:bg-[#030303]" 
-      style={{ height: isMobile ? "160vh" : "200vh" }}
-    >
-      <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
-        
-        {/* Top Typography */}
-        <motion.div 
-          style={{ y: textTopY, opacity: textOpacity }}
-          className="absolute top-[clamp(5.5rem,12vh,7.5rem)] w-full flex justify-center px-4 pointer-events-none select-none z-0"
-        >
-          <motion.h1 
-            variants={letterContainer}
-            initial="hidden"
-            animate="show"
-            className="font-display font-extralight md:font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] tracking-tight text-black dark:text-white leading-[1.05] flex overflow-visible py-1"
-          >
-            {"Y-POINT".split("").map((char, index) => (
-              <motion.span key={index} variants={letterAnim} className="inline-block origin-bottom-left">
-                {char}
-              </motion.span>
-            ))}
-          </motion.h1>
-        </motion.div>
+    <section className="relative w-full h-screen h-[100dvh] overflow-hidden bg-black flex items-center justify-center select-none">
+      {/* 100% Screen-Fitted Cinematic Video */}
+      <video
+        ref={videoRef}
+        src="/Y-Point_Film_v2_kinetic_draft.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full h-full object-cover object-center"
+      />
 
-        {/* Center Expanding Cinematic Video */}
-        <motion.div 
-          initial={{ scale: 0.85, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1, transition: { duration: 1.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 0.4 } }}
-          style={{ 
-            height: videoHeight,
-            width: videoWidth,
-            borderRadius: videoRadius,
-          }}
-          className="relative z-10 overflow-hidden shadow-2xl bg-black"
+      {/* Pure Circle Action Suite in Bottom Right (X, Instagram, LinkedIn, Sound) */}
+      <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 z-20 flex items-center gap-2 sm:gap-2.5">
+        {/* 1. X (formerly Twitter) Circle */}
+        <a
+          href="https://x.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="h-9 w-9 sm:h-10 sm:w-10 rounded-full flex items-center justify-center bg-black/50 hover:bg-black/75 backdrop-blur-2xl border border-white/15 hover:border-white/30 text-white/80 hover:text-white transition-all duration-300 hover:scale-110 active:scale-95 shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
+          aria-label="Follow Y-Point on X"
         >
-          <video
-            src="/Y-Point_Film_v2_kinetic_draft.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-90" 
-          />
-        </motion.div>
+          <svg className="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+        </a>
 
-        {/* Bottom Typography */}
-        <motion.div 
-          style={{ y: textBottomY, opacity: textOpacity }}
-          className="absolute bottom-[clamp(3.5rem,8vh,5.5rem)] w-full flex flex-col items-center px-4 pointer-events-none select-none z-0"
+        {/* 2. Instagram Circle */}
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="h-9 w-9 sm:h-10 sm:w-10 rounded-full flex items-center justify-center bg-black/50 hover:bg-black/75 backdrop-blur-2xl border border-white/15 hover:border-white/30 text-white/80 hover:text-white transition-all duration-300 hover:scale-110 active:scale-95 shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
+          aria-label="Follow Y-Point on Instagram"
         >
-          <motion.h2 
-            variants={letterContainer}
-            initial="hidden"
-            animate="show"
-            className="font-display font-extralight md:font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] tracking-tight text-black dark:text-white leading-[1.05] flex overflow-visible py-1"
-          >
-            {"CAPITAL".split("").map((char, index) => (
-              <motion.span key={index} variants={letterAnim} className="inline-block origin-bottom-left">
-                {char}
-              </motion.span>
-            ))}
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } }}
-            className="font-sans font-medium text-xs sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-black/50 dark:text-white/50 mt-3 sm:mt-4 text-center"
-          >
-            Translational Science Fund
-          </motion.p>
-        </motion.div>
+          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+          </svg>
+        </a>
 
+        {/* 3. LinkedIn Circle */}
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="h-9 w-9 sm:h-10 sm:w-10 rounded-full flex items-center justify-center bg-black/50 hover:bg-black/75 backdrop-blur-2xl border border-white/15 hover:border-white/30 text-white/80 hover:text-white transition-all duration-300 hover:scale-110 active:scale-95 shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
+          aria-label="Connect with Y-Point on LinkedIn"
+        >
+          <svg className="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+          </svg>
+        </a>
+
+        {/* Divider */}
+        <div className="h-4 w-[1px] bg-white/20 mx-0.5" />
+
+        {/* 4. Sound Toggle Circle */}
+        <button
+          onClick={toggleSound}
+          className={`h-9 w-9 sm:h-10 sm:w-10 rounded-full flex items-center justify-center backdrop-blur-2xl border transition-all duration-300 hover:scale-110 active:scale-95 shadow-[0_4px_24px_rgba(0,0,0,0.5)] ${
+            isMuted
+              ? "bg-black/50 hover:bg-black/75 border-white/15 hover:border-white/30 text-white/70 hover:text-white"
+              : "bg-emerald-500/20 hover:bg-emerald-500/30 border-emerald-400/40 text-emerald-400"
+          }`}
+          aria-label={isMuted ? "Turn Sound On" : "Turn Sound Off"}
+        >
+          {isMuted ? (
+            <VolumeX className="h-4 w-4" />
+          ) : (
+            <Volume2 className="h-4 w-4" />
+          )}
+        </button>
       </div>
     </section>
   );
