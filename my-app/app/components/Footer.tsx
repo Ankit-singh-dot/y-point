@@ -26,14 +26,16 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-6 sm:space-y-8">
             <div className="flex items-center gap-4">
-              <div className="relative h-14 sm:h-16 md:h-18 w-auto flex items-center">
-                <Image 
-                  src="/logo-cropped.png" 
-                  alt="Y-Point Logo" 
-                  width={240} 
-                  height={84} 
-                  className="object-contain h-full w-auto opacity-95 hover:opacity-100 transition-opacity mix-blend-multiply dark:invert dark:hue-rotate-180 dark:mix-blend-screen" 
-                />
+              <div className="flex items-center px-4 py-2 rounded-2xl bg-white border border-black/10 shadow-xs">
+                <div className="relative h-10 sm:h-12 md:h-14 w-auto flex items-center">
+                  <Image 
+                    src="/logo-transparent.png" 
+                    alt="Y-Point Logo" 
+                    width={220} 
+                    height={75} 
+                    className="object-contain h-full w-auto opacity-95 hover:opacity-100 transition-opacity" 
+                  />
+                </div>
               </div>
             </div>
 

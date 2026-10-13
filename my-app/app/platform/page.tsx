@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, AlertOctagon } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function PlatformPage() {
@@ -218,48 +218,6 @@ export default function PlatformPage() {
           </motion.div>
 
         </div>
-
-        {/* Section 10.6 What We Ask In Return */}
-        <motion.div 
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-          className="rounded-3xl bg-black/5 dark:bg-[#0a0a0a] p-12 sm:p-24 space-y-16"
-        >
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-8 border-b border-black/10 dark:border-white/10 pb-8">
-            <div className="space-y-4 max-w-xl">
-              <div className="flex items-center gap-3">
-                <AlertOctagon className="h-6 w-6 text-black dark:text-white" />
-                <h2 className="font-display font-light text-3xl sm:text-5xl text-black dark:text-white">
-                  What we ask in return
-                </h2>
-              </div>
-              <p className="font-sans font-light text-sm sm:text-base text-black/60 dark:text-white/60">
-                Unusual, and non-negotiable. Obligations run in both directions.
-              </p>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-            <div className="space-y-2">
-              <span className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-bold">Bad news early</span>
-              <p className="font-sans font-light text-sm sm:text-base text-black/80 dark:text-white/80 leading-relaxed">We have never once been able to help more by hearing about a problem later.</p>
-            </div>
-            <div className="space-y-2">
-              <span className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-bold">Technical honesty</span>
-              <p className="font-sans font-light text-sm sm:text-base text-black/80 dark:text-white/80 leading-relaxed">Tell us what is not working. We have already assumed something is.</p>
-            </div>
-            <div className="space-y-2">
-              <span className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-bold">Reporting we can use</span>
-              <p className="font-sans font-light text-sm sm:text-base text-black/80 dark:text-white/80 leading-relaxed">A short, regular, truthful update beats a polished quarterly deck every single time.</p>
-            </div>
-            <div className="space-y-2">
-              <span className="font-sans text-xs uppercase tracking-wider text-black/70 dark:text-white/70 font-bold">Respect the ecosystem</span>
-              <p className="font-sans font-light text-sm sm:text-base text-black/80 dark:text-white/80 leading-relaxed">Treat the ecosystem as a resource rather than an entitlement. It was built over two decades.</p>
-            </div>
-          </div>
-        </motion.div>
 
         {/* CTA */}
         <motion.div 

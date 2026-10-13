@@ -25,12 +25,12 @@ export default function Navbar() {
 
 
   const drawerLinks = [
+    { name: "About us", href: "/about" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Team", href: "/team" },
     { name: "Focus Areas", href: "/focus-areas" },
-    { name: "Insights", href: "/insights" },
-    { name: "About", href: "/about" },
-    { name: "Apply for Capital", href: "/apply" },
-    { name: "Institutional (LPs)", href: "/institutional" },
-    { name: "Contact & Routed Inboxes", href: "/contact" },
+    { name: "Content", href: "/insights" },
+    { name: "Apply for funding", href: "/apply" },
   ];
 
   const isDark = theme === "dark";
@@ -41,26 +41,24 @@ export default function Navbar() {
       <header className="fixed top-3 sm:top-5 md:top-6 inset-x-0 z-50 px-4 sm:px-8 lg:px-12 pointer-events-none">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           
-          {/* Left: Brand Identity (Seamlessly merged with the video, no opaque pill) */}
+          {/* Left: Brand Identity (Original logo colors preserved 100% across all scenes) */}
           <div className="pointer-events-auto flex items-center">
             <Link 
               href="/" 
-              className="flex items-center group transition-transform hover:scale-[1.02] active:scale-95 py-1"
+              className="flex items-center group transition-transform hover:scale-[1.02] active:scale-95"
               aria-label="Y-Point Home"
             >
-              <div className="relative h-8 sm:h-9 md:h-10 w-auto flex items-center">
-                <Image 
-                  src="/logo-transparent.png" 
-                  alt="Y-Point Logo" 
-                  width={200} 
-                  height={70} 
-                  className={`object-contain h-full w-auto transition-all duration-300 ${
-                    scrolled 
-                      ? (mounted && isDark ? "brightness-0 invert" : "") 
-                      : "brightness-0 invert drop-shadow-[0_2px_14px_rgba(0,0,0,0.9)]"
-                  }`} 
-                  priority
-                />
+              <div className="flex items-center px-3 sm:px-3.5 py-1.5 rounded-full bg-white/95 dark:bg-white/95 backdrop-blur-xl border border-black/10 dark:border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.12)]">
+                <div className="relative h-7 sm:h-7.5 md:h-8 w-auto flex items-center">
+                  <Image 
+                    src="/logo-transparent.png" 
+                    alt="Y-Point Logo" 
+                    width={180} 
+                    height={60} 
+                    className="object-contain h-full w-auto" 
+                    priority
+                  />
+                </div>
               </div>
             </Link>
           </div>
@@ -115,9 +113,9 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Full Screen Overlay Menu */}
+      {/* Full Screen Overlay Menu - ONLY The 6 Requested Items */}
       <div 
-        className={`fixed inset-0 z-[60] bg-white/98 dark:bg-[#050505]/98 backdrop-blur-2xl transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-center px-6 sm:px-16 lg:px-24 ${
+        className={`fixed inset-0 z-[60] bg-white/98 dark:bg-[#050505]/98 backdrop-blur-3xl transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-center px-6 sm:px-16 lg:px-24 ${
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -129,36 +127,21 @@ export default function Navbar() {
           <X className="h-6 w-6 sm:h-7 sm:w-7" />
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto w-full">
-          <div className="flex flex-col space-y-2.5 sm:space-y-5">
-            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-black/40 dark:text-white/40 mb-2 block font-medium">
-              Navigation Index · SINE IIT Bombay
-            </span>
-            {drawerLinks.map((item, idx) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="group flex items-center gap-4 text-2xl sm:text-4xl lg:text-5xl font-display font-light text-black/40 hover:text-black dark:text-white/40 dark:hover:text-white transition-colors"
-                style={{ transitionDelay: mobileMenuOpen ? `${idx * 40}ms` : '0ms' }}
-              >
-                <span>{item.name}</span>
-              </Link>
-            ))}
-          </div>
-          
-          <div className="hidden md:flex flex-col justify-end text-sm font-sans font-light text-black/50 dark:text-white/40 space-y-8 pb-4 border-l border-black/5 dark:border-white/5 pl-12">
-            <div>
-              <p className="text-black/80 dark:text-white/80 uppercase tracking-widest mb-2 font-medium text-xs">Headquarters</p>
-              <p>SINE, 5th Floor, RBTIC Building</p>
-              <p>IIT Bombay, Powai, Mumbai 400076</p>
-            </div>
-            <div>
-              <p className="text-black/80 dark:text-white/80 uppercase tracking-widest mb-2 font-medium text-xs">Direct Contact</p>
-              <p className="hover:text-black dark:hover:text-white cursor-pointer transition-colors">contact@y-point.vc</p>
-              <p className="hover:text-black dark:hover:text-white cursor-pointer transition-colors">ir@y-point.vc</p>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto w-full flex flex-col items-start justify-center space-y-4 sm:space-y-6">
+          {drawerLinks.map((item, idx) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="group flex items-baseline gap-4 sm:gap-6 text-3xl sm:text-5xl lg:text-6xl font-display font-light text-black/40 hover:text-black dark:text-white/40 dark:hover:text-white transition-all duration-300 hover:translate-x-3"
+              style={{ transitionDelay: mobileMenuOpen ? `${idx * 40}ms` : '0ms' }}
+            >
+              <span className="font-mono text-xs sm:text-sm tracking-widest text-black/25 dark:text-white/25 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                0{idx + 1}
+              </span>
+              <span>{item.name}</span>
+            </Link>
+          ))}
         </div>
       </div>
     </>

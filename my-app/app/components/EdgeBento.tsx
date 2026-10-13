@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowUpRight, AlertOctagon } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PILLARS_DATA } from "./EdgePillars";
 
@@ -140,60 +140,7 @@ export default function EdgeBento() {
         </div>
       </div>
 
-      {/* What We Ask In Return Section */}
-      <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 py-14 sm:py-24 lg:py-32 border-t border-black/5 dark:border-white/5 bg-white dark:bg-[#030303]">
-        <div className="space-y-3 sm:space-y-4 mb-10 sm:mb-16 max-w-3xl">
-          <div className="flex items-center gap-3">
-            <AlertOctagon className="h-5 w-5 sm:h-6 sm:w-6 text-black/80 dark:text-white" />
-            <h3 className="font-display font-light text-2xl sm:text-4xl lg:text-5xl text-black dark:text-white">
-              What We Ask In Return
-            </h3>
-          </div>
-          <p className="font-sans font-light text-sm sm:text-base text-black/60 dark:text-white/60 leading-relaxed">
-            Unusual, and non-negotiable. We believe obligations run in both directions.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
-          
-          <div className="space-y-2 sm:space-y-3 p-4 sm:p-0 rounded-xl bg-black/[0.02] sm:bg-transparent dark:bg-white/[0.02] sm:dark:bg-transparent">
-            <span className="font-sans text-xs sm:text-xs uppercase tracking-widest text-black/60 dark:text-white/50 font-bold block">
-              01 Bad news early
-            </span>
-            <p className="font-sans font-light text-sm text-black/80 dark:text-white/80 leading-relaxed">
-              We have never once been able to help more by hearing about a problem later.
-            </p>
-          </div>
-
-          <div className="space-y-2 sm:space-y-3 p-4 sm:p-0 rounded-xl bg-black/[0.02] sm:bg-transparent dark:bg-white/[0.02] sm:dark:bg-transparent">
-            <span className="font-sans text-xs sm:text-xs uppercase tracking-widest text-black/60 dark:text-white/50 font-bold block">
-              02 Technical honesty
-            </span>
-            <p className="font-sans font-light text-sm text-black/80 dark:text-white/80 leading-relaxed">
-              Tell us what is not working. We have already assumed something is.
-            </p>
-          </div>
-
-          <div className="space-y-2 sm:space-y-3 p-4 sm:p-0 rounded-xl bg-black/[0.02] sm:bg-transparent dark:bg-white/[0.02] sm:dark:bg-transparent">
-            <span className="font-sans text-xs sm:text-xs uppercase tracking-widest text-black/60 dark:text-white/50 font-bold block">
-              03 Usable reporting
-            </span>
-            <p className="font-sans font-light text-sm text-black/80 dark:text-white/80 leading-relaxed">
-              A short, regular, truthful update beats a polished quarterly deck every time.
-            </p>
-          </div>
-
-          <div className="space-y-2 sm:space-y-3 p-4 sm:p-0 rounded-xl bg-black/[0.02] sm:bg-transparent dark:bg-white/[0.02] sm:dark:bg-transparent">
-            <span className="font-sans text-xs sm:text-xs uppercase tracking-widest text-black/60 dark:text-white/50 font-bold block">
-              04 Respect ecosystem
-            </span>
-            <p className="font-sans font-light text-sm text-black/80 dark:text-white/80 leading-relaxed">
-              Treat the ecosystem as a resource rather than an entitlement. It took two decades to build.
-            </p>
-          </div>
-
-        </div>
-      </div>
 
     </section>
   );

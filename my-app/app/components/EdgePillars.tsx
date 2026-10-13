@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ShieldCheck, Microscope, Users2, Building, AlertOctagon } from "lucide-react";
+import { ArrowUpRight, ShieldCheck, Microscope, Users2, Building } from "lucide-react";
 
 export const PILLARS_DATA = [
   {
@@ -101,57 +101,6 @@ export default function EdgePillars() {
               </div>
             );
           })}
-        </div>
-
-        {/* What We Ask In Return (Section 10.6) */}
-        <div className="rounded-2xl border border-[#242d40] bg-[#0b0d13] p-8 sm:p-12 relative overflow-hidden">
-          <div className="flex items-center gap-3 mb-6">
-            <AlertOctagon className="h-5 w-5 text-[#f59e0b]" />
-            <h3 className="font-serif text-2xl font-bold text-white">
-              What We Ask In Return
-            </h3>
-          </div>
-          <p className="text-xs font-mono uppercase tracking-wider text-zinc-400 mb-6">
-            Unusual, and non-negotiable. We believe obligations run in both directions.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-xl border border-[#1b2230] bg-[#08090c] p-5 space-y-2">
-              <span className="font-mono text-xs uppercase tracking-wider text-[#00e5a3] font-bold">
-                01 Bad news early
-              </span>
-              <p className="text-xs text-zinc-300 leading-relaxed">
-                We have never once been able to help more by hearing about a problem later.
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-[#1b2230] bg-[#08090c] p-5 space-y-2">
-              <span className="font-mono text-xs uppercase tracking-wider text-[#00e5a3] font-bold">
-                02 Technical honesty
-              </span>
-              <p className="text-xs text-zinc-300 leading-relaxed">
-                Tell us what is not working. We have already assumed something is.
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-[#1b2230] bg-[#08090c] p-5 space-y-2">
-              <span className="font-mono text-xs uppercase tracking-wider text-[#00e5a3] font-bold">
-                03 Usable reporting
-              </span>
-              <p className="text-xs text-zinc-300 leading-relaxed">
-                A short, regular, truthful update beats a polished quarterly deck every time.
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-[#1b2230] bg-[#08090c] p-5 space-y-2">
-              <span className="font-mono text-xs uppercase tracking-wider text-[#00e5a3] font-bold">
-                04 Respect the ecosystem
-              </span>
-              <p className="text-xs text-zinc-300 leading-relaxed">
-                Treat the ecosystem as a resource rather than an entitlement. It took two decades to build.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
