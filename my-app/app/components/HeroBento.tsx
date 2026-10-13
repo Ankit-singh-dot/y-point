@@ -22,24 +22,26 @@ export default function HeroBento() {
   });
 
   // Responsive Transforms
-  // On mobile, video starts wider (84vw) so it doesn't look like a tiny slit surrounded by empty space
+  // On mobile, video starts wider (84vw) so it doesn't look like a tiny slit surrounded by empty space.
+  // On desktop / big screens, video starts at a refined 28vh height and 40vw width with capped typography,
+  // preventing the video from attaching or sticking to the text on large or wide monitors.
   const videoHeight = useTransform(scrollYProgress, (v) => {
-    const start = isMobile ? 26 : 32;
+    const start = isMobile ? 26 : 28;
     return `${start + v * (100 - start)}vh`;
   });
   const videoWidth = useTransform(scrollYProgress, (v) => {
-    const start = isMobile ? 84 : 44;
+    const start = isMobile ? 84 : 40;
     return `${start + v * (100 - start)}vw`;
   });
   const videoRadius = useTransform(scrollYProgress, (v) => {
-    const start = isMobile ? 24 : 56;
-    return `${Math.max(0, start * (1 - v))}px`;
+    const start = isMobile ? 24 : 48;
+    return `${Math.max(0, start * (1 - v * 1.5))}px`;
   });
   
-  // Text translates out of the viewport as user scrolls
-  const textTopY = useTransform(scrollYProgress, (v) => `${-v * 45}vh`);
-  const textBottomY = useTransform(scrollYProgress, (v) => `${v * 45}vh`);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.45], [1, 0]);
+  // Text translates out of the viewport cleanly and dissolves before the video expands to full viewport
+  const textTopY = useTransform(scrollYProgress, (v) => `${-v * 55}vh`);
+  const textBottomY = useTransform(scrollYProgress, (v) => `${v * 55}vh`);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.35], [1, 0]);
   
   // Letter animation variants
   const letterContainer = {
@@ -77,13 +79,13 @@ export default function HeroBento() {
         {/* Top Typography */}
         <motion.div 
           style={{ y: textTopY, opacity: textOpacity }}
-          className="absolute top-[10vh] sm:top-[12vh] w-full flex justify-center px-4"
+          className="absolute top-[clamp(4.25rem,7.5vh,6rem)] w-full flex justify-center px-4 pointer-events-none select-none z-0"
         >
           <motion.h1 
             variants={letterContainer}
             initial="hidden"
             animate="show"
-            className="font-display font-light text-[16vw] sm:text-7xl md:text-8xl lg:text-[9vw] tracking-tighter text-black dark:text-white leading-none flex overflow-hidden"
+            className="font-display font-light text-[15vw] sm:text-7xl md:text-8xl lg:text-[clamp(4.5rem,8.5vw,8.25rem)] tracking-tighter text-black dark:text-white leading-none flex overflow-hidden"
           >
             {"Y-POINT".split("").map((char, index) => (
               <motion.span key={index} variants={letterAnim} className="inline-block origin-bottom-left">
@@ -95,8 +97,8 @@ export default function HeroBento() {
 
         {/* Center Expanding Cinematic Video */}
         <motion.div 
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1, transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 0.5 } }}
+          initial={{ scale: 0.85, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1, transition: { duration: 1.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 0.4 } }}
           style={{ 
             height: videoHeight,
             width: videoWidth,
@@ -117,13 +119,13 @@ export default function HeroBento() {
         {/* Bottom Typography */}
         <motion.div 
           style={{ y: textBottomY, opacity: textOpacity }}
-          className="absolute bottom-[10vh] sm:bottom-[12vh] w-full flex flex-col items-center px-4"
+          className="absolute bottom-[clamp(3.75rem,7vh,5.5rem)] w-full flex flex-col items-center px-4 pointer-events-none select-none z-0"
         >
           <motion.h2 
             variants={letterContainer}
             initial="hidden"
             animate="show"
-            className="font-display font-light text-[16vw] sm:text-7xl md:text-8xl lg:text-[9vw] tracking-tighter text-black dark:text-white leading-none flex overflow-hidden"
+            className="font-display font-light text-[15vw] sm:text-7xl md:text-8xl lg:text-[clamp(4.5rem,8.5vw,8.25rem)] tracking-tighter text-black dark:text-white leading-none flex overflow-hidden"
           >
             {"CAPITAL".split("").map((char, index) => (
               <motion.span key={index} variants={letterAnim} className="inline-block origin-bottom-left">
@@ -134,7 +136,7 @@ export default function HeroBento() {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } }}
-            className="font-sans font-semibold text-xs sm:text-sm uppercase tracking-[0.25em] sm:tracking-[0.35em] text-black/60 dark:text-white/60 mt-4 sm:mt-6 text-center"
+            className="font-sans font-semibold text-xs sm:text-sm uppercase tracking-[0.25em] sm:tracking-[0.35em] text-black/60 dark:text-white/60 mt-3 sm:mt-5 text-center"
           >
             Translational Science Fund
           </motion.p>
