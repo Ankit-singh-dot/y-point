@@ -44,27 +44,57 @@ export default function FocusAreasHub() {
           className="space-y-6 sm:space-y-8 max-w-5xl"
         >
           <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-3.5 py-1 text-[11px] sm:text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
-            <span>Sector Mandates · Portfolio Concentration</span>
+            <span>Investment Mandate · The Six Sectors</span>
           </motion.div>
 
           <motion.h1 variants={fadeInUp} className="font-display font-light text-4xl sm:text-6xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1]">
             WHERE WE INVEST.
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="font-display font-light text-xl sm:text-3xl lg:text-4xl text-black/40 dark:text-white/40">
-            Six sectors. One common condition: the hard part is the technology, and it has been proven but not yet productised.
+          <motion.p variants={fadeInUp} className="font-display font-light text-xl sm:text-2xl lg:text-3xl text-black/50 dark:text-white/50 max-w-3xl">
+            Six technology domains. One condition: proven science ready for productisation.
           </motion.p>
 
-          <motion.div variants={fadeInUp} className="max-w-3xl space-y-4 sm:space-y-6 pt-6 sm:pt-10 border-l border-black/10 dark:border-white/20 pl-4 sm:pl-10 text-black/70 dark:text-white/70 font-sans font-light text-base sm:text-lg leading-relaxed">
-            <p>
-              We organise around domains rather than business models, because deep tech companies rarely fit a model at the point we meet them. A team with a novel material may end up selling a component, a licence or a finished system, and which of those it becomes is often the most consequential decision of the first three years. We want to be in the room for it.
-            </p>
-            <p>
-              Each page states what we believe about the sector, what we are actively looking for, and the bar a company needs to clear. We have also written down what gets a fast no. We would rather lose a meeting than waste a founder&apos;s month.
-            </p>
-            <p className="font-sans text-xs uppercase tracking-wider font-semibold text-black/50 dark:text-white/50 pt-2">
-              No single sector will exceed roughly a fifth of the portfolio (~20% limit). We are building a concentrated fund, not an index.
-            </p>
+          {/* Compiled Fund Tenets: 3 Crisp High-Impact Pillars */}
+          <motion.div 
+            variants={fadeInUp} 
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 sm:pt-6 border-t border-black/10 dark:border-white/10"
+          >
+            <div className="rounded-2xl border border-black/8 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] p-5 space-y-2">
+              <span className="font-mono text-[11px] uppercase tracking-wider text-black/40 dark:text-white/40 block font-medium">
+                01 · Stage & Readiness
+              </span>
+              <p className="font-sans font-semibold text-sm text-black/90 dark:text-white/90">
+                TRL 4–7 · Pre-Seed & Seed
+              </p>
+              <p className="font-sans font-light text-xs text-black/60 dark:text-white/60 leading-relaxed">
+                Backing hard technology proven in labs, scaling toward first productisation.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-black/8 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] p-5 space-y-2">
+              <span className="font-mono text-[11px] uppercase tracking-wider text-black/40 dark:text-white/40 block font-medium">
+                02 · Discipline
+              </span>
+              <p className="font-sans font-semibold text-sm text-black/90 dark:text-white/90">
+                ≤ 20% Sector Limit
+              </p>
+              <p className="font-sans font-light text-xs text-black/60 dark:text-white/60 leading-relaxed">
+                Concentrated high-conviction portfolio. We build deep conviction, not a broad index.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-black/8 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] p-5 space-y-2">
+              <span className="font-mono text-[11px] uppercase tracking-wider text-black/40 dark:text-white/40 block font-medium">
+                03 · Architecture
+              </span>
+              <p className="font-sans font-semibold text-sm text-black/90 dark:text-white/90">
+                Domain-First Approach
+              </p>
+              <p className="font-sans font-light text-xs text-black/60 dark:text-white/60 leading-relaxed">
+                Organised by technical physics before commercial business models settle.
+              </p>
+            </div>
           </motion.div>
         </motion.div>
 
@@ -108,33 +138,43 @@ export default function FocusAreasHub() {
 
                 {/* Card Body */}
                 <div className="flex flex-col space-y-6">
-                  <div className="space-y-4">
-                    <h2 className="font-display font-light text-3xl sm:text-4xl text-black dark:text-white group-hover:text-black/60 dark:group-hover:text-white/60 transition-colors">
+                  <div className="space-y-3">
+                    <h2 className="font-display font-light text-2xl sm:text-3xl lg:text-4xl text-black dark:text-white group-hover:text-black/60 dark:group-hover:text-white/60 transition-colors">
                       {vert.name}
                     </h2>
-                    <p className="font-display font-light text-xl text-black/60 dark:text-white/60">
+                    <p className="font-display font-light text-lg sm:text-xl text-black/70 dark:text-white/70 leading-relaxed">
                       &ldquo;{vert.oneLineThesis}&rdquo;
-                    </p>
-                    <p className="font-sans font-light text-base text-black/70 dark:text-white/70 leading-relaxed">
-                      {vert.whatWeBelieve[0]}
                     </p>
                   </div>
 
-                  <div className="space-y-6 pt-6 border-t border-black/10 dark:border-white/10">
-                    <div className="rounded-xl border border-red-500/20 bg-red-500/5 p-4 space-y-2">
-                      <span className="font-sans text-xs font-bold uppercase tracking-wider text-red-500 dark:text-red-400 block">Fast No</span>
-                      <span className="font-sans font-light text-sm text-black/80 dark:text-white/80 line-clamp-2 leading-relaxed">{vert.fastNo[0]}</span>
+                  {/* Scannable Active Inquiries (Compiled, replacing repetitive paragraphs) */}
+                  <div className="space-y-2 pt-2">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-black/40 dark:text-white/40 block font-medium">
+                      Active Inquiries
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {vert.whereWeAreLooking.slice(0, 3).map((item, idx) => (
+                        <span 
+                          key={idx}
+                          className="inline-flex items-center px-3 py-1 rounded-full text-xs font-sans font-light bg-black/[0.03] dark:bg-white/[0.04] border border-black/8 dark:border-white/10 text-black/75 dark:text-white/75"
+                        >
+                          {item}
+                        </span>
+                      ))}
                     </div>
+                  </div>
 
-                    <div className="flex justify-end">
-                      <Link
-                        href={`/focus-areas/${vert.slug}`}
-                        className="inline-flex items-center gap-3 font-sans text-xs sm:text-sm uppercase tracking-wider text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors font-semibold"
-                      >
-                        <span>Read Thesis</span>
-                        <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                      </Link>
-                    </div>
+                  <div className="flex items-center justify-between pt-5 border-t border-black/10 dark:border-white/10">
+                    <span className="font-mono text-xs text-black/40 dark:text-white/40 tracking-wider uppercase">
+                      TRL 4–7 · Pre-seed & Seed
+                    </span>
+                    <Link
+                      href={`/focus-areas/${vert.slug}`}
+                      className="inline-flex items-center gap-2 font-sans text-xs sm:text-sm uppercase tracking-wider text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors font-semibold"
+                    >
+                      <span>Read Thesis</span>
+                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </Link>
                   </div>
                 </div>
               </motion.div>
