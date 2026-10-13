@@ -117,7 +117,7 @@ export default function Navbar() {
               </Link>
               
               {/* Theme Toggle Button */}
-              {mounted && (
+              {mounted ? (
                 <button 
                   onClick={() => setTheme(isDark ? "light" : "dark")}
                   className="h-7 w-7 sm:h-8 sm:w-8 rounded-full border border-black/8 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.05] hover:bg-black/8 dark:hover:bg-white/15 flex items-center justify-center transition-all text-black/70 dark:text-white/80 active:scale-90"
@@ -125,6 +125,8 @@ export default function Navbar() {
                 >
                   {isDark ? <Sun className="h-3.5 w-3.5 sm:h-3.5 sm:w-3.5" /> : <Moon className="h-3.5 w-3.5 sm:h-3.5 sm:w-3.5" />}
                 </button>
+              ) : (
+                <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-full border border-black/8 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.05]" />
               )}
             </div>
           </div>
