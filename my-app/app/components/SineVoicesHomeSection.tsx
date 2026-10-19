@@ -79,10 +79,9 @@ export default function SineVoicesHomeSection() {
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-black/10 dark:border-white/10 pb-6">
-          <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.2em] font-bold">
-              <span className="h-2 w-2 rounded-full bg-red-600 animate-pulse" />
-              <span>Official Video Podcast Series · SINE Voices</span>
+          <div className="space-y-3">
+            <div className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400 font-medium">
+              SINE Voices · Video Podcast Series
             </div>
             <h2 className="font-display font-light text-3xl sm:text-4xl md:text-5xl text-[#0A0A0A] dark:text-white tracking-tight leading-tight">
               Signal from the Lab
@@ -97,14 +96,14 @@ export default function SineVoicesHomeSection() {
               href={playlistUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 rounded-full bg-red-600 hover:bg-red-700 text-white font-mono text-xs uppercase tracking-wider font-semibold transition-all inline-flex items-center gap-2 shadow-sm"
+              className="px-5 py-2.5 rounded-full bg-black text-white dark:bg-white dark:text-black font-sans text-xs uppercase tracking-[0.18em] font-semibold transition-all hover:opacity-90 inline-flex items-center gap-2 shadow-sm"
             >
               <span>Play All on YouTube</span>
               <ExternalLink className="h-3.5 w-3.5" />
             </a>
             <Link
               href="/insights"
-              className="px-4 py-2 rounded-full border border-black/15 dark:border-white/15 hover:border-[#00E5A3] font-mono text-xs uppercase tracking-wider text-zinc-700 dark:text-zinc-300 transition-all inline-flex items-center gap-1.5"
+              className="px-5 py-2.5 rounded-full border border-black/15 dark:border-white/15 hover:border-black dark:hover:border-white font-sans text-xs uppercase tracking-[0.18em] text-zinc-700 dark:text-zinc-300 transition-all inline-flex items-center gap-1.5 font-medium"
             >
               <span>Full Content Hub</span>
               <ArrowUpRight className="h-3.5 w-3.5" />
@@ -128,18 +127,18 @@ export default function SineVoicesHomeSection() {
             </div>
 
             {/* Active Episode Details */}
-            <div className="p-5 rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#0c0f16] space-y-2 shadow-sm">
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <span className="font-mono text-xs font-bold text-[#0D7377] dark:text-[#00E5A3] bg-[#0D7377]/10 dark:bg-[#00E5A3]/10 px-2.5 py-0.5 rounded-full">
+            <div className="p-6 rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#0c0f16] space-y-3 shadow-sm">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-black/5 dark:border-white/5 pb-2.5">
+                <span className="font-mono text-xs uppercase tracking-[0.18em] text-zinc-500 dark:text-zinc-400 font-semibold">
                   {activeVideo.epNumber} · {activeVideo.category}
                 </span>
                 <a
                   href={`https://www.youtube.com/watch?v=${activeVideo.videoId}&list=PLDKsKSD5DcTIzCGj3IH8mOKo5nLUoC-XM`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-[11px] text-zinc-500 hover:text-red-600 inline-flex items-center gap-1 transition-colors"
+                  className="font-mono text-[11px] text-zinc-500 hover:text-black dark:hover:text-white inline-flex items-center gap-1 transition-colors"
                 >
-                  <span>Watch directly on YouTube</span>
+                  <span>Watch on YouTube</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </div>
