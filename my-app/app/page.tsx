@@ -1,6 +1,7 @@
 import React from "react";
 import HeroBento from "./components/HeroBento";
 import FocusAreasStackingBento from "./components/FocusAreasStackingBento";
+import SineVoicesHomeSection from "./components/SineVoicesHomeSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,9 @@ export default function Home() {
 
       {/* 2. Six Deep Tech Focus Areas with Card-Over-Card Stacking Scroll Physics */}
       <FocusAreasStackingBento />
+
+      {/* 3. Official SINE Voices YouTube Video Podcast Theater */}
+      <SineVoicesHomeSection />
     </div>
   );
 }
