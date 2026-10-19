@@ -75,10 +75,10 @@ export default function PlatformPage() {
         >
           <motion.div style={{ y: imageY, scale: imageScale }} className="absolute inset-0 origin-bottom">
             <Image
-              src="/Midjourney_  Painting depicts human and robotic hands reaching, commentary on AI_.jpeg"
-              alt="Humanity Amplified by Technology"
+              src="/sectors/advanced-manufacturing.jpg"
+              alt="Advanced manufacturing and precision automation"
               fill
-              className="object-cover opacity-80 mix-blend-screen"
+              className="object-cover opacity-80"
               priority
             />
           </motion.div>
