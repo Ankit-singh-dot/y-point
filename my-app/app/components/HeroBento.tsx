@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { Volume2, VolumeX } from "lucide-react";
+import Link from "next/link";
+import { Volume2, VolumeX, ArrowUpRight } from "lucide-react";
 
 export default function HeroBento() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -16,7 +17,7 @@ export default function HeroBento() {
 
   return (
     <section className="relative w-full h-screen h-[100dvh] overflow-hidden bg-black flex items-center justify-center select-none">
-      {/* 100% Screen-Fitted Cinematic Video */}
+      {/* 100% Screen-Fitted Cinematic Video (Pure, Unobstructed) */}
       <video
         ref={videoRef}
         src="/Y-Point_Film_v2_kinetic_draft.mp4"
@@ -27,9 +28,22 @@ export default function HeroBento() {
         className="w-full h-full object-cover object-center"
       />
 
+      {/* Subtle Vignette for Bottom Interface Readability */}
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
+
+      {/* Single Pristine Action: "Apply for Funding" Button */}
+      <div className="absolute bottom-10 sm:bottom-14 inset-x-0 z-20 flex justify-center pointer-events-auto">
+        <Link
+          href="/apply"
+          className="group px-8 py-3.5 sm:px-9 sm:py-4 rounded-full bg-white hover:bg-[#00E5A3] text-black font-sans text-xs sm:text-sm uppercase tracking-[0.22em] font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_8px_32px_rgba(255,255,255,0.25)] flex items-center gap-2.5"
+        >
+          <span>Apply for Funding</span>
+          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </Link>
+      </div>
+
       {/* Pure Circle Action Suite in Bottom Right (X, Instagram, LinkedIn, Sound) */}
       <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 z-20 flex items-center gap-2 sm:gap-2.5">
-        {/* 1. X (formerly Twitter) Circle */}
         <a
           href="https://x.com"
           target="_blank"
@@ -42,7 +56,6 @@ export default function HeroBento() {
           </svg>
         </a>
 
-        {/* 2. Instagram Circle */}
         <a
           href="https://instagram.com"
           target="_blank"
@@ -57,7 +70,6 @@ export default function HeroBento() {
           </svg>
         </a>
 
-        {/* 3. LinkedIn Circle */}
         <a
           href="https://linkedin.com"
           target="_blank"
@@ -70,24 +82,18 @@ export default function HeroBento() {
           </svg>
         </a>
 
-        {/* Divider */}
         <div className="h-4 w-[1px] bg-white/20 mx-0.5" />
 
-        {/* 4. Sound Toggle Circle */}
         <button
           onClick={toggleSound}
           className={`h-9 w-9 sm:h-10 sm:w-10 rounded-full flex items-center justify-center backdrop-blur-2xl border transition-all duration-300 hover:scale-110 active:scale-95 shadow-[0_4px_24px_rgba(0,0,0,0.5)] ${
             isMuted
               ? "bg-black/50 hover:bg-black/75 border-white/15 hover:border-white/30 text-white/70 hover:text-white"
-              : "bg-emerald-500/20 hover:bg-emerald-500/30 border-emerald-400/40 text-emerald-400"
+              : "bg-[#00E5A3]/20 hover:bg-[#00E5A3]/30 border-[#00E5A3]/50 text-[#00E5A3]"
           }`}
           aria-label={isMuted ? "Turn Sound On" : "Turn Sound Off"}
         >
-          {isMuted ? (
-            <VolumeX className="h-4 w-4" />
-          ) : (
-            <Volume2 className="h-4 w-4" />
-          )}
+          {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
         </button>
       </div>
     </section>
