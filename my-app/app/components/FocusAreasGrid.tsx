@@ -9,7 +9,7 @@ export const FOCUS_AREAS_DATA = [
     title: "AI & Advanced Computing",
     headline: "INVESTING IN THE FUTURE OF SILICON",
     thesis: "Models are commoditising. The durable value is moving down the stack.",
-    image: "/bygen_ (@bygen_ai) on X.jpeg",
+    image: "/sectors/ai-computing.jpg",
     icon: Cpu,
     sectors: [
       "Indic and domain-specific language models",
@@ -26,7 +26,7 @@ export const FOCUS_AREAS_DATA = [
     title: "Advanced Manufacturing & Semiconductor",
     headline: "INVESTING IN THE FUTURE OF THE FACTORY FLOOR",
     thesis: "India will not win manufacturing on labour cost. It will win on automation and on silicon.",
-    image: "/_ (27).jpeg",
+    image: "/sectors/semiconductor.jpg",
     icon: Factory,
     sectors: [
       "Chip design — analog, mixed-signal, RF, domain silicon",
@@ -43,7 +43,7 @@ export const FOCUS_AREAS_DATA = [
     title: "Next Gen Materials",
     headline: "INVESTING IN THE FUTURE OF MATTER",
     thesis: "Every hard problem in energy, space and electronics is a materials problem wearing a disguise.",
-    image: "/_ (26).jpeg",
+    image: "/sectors/advanced-manufacturing.jpg",
     icon: Atom,
     sectors: [
       "Advanced carbon materials (CNTs, graphene)",
@@ -60,7 +60,7 @@ export const FOCUS_AREAS_DATA = [
     title: "Space & Defence",
     headline: "INVESTING IN THE FUTURE OF ORBIT",
     thesis: "Sovereign capability became a commercial market, and the procurement door is finally open.",
-    image: "/06a51e9d213cf5cd790d81eaca0d09e2.jpg",
+    image: "/sectors/space-defence.jpg",
     icon: Rocket,
     sectors: [
       "Reusable launch vehicles and propulsion",
@@ -77,7 +77,7 @@ export const FOCUS_AREAS_DATA = [
     title: "Climate & CleanTech",
     headline: "INVESTING IN THE FUTURE OF ENERGY",
     thesis: "Decarbonising an industrialising economy is a different problem from decarbonising a rich one.",
-    image: "/Midjourney_  Painting depicts human and robotic hands reaching, commentary on AI_.jpeg",
+    image: "/sectors/climate-energy.jpg",
     icon: Zap,
     sectors: [
       "Green hydrogen and ammonia electrolyser components",
@@ -94,7 +94,7 @@ export const FOCUS_AREAS_DATA = [
     title: "Life Sciences",
     headline: "INVESTING IN THE FUTURE OF MEDICINE",
     thesis: "Indian clinical scale and Indian engineering cost is an advantage nobody else can assemble.",
-    image: "/The Next Creation - Humanity, Amplified by Technology.jpeg",
+    image: "/sectors/life-sciences.jpg",
     icon: Dna,
     sectors: [
       "Novel biologics development",
