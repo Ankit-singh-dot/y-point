@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Outfit, JetBrains_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Outfit, JetBrains_Mono, Newsreader } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SmoothScroll from "./components/SmoothScroll";
+import { ThemeProvider } from "./components/ThemeProvider";
+import DeepTechCosmosBackground from "./components/DeepTechCosmosBackground";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -12,6 +15,12 @@ const plusJakarta = Plus_Jakarta_Sans({
 const outfit = Outfit({
   variable: "--font-display",
   subsets: ["latin"],
+});
+
+const newsreader = Newsreader({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -36,9 +45,6 @@ export const metadata: Metadata = {
   ],
 };
 
-import SmoothScroll from "./components/SmoothScroll";
-import { ThemeProvider } from "./components/ThemeProvider";
-
 export default function RootLayout({
   children,
 }: {
@@ -48,13 +54,14 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${plusJakarta.variable} ${outfit.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${plusJakarta.variable} ${outfit.variable} ${newsreader.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-black dark:bg-[#030303] dark:text-[#f3f4f6] transition-colors duration-300">
+      <body className="min-h-full flex flex-col bg-white text-black dark:bg-[#05070a] dark:text-[#f3f4f6] transition-colors duration-300">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <SmoothScroll>
+            <DeepTechCosmosBackground />
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 relative z-10">{children}</main>
             <Footer />
           </SmoothScroll>
         </ThemeProvider>
