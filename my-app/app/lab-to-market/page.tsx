@@ -76,10 +76,10 @@ export default function LabToMarketPage() {
         >
           <motion.div style={{ y: imageY, scale: imageScale }} className="absolute inset-0 origin-bottom">
             <Image
-              src="/The Next Creation - Humanity, Amplified by Technology.jpeg"
+              src="/sectors/ai-computing.jpg"
               alt="From Lab to Market - Translational Science"
               fill
-              className="object-cover opacity-80 mix-blend-screen"
+              className="object-cover opacity-80"
               priority
             />
           </motion.div>
