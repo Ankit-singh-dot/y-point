@@ -59,84 +59,33 @@ export default function Footer() {
 
           {/* Links Grid */}
           <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-8 pt-4 sm:pt-0">
-            {/* Explore */}
+            {/* Sections */}
             <div className="space-y-4 sm:space-y-6">
-              <h4 className="font-sans font-semibold text-xs uppercase tracking-[0.2em] text-black/50 dark:text-white/50">Explore</h4>
-              <ul className="space-y-3">
-                <li><Link href="/focus-areas" className="group flex items-center gap-2 font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">
-                  <span className="relative overflow-hidden">
-                    <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">Focus Areas</span>
-                    <span className="inline-block absolute left-0 top-0 translate-y-full transition-transform duration-300 group-hover:translate-y-0">Focus Areas</span>
-                  </span>
-                </Link></li>
-                <li><Link href="/platform" className="group flex items-center gap-2 font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">
-                  <span className="relative overflow-hidden">
-                    <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">Platform</span>
-                    <span className="inline-block absolute left-0 top-0 translate-y-full transition-transform duration-300 group-hover:translate-y-0">Platform</span>
-                  </span>
-                </Link></li>
-                <li><Link href="/lab-to-market" className="group flex items-center gap-2 font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">
-                  <span className="relative overflow-hidden">
-                    <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">Lab to Market</span>
-                    <span className="inline-block absolute left-0 top-0 translate-y-full transition-transform duration-300 group-hover:translate-y-0">Lab to Market</span>
-                  </span>
-                </Link></li>
-                <li><Link href="/insights" className="group flex items-center gap-2 font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">
-                  <span className="relative overflow-hidden">
-                    <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">Insights</span>
-                    <span className="inline-block absolute left-0 top-0 translate-y-full transition-transform duration-300 group-hover:translate-y-0">Insights</span>
-                  </span>
-                </Link></li>
+              <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-[#0D7377] font-semibold">01 · Structure</h4>
+              <ul className="space-y-3 font-sans text-sm">
+                <li><Link href="/#about" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">About Us</Link></li>
+                <li><Link href="/#portfolio" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Portfolio & Track Record</Link></li>
+                <li><Link href="/#team" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Team & IC</Link></li>
               </ul>
             </div>
 
-            {/* Founders */}
+            {/* Theses & Content */}
             <div className="space-y-4 sm:space-y-6">
-              <h4 className="font-sans font-semibold text-xs uppercase tracking-[0.2em] text-black/50 dark:text-white/50">Founders</h4>
-              <ul className="space-y-3">
-                <li><Link href="/apply" className="group flex items-center gap-2 font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">
-                  <span className="relative overflow-hidden">
-                    <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">Apply Now</span>
-                    <span className="inline-block absolute left-0 top-0 translate-y-full transition-transform duration-300 group-hover:translate-y-0 text-black dark:text-white font-medium">Apply Now</span>
-                  </span>
-                </Link></li>
-                <li><Link href="/lab-to-market" className="group flex items-center gap-2 font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">
-                  <span className="relative overflow-hidden">
-                    <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">The TRL Journey</span>
-                    <span className="inline-block absolute left-0 top-0 translate-y-full transition-transform duration-300 group-hover:translate-y-0">The TRL Journey</span>
-                  </span>
-                </Link></li>
-                <li><Link href="/insights#handbook" className="group flex items-center gap-2 font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">
-                  <span className="relative overflow-hidden">
-                    <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">Handbook</span>
-                    <span className="inline-block absolute left-0 top-0 translate-y-full transition-transform duration-300 group-hover:translate-y-0">Handbook</span>
-                  </span>
-                </Link></li>
+              <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-[#0D7377] font-semibold">02 · Theses</h4>
+              <ul className="space-y-3 font-sans text-sm">
+                <li><Link href="/#focus" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Focus Areas Map</Link></li>
+                <li><Link href="/#content" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Signal from the Lab</Link></li>
+                <li><Link href="/#content" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Podcast Series</Link></li>
               </ul>
             </div>
 
-            {/* Fund */}
+            {/* Engagement */}
             <div className="space-y-4 sm:space-y-6">
-              <h4 className="font-sans font-semibold text-xs uppercase tracking-[0.2em] text-black/50 dark:text-white/50">Fund</h4>
-              <ul className="space-y-3">
-                <li><Link href="/about" className="group flex items-center gap-2 font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">
-                  <span className="relative overflow-hidden">
-                    <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">About Fund</span>
-                    <span className="inline-block absolute left-0 top-0 translate-y-full transition-transform duration-300 group-hover:translate-y-0">About Fund</span>
-                  </span>
-                </Link></li>
-                <li><Link href="/institutional" className="group flex items-center gap-2 font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">
-                  <span className="relative overflow-hidden">
-                    <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">LPs</span>
-                    <span className="inline-block absolute left-0 top-0 translate-y-full transition-transform duration-300 group-hover:translate-y-0">LPs</span>
-                  </span>
-                </Link></li>
-                <li><Link href="/contact" className="group flex items-center gap-2 font-sans font-light text-sm sm:text-base text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">
-                  <span className="relative overflow-hidden">
-                    <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">Contact</span>
-                    <span className="inline-block absolute left-0 top-0 translate-y-full transition-transform duration-300 group-hover:translate-y-0">Contact</span>
-                  </span>
-                </Link></li>
+              <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-[#0D7377] font-semibold">03 · Engage</h4>
+              <ul className="space-y-3 font-sans text-sm">
+                <li><Link href="/#apply" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors font-medium">Apply for Funding</Link></li>
+                <li><a href="mailto:ir@y-point.vc" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Institutional LPs</a></li>
+                <li><a href="mailto:contact@y-point.vc" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Direct Contact</a></li>
               </ul>
             </div>
           </div>
