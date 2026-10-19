@@ -29,6 +29,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-display: var(--font-display);
+  --font-serif: var(--font-serif);
   --font-mono: var(--font-mono);
 }
 
@@ -153,6 +154,48 @@ body {
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* Engineering Crosshair & Dot Matrix (Cleanroom & Precision Instrument Feel) */
+.deeptech-grid-light {
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, rgba(13, 115, 119, 0.12) 1px, transparent 1px);
+}
+
+.deeptech-grid-dark {
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, rgba(13, 115, 119, 0.22) 1px, transparent 1px);
+}
+
+/* Subtle Animated Ambient Quantum Glow */
+.quantum-ambient-teal {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(13, 115, 119, 0.15) 0%, rgba(13, 115, 119, 0.03) 50%, transparent 75%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  animation: pulseGlow 10s ease-in-out infinite;
+}
+
+/* Precision Instrument Bezel / Border */
+.instrument-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .instrument-card {
+  background: rgba(14, 14, 16, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.instrument-card:hover {
+  border-color: rgba(13, 115, 119, 0.5);
+  box-shadow: 0 12px 35px -10px rgba(13, 115, 119, 0.15);
 }
 
 /* Scanline / Grain Texture for Cinematic Video Overlay */
