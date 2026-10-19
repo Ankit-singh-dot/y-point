@@ -24,7 +24,7 @@ export const VERTICALS: Record<string, VerticalData> = {
     name: "AI & Advanced Computing",
     heroHeadline: "INVESTING IN THE FUTURE OF SILICON",
     oneLineThesis: "Models are commoditising. The durable value is moving down the stack.",
-    image: "/bygen_ (@bygen_ai) on X.jpeg",
+    image: "/sectors/ai-computing.jpg",
     whatWeBelieve: [
       "The Indian AI opportunity is not another application layer. Models are commoditising faster than anyone forecast, and durable value is migrating down the stack — into infrastructure, optimisation, and the physics of how computation consumes power. India holds an under-exploited asset here: two decades of engineering talent trained inside global technology companies, now available to build for themselves.",
       "We are interested in three things. Infrastructure and optimisation tooling that makes computation cheaper or possible where it was not. Domain-specific and Indic language models where the defensibility is proprietary data, regulatory position or workflow depth rather than the model itself. And the security layer — AI safety and cyber — where India has both a genuine research base and a sovereign buyer.",
@@ -65,7 +65,7 @@ export const VERTICALS: Record<string, VerticalData> = {
     name: "Advanced Manufacturing & Semiconductor",
     heroHeadline: "INVESTING IN THE FUTURE OF THE FACTORY FLOOR",
     oneLineThesis: "India will not win manufacturing on labour cost. It will win on automation and on silicon.",
-    image: "/_ (27).jpeg",
+    image: "/sectors/semiconductor.jpg",
     whatWeBelieve: [
       "India will not become a manufacturing power on labour cost. That race is being lost to countries with lower wages and won by countries with higher automation. The route available to India is to skip a generation: build plants that compete because of what the machines do.",
       "Semiconductors belong in this conversation rather than alongside AI, and we have deliberately grouped them that way. A fabless startup's binding constraints are industrial ones — tape-out economics, packaging, yield, qualification, supply chain — and they are the same constraints a robotics or precision manufacturing company faces. The India Semiconductor Mission has changed what is financeable here, and chip design and photonics are now a realistic venture category rather than a policy aspiration.",
@@ -107,7 +107,7 @@ export const VERTICALS: Record<string, VerticalData> = {
     name: "Next Gen Materials",
     heroHeadline: "INVESTING IN THE FUTURE OF MATTER",
     oneLineThesis: "Every hard problem in energy, space and electronics is a materials problem wearing a disguise.",
-    image: "/_ (26).jpeg",
+    image: "/sectors/advanced-manufacturing.jpg",
     whatWeBelieve: [
       "Almost every hard constraint in energy, space, electronics and mobility is a materials problem wearing a disguise. Batteries are limited by chemistry and interfaces; hypersonics by thermal protection; semiconductors by substrates and packaging; hydrogen by catalysts and membranes. Solve the material and the downstream industry reorganises around you.",
       "Materials companies are also the most commonly mis-underwritten venture bet in existence, and the reason is a category error rather than a fundamental flaw. They are assessed as product companies when, for their first several years, they are process companies. The valuable asset is rarely the molecule — which is usually published — but the ability to make it consistently at a price and volume nobody else can hit.",
@@ -148,7 +148,7 @@ export const VERTICALS: Record<string, VerticalData> = {
     name: "Space & Defence",
     heroHeadline: "INVESTING IN THE FUTURE OF ORBIT",
     oneLineThesis: "Sovereign capability became a commercial market, and the procurement door is finally open.",
-    image: "/06a51e9d213cf5cd790d81eaca0d09e2.jpg",
+    image: "/sectors/space-defence.jpg",
     whatWeBelieve: [
       "Sovereign capability has become a commercial market. India's space sector has opened to private operators, defence procurement has built real channels for startups, and the strategic case for domestic supply is no longer something founders have to argue — it is the buyer's stated policy.",
       "What has not changed is the difficulty of the sale. Procurement cycles outlast seed rounds. Qualification is brutal and non-negotiable. A single programme delay can consume a year of runway. We invest here clear-eyed about that, which is why we care disproportionately about whether a company has a commercial or export revenue line that can carry it while an institutional contract matures.",
@@ -192,7 +192,7 @@ export const VERTICALS: Record<string, VerticalData> = {
     name: "Climate & CleanTech",
     heroHeadline: "INVESTING IN THE FUTURE OF ENERGY",
     oneLineThesis: "Decarbonising an industrialising economy is a different problem from decarbonising a rich one.",
-    image: "/Midjourney_  Painting depicts human and robotic hands reaching, commentary on AI_.jpeg",
+    image: "/sectors/climate-energy.jpg",
     whatWeBelieve: [
       "Decarbonising an industrialising economy is a structurally different problem from decarbonising a wealthy one, and most available climate technology was designed for the second case. India is adding industrial capacity, not retiring it. Its buyers are price-sensitive to a degree that Western climate business models rarely survive. Its grid, land and water constraints are specific.",
       "This is an advantage for companies that design for it. Technology that reaches parity without a subsidy in India will be exportable to every other industrialising market on earth, which is where most of this century's emissions growth will occur. Technology that needs a carbon price to work is, for our purposes, a research project.",
@@ -233,7 +233,7 @@ export const VERTICALS: Record<string, VerticalData> = {
     name: "Life Sciences",
     heroHeadline: "INVESTING IN THE FUTURE OF MEDICINE",
     oneLineThesis: "Indian clinical scale and Indian engineering cost is an advantage nobody else can assemble.",
-    image: "/The Next Creation - Humanity, Amplified by Technology.jpeg",
+    image: "/sectors/life-sciences.jpg",
     whatWeBelieve: [
       "India has two assets in health that are difficult for anyone else to assemble: clinical scale — patient populations, disease diversity and trial capacity — and an engineering cost base that can build an instrument or a therapy for a fraction of what it costs elsewhere. ImmunoACT priced India's first indigenous CAR-T therapy at roughly a tenth of international equivalents. That is not a discount; it is a different cost structure, and it opens markets the incumbents have written off.",
       "We concentrate on novel biologics, precision medicine, and stem cell and tissue engineering, alongside the instrumentation and diagnostics layer where our engineering diligence is strongest. Where a programme requires clinical capital beyond what a fund of our size can responsibly underwrite alone, we expect to participate alongside a specialist lead rather than lead it ourselves.",
