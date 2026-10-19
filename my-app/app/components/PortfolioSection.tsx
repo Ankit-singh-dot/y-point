@@ -34,8 +34,6 @@ export default function PortfolioSection() {
       tech: "Avionics, autonomous navigation & composite airframes",
       year: "SINE Alum",
       milestone: "Listed on NSE & BSE (₹3,000+ Cr valuation)",
-      x: 94,
-      y: 85,
     },
     {
       id: "immunoact",
@@ -48,8 +46,6 @@ export default function PortfolioSection() {
       tech: "Chimeric antigen receptor T-cell bioengineering",
       year: "SINE Alum",
       milestone: "CDSCO Commercial Approval; 90% cheaper than US therapy",
-      x: 82,
-      y: 92,
     },
     {
       id: "sedemac",
@@ -62,8 +58,6 @@ export default function PortfolioSection() {
       tech: "Real-time engine control algorithms & power electronics",
       year: "SINE Alum",
       milestone: "Deployed in 10M+ commercial vehicles globally",
-      x: 92,
-      y: 78,
     },
     {
       id: "qnu-labs",
@@ -76,8 +70,6 @@ export default function PortfolioSection() {
       tech: "Single-photon optics & Quantum Random Number Generation",
       year: "2024",
       milestone: "Sovereign defence deployment & national telecom pilots",
-      x: 75,
-      y: 86,
     },
     {
       id: "peppermint",
@@ -90,8 +82,6 @@ export default function PortfolioSection() {
       tech: "Proprietary multi-sensor SLAM & industrial autonomy",
       year: "2025",
       milestone: "Deployed across Fortune 500 manufacturing plants",
-      x: 68,
-      y: 62,
     },
     {
       id: "mumbaisemi",
@@ -104,8 +94,6 @@ export default function PortfolioSection() {
       tech: "Sub-28nm RF CMOS design & high-frequency packaging",
       year: "2026",
       milestone: "First multi-project wafer (MPW) tape-out validated",
-      x: 48,
-      y: 90,
     },
     {
       id: "nanosafe",
@@ -118,8 +106,6 @@ export default function PortfolioSection() {
       tech: "Engineered copper-doped nanomaterial compounding",
       year: "2024",
       milestone: "Commercial packaging & active defense material patents",
-      x: 64,
-      y: 54,
     },
     {
       id: "carboncraft",
@@ -132,8 +118,6 @@ export default function PortfolioSection() {
       tech: "Carbon black waste pyrolysis processing & binder technology",
       year: "2025",
       milestone: "500,000+ sq ft architectural deployments across India",
-      x: 72,
-      y: 52,
     },
     {
       id: "babbelbots",
@@ -146,8 +130,6 @@ export default function PortfolioSection() {
       tech: "Acoustic phoneme modeling & quantized neural network runtimes",
       year: "2025",
       milestone: "Powering voice automation for tier-1 Indian banks",
-      x: 70,
-      y: 65,
     },
   ];
 
