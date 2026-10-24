@@ -33,8 +33,21 @@ export default function PlatformPage() {
   };
 
   return (
-    <div ref={containerRef} className="min-h-screen pt-20 sm:pt-28 lg:pt-32 pb-14 sm:pb-20 lg:pb-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-12 space-y-14 sm:space-y-24 lg:space-y-32">
+    <div ref={containerRef} className="relative min-h-screen pt-20 sm:pt-28 lg:pt-32 pb-14 sm:pb-20 lg:pb-24 overflow-hidden">
+      {/* Subtle IIT Bombay Crest Watermark in Background */}
+      <div 
+        className="absolute -right-28 top-1/4 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[450px] h-[450px] sm:w-[650px] sm:h-[650px] lg:w-[800px] lg:h-[800px]"
+        aria-hidden="true"
+      >
+        <Image
+          src="/iitb/iitb-logo.png"
+          alt=""
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-8 lg:px-12 space-y-14 sm:space-y-24 lg:space-y-32">
         
         {/* Page Hero */}
         <motion.div 
@@ -43,15 +56,21 @@ export default function PlatformPage() {
           animate="show"
           className="space-y-6 sm:space-y-8"
         >
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/5 px-3.5 py-1 text-[11px] sm:text-xs font-sans uppercase tracking-widest text-black/60 dark:text-white/60">
-            <span>Platform · The Y-Point Edge</span>
+          <motion.div variants={fadeInUp} className="flex items-center gap-3">
+            <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#0D7377] dark:text-[#00E5A3] font-semibold">
+              Platform · The Y-Point Edge
+            </span>
+            <span className="h-1 w-1 rounded-full bg-[#0D7377] dark:bg-[#00E5A3]" />
+            <span className="font-mono text-xs uppercase tracking-wider text-black/40 dark:text-white/40">
+              SINE IIT Bombay Ecosystem
+            </span>
           </motion.div>
 
-          <motion.h1 variants={fadeInUp} className="font-display font-light text-4xl sm:text-6xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.1] max-w-4xl">
+          <motion.h1 variants={fadeInUp} className="font-display font-light text-4xl sm:text-6xl md:text-8xl tracking-tight text-black dark:text-white leading-[1.08] max-w-4xl">
             HOW WE WORK WITH FOUNDERS
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="font-display font-light text-xl sm:text-3xl lg:text-4xl text-black/40 dark:text-white/40">
+          <motion.p variants={fadeInUp} className="font-display font-light text-xl sm:text-3xl lg:text-4xl text-black/50 dark:text-white/50">
             Capital is the least differentiated thing we bring.
           </motion.p>
 
@@ -60,32 +79,62 @@ export default function PlatformPage() {
               Deep tech companies do not fail because a term sheet was two crore too small. They fail because a qualification cycle took eighteen months instead of six, because a grant application was filed at the wrong stage, because the first customer needed a certification nobody had budgeted for, or because a technical risk everyone had privately noticed was never properly addressed.
             </p>
             <p>
-              We organise ourselves around those failure modes. Two decades of watching them happen, at close range, is the main thing we have that other funds do not.
+              We organise ourselves around those failure modes. Two decades of watching them happen, at close range within IIT Bombay, is the main thing we have that other funds do not.
             </p>
           </motion.div>
         </motion.div>
 
-        {/* Visual Parallax Banner */}
+        {/* Purposeful IIT Bombay Campus Visual Anchor Banner */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true, margin: "-100px" }}
-          className="relative aspect-[21/9] w-full overflow-hidden rounded-3xl bg-black"
+          className="relative aspect-[16/8] sm:aspect-[21/9] w-full overflow-hidden rounded-3xl bg-black border border-black/10 dark:border-white/10 shadow-xl"
         >
           <motion.div style={{ y: imageY, scale: imageScale }} className="absolute inset-0 origin-bottom">
             <Image
-              src="/sectors/advanced-manufacturing.jpg"
-              alt="Advanced manufacturing and precision automation"
+              src="/iitb/campus-lawn.jpg"
+              alt="IIT Bombay Academic & Incubation Campus"
               fill
-              className="object-cover opacity-80"
+              className="object-cover opacity-85"
               priority
             />
           </motion.div>
-          <div className="absolute bottom-8 left-8 right-8">
-            <span className="font-sans text-xs uppercase tracking-wider text-white font-semibold bg-black/60 px-4 py-2 rounded-full border border-white/20 backdrop-blur-md">
-              IIT Bombay Ecosystem Integration
+          
+          {/* Legibility Gradients */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
+
+          {/* Top Institutional Badge */}
+          <div className="absolute top-4 sm:top-5 left-4 sm:left-5 right-4 sm:right-5 flex items-center justify-between">
+            <div className="flex items-center gap-2 bg-black/60 backdrop-blur-md px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-white/20">
+              <div className="relative h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0">
+                <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+              </div>
+              <span className="font-mono text-[9px] sm:text-[11px] text-white tracking-wider font-semibold">
+                SINE · IIT BOMBAY
+              </span>
+            </div>
+            <span className="font-mono text-[9px] sm:text-[11px] text-white/80 bg-black/50 backdrop-blur-md px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full border border-white/10">
+              EST. 1958
             </span>
+          </div>
+
+          {/* Bottom Information Anchor */}
+          <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 text-white space-y-1 sm:space-y-1.5">
+            <span className="font-mono text-[9px] sm:text-[11px] uppercase tracking-widest text-[#00E5A3] font-semibold block">
+              Institutional Integration
+            </span>
+            <h3 className="font-display font-light text-lg sm:text-3xl text-white leading-tight">
+              Direct Institutional Integration with IIT Bombay
+            </h3>
+            <div className="flex flex-wrap items-center gap-2 pt-0.5 sm:pt-1 font-mono text-[10px] sm:text-[11px] text-white/70">
+              <span className="text-[#00E5A3] font-bold">ज्ञानं परमं ध्येयम्</span>
+              <span className="hidden sm:inline">·</span>
+              <span className="hidden sm:inline">Specialised Laboratories</span>
+              <span className="hidden sm:inline">·</span>
+              <span className="hidden sm:inline">Dean R&amp;D Clean IP Transfer</span>
+            </div>
           </div>
         </motion.div>
 
@@ -101,12 +150,27 @@ export default function PlatformPage() {
             className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start"
           >
             <div className="md:col-span-5 space-y-4 md:sticky md:top-32">
-              <span className="font-sans text-xs uppercase tracking-wider text-black/60 dark:text-white/60 font-bold">
+              <span className="font-mono text-xs uppercase tracking-wider text-[#0D7377] dark:text-[#00E5A3] font-bold">
                 01 — OWNERSHIP STRUCTURE
               </span>
               <h2 className="font-display font-light text-3xl sm:text-5xl text-black dark:text-white leading-tight">
                 We are the capital arm of the incubator.
               </h2>
+              
+              {/* Institutional Visual Anchor */}
+              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-black shadow-md mt-6 hidden sm:block">
+                <Image
+                  src="/iitb/crest-plaque.jpg"
+                  alt="Historic IIT Bombay Bronze Crest"
+                  fill
+                  className="object-cover opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                <div className="absolute bottom-3 left-4 right-4 text-white">
+                  <div className="font-mono text-[10px] text-[#00E5A3] font-bold">ज्ञानं परमं ध्येयम्</div>
+                  <div className="font-mono text-[10px] text-white/70">SINE · IIT Bombay Incubation Network</div>
+                </div>
+              </div>
             </div>
             <div className="md:col-span-7 space-y-6 text-black/70 dark:text-white/70 font-sans font-light text-base sm:text-lg leading-relaxed">
               <p>
@@ -219,21 +283,53 @@ export default function PlatformPage() {
 
         </div>
 
-        {/* CTA */}
+        {/* Institutional Closing CTA */}
         <motion.div 
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
-          className="text-center pt-16 pb-16"
+          className="relative rounded-3xl border border-black/10 dark:border-white/10 bg-[#FBFBFB] dark:bg-[#0c0f16] p-10 sm:p-16 text-center space-y-6 overflow-hidden shadow-lg"
         >
-          <Link
-            href="/apply"
-            className="group inline-flex items-center gap-3 rounded-full bg-black dark:bg-white px-8 py-4 text-xs font-sans uppercase tracking-[0.2em] text-white dark:text-black hover:bg-black/80 dark:hover:bg-white/80 transition-all"
+          {/* Subtle IIT Bombay Crest Watermark */}
+          <div 
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[350px] h-[350px]"
+            aria-hidden="true"
           >
-            <span>Apply For Funding</span>
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
+            <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+          </div>
+
+          <div className="relative space-y-3">
+            <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#0D7377] dark:text-[#00E5A3] font-semibold">
+              Pitch to Y-Point · SINE IIT Bombay
+            </span>
+            <h3 className="font-display font-light text-3xl sm:text-5xl text-black dark:text-white max-w-2xl mx-auto leading-tight">
+              Ready to build with institutional backing?
+            </h3>
+            <p className="font-sans font-light text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto leading-relaxed">
+              We invest in early-stage deeptech ventures developing technology-led solutions with validated proof-of-concept (typically TRL 4+).
+            </p>
+          </div>
+
+          <div className="relative pt-4 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/apply"
+              className="group inline-flex items-center gap-3 rounded-full bg-black dark:bg-white px-8 py-3.5 text-xs font-sans uppercase tracking-[0.2em] text-white dark:text-black hover:bg-[#0D7377] dark:hover:bg-[#00E5A3] transition-all shadow-md"
+            >
+              <span>Apply For Funding</span>
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+            <Link
+              href="/focus-areas"
+              className="inline-flex items-center gap-2 rounded-full border border-black/15 dark:border-white/15 px-8 py-3.5 text-xs font-sans uppercase tracking-[0.2em] text-zinc-700 dark:text-zinc-300 hover:border-black dark:hover:border-white transition-all"
+            >
+              <span>Explore Focus Areas</span>
+            </Link>
+          </div>
+
+          <div className="relative pt-4 font-mono text-[11px] text-zinc-400">
+            SINE Office, 5th Floor, RBTIC Building, IIT Bombay, Powai, Mumbai 400076
+          </div>
         </motion.div>
 
       </div>
