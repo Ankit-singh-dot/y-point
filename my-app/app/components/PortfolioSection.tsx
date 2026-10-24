@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Filter, PieChart, Layers, Building2, ExternalLink } from "lucide-react";
@@ -158,8 +159,21 @@ export default function PortfolioSection() {
       : companies.filter((c) => c.sector === selectedSector);
 
   return (
-    <section id="portfolio" className="relative bg-white dark:bg-[#0A0A0A] text-[#0A0A0A] dark:text-[#F5F5F3] pt-24 sm:pt-32 pb-24 border-b border-[#E5E5E5] dark:border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+    <section id="portfolio" className="relative bg-white dark:bg-[#0A0A0A] text-[#0A0A0A] dark:text-[#F5F5F3] pt-24 sm:pt-32 pb-24 border-b border-[#E5E5E5] dark:border-white/10 overflow-hidden">
+      {/* Subtle IIT Bombay Crest Watermark in Background */}
+      <div 
+        className="absolute -right-28 top-1/4 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[450px] h-[450px] sm:w-[650px] sm:h-[650px] lg:w-[800px] lg:h-[800px]"
+        aria-hidden="true"
+      >
+        <Image
+          src="/iitb/iitb-logo.png"
+          alt=""
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* 1. SECTION HEADER */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E5E5E5] dark:border-white/10 pb-6 mb-12 sm:mb-16">
@@ -169,7 +183,7 @@ export default function PortfolioSection() {
             </span>
             <span className="h-1 w-1 rounded-full bg-[#0D7377]" />
             <span className="font-sans text-xs uppercase tracking-wider text-[#666666] dark:text-zinc-400">
-              Track Record & Construction Logic
+              Track Record &amp; Construction Logic
             </span>
           </div>
 
@@ -178,29 +192,81 @@ export default function PortfolioSection() {
           </div>
         </div>
 
-        {/* HERO TITLE */}
-        <div className="max-w-4xl space-y-6 mb-16 sm:mb-20">
-          <h2 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.12]">
-            A concentrated portfolio of companies turning proven science into industry.
+        {/* HERO TITLE & SINE INSTITUTIONAL VISUAL ANCHOR */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16 sm:mb-20">
+          <div className="lg:col-span-8 space-y-6">
+            <h1 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.12]">
+              Backing the next generation of deeptech opportunities.
+            </h1>
+            <p className="font-sans font-light text-lg sm:text-xl text-[#666666] dark:text-zinc-300 leading-relaxed max-w-3xl">
+              Y-Point&apos;s investment focus spans technology-led businesses addressing challenges across advanced computing, manufacturing, materials, biotechnology, climate technology, space and defence.
+            </p>
+          </div>
+
+          {/* Institutional Heritage Anchor */}
+          <div className="lg:col-span-4">
+            <div className="group relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-black shadow-md">
+              <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src="/iitb/campus-lawn.jpg"
+                  alt="IIT Bombay SINE Incubation Lineage"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-85"
+                  sizes="(max-width: 1024px) 100vw, 30vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
+                
+                <div className="absolute top-3 left-3 flex items-center gap-2 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                  <div className="relative h-3.5 w-3.5 shrink-0">
+                    <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+                  </div>
+                  <span className="font-mono text-[9px] text-white tracking-wider font-semibold">
+                    SINE · IIT BOMBAY LINEAGE
+                  </span>
+                </div>
+
+                <div className="absolute bottom-3 left-3 right-3 text-white space-y-1">
+                  <div className="font-mono text-[10px] text-[#00E5A3] font-semibold">
+                    ज्ञानं परमं ध्येयम्
+                  </div>
+                  <div className="font-sans font-medium text-xs text-white">
+                    Two Decades of Category Creation
+                  </div>
+                  <p className="hidden sm:block font-sans text-[11px] text-white/70 font-light leading-snug">
+                    Over 532 ventures supported, nurturing sovereign pioneers from initial laboratory proof to NSE/BSE listings.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Y-POINT FUND I INTRODUCTORY SECTION */}
+        <div className="p-8 sm:p-10 rounded-2xl border border-black/10 dark:border-white/10 bg-[#F9F9F8] dark:bg-[#0c0f16] mb-16 space-y-3">
+          <span className="font-mono text-xs uppercase tracking-widest text-[#0D7377] font-semibold">
+            Deployment Scope
+          </span>
+          <h2 className="font-display font-light text-2xl sm:text-3xl text-[#0A0A0A] dark:text-white">
+            Y-Point Fund I Investments
           </h2>
-          <p className="font-sans font-light text-lg sm:text-xl text-[#666666] dark:text-zinc-300 leading-relaxed max-w-3xl">
-            Each company entered the portfolio because its core technology had cleared the lab and needed capital, customers, and company-building to reach the market.
+          <p className="font-sans font-light text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed">
+            Y-Point Fund I is actively deploying pre-seed and seed capital into early-stage deeptech companies with validated technology (typically TRL 4+). Confirmed portfolio investments cleared for public disclosure will feature detailed technical profiles and milestones here.
           </p>
         </div>
 
-        {/* 2. INFOGRAPHIC: INSTITUTIONAL TRACK RECORD & PRECEDENTS */}
+        {/* 2. INFOGRAPHIC: THE BROADER SINE ECOSYSTEM */}
         <div className="p-8 sm:p-12 rounded-xl border border-[#E5E5E5] dark:border-white/10 bg-[#F5F5F3]/50 dark:bg-white/[0.02] mb-20 space-y-8">
           
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-2">
               <span className="font-mono text-xs uppercase tracking-widest text-[#0D7377] font-semibold">
-                Infographic · SINE Incubation Heritage
+                Historical Institutional Track Record
               </span>
-              <h3 className="font-display font-light text-2xl sm:text-3xl text-[#0A0A0A] dark:text-white">
-                Laboratory-to-Market Precedents
-              </h3>
-              <p className="font-sans font-light text-xs sm:text-sm text-[#666] dark:text-zinc-400">
-                Category leaders incubated through SINE IIT Bombay that established India&apos;s deep technology translation playbook.
+              <h2 className="font-display font-light text-2xl sm:text-3xl text-[#0A0A0A] dark:text-white">
+                The Broader SINE Ecosystem
+              </h2>
+              <p className="font-sans font-light text-xs sm:text-sm text-[#666] dark:text-zinc-400 max-w-2xl">
+                SINE has supported a broad range of technology ventures over more than two decades, including historical ecosystem companies that established India&apos;s deep technology translation playbook.
               </p>
             </div>
 
@@ -472,20 +538,20 @@ export default function PortfolioSection() {
             NEXT SECTIONS:
           </span>
           <div className="flex items-center gap-6">
-            <a
-              href="#focus"
+            <Link
+              href="/focus-areas"
               className="group inline-flex items-center gap-1.5 font-semibold text-[#0A0A0A] dark:text-white hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors"
             >
               <span>Explore Our Investment Theses</span>
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
-            <a
-              href="#apply"
+            </Link>
+            <Link
+              href="/apply"
               className="group inline-flex items-center gap-1.5 font-semibold text-[#0A0A0A] dark:text-white hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors"
             >
               <span>Apply for Funding</span>
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
+            </Link>
           </div>
         </div>
 
