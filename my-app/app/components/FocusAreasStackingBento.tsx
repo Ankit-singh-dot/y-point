@@ -116,14 +116,14 @@ export default function FocusAreasStackingBento() {
       <div className="mx-auto max-w-5xl px-4 sm:px-8 pt-20 sm:pt-28 pb-12 sm:pb-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-2xl space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0D7377]/30 dark:border-[#00E5A3]/30 bg-[#0D7377]/5 dark:bg-[#00E5A3]/5 text-[#0D7377] dark:text-[#00E5A3] font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.2em] font-semibold">
-              Where We Invest · Six Verticals
+            <div className="font-mono text-xs uppercase tracking-[0.22em] text-[#0D7377] dark:text-[#00E5A3] font-medium">
+              Where We Invest
             </div>
             <h2 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl text-[#0A0A0A] dark:text-white tracking-tight leading-[1.12]">
-              Six sectors. One common condition.
+              Six Deep Tech Focus Areas
             </h2>
             <p className="font-sans font-light text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-xl">
-              The hard part is the technology, and it has been proven but not yet productised. No single sector will exceed roughly a fifth of the fund.
+              AI &amp; Advanced Computing · Advanced Manufacturing · Next-Generation Materials · Lifesciences &amp; Biotechnology · Climate &amp; CleanTech · Space &amp; Defence.
             </p>
           </div>
           <Link
