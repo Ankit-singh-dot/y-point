@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Cpu, Factory, Atom, Rocket, Zap, Dna, Check, X } from "lucide-react";
+import { ArrowUpRight, Cpu, Factory, Atom, Rocket, Zap, Dna } from "lucide-react";
 
 interface SectorThesis {
   id: string;
@@ -217,37 +217,89 @@ export default function FocusAreaSection() {
   const active = sectors[activeSector];
 
   return (
-    <section id="focus" className="relative bg-white dark:bg-[#0A0A0A] text-[#0A0A0A] dark:text-[#F5F5F3] pt-24 sm:pt-32 pb-24 border-b border-[#E5E5E5] dark:border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+    <section id="focus" className="relative bg-white dark:bg-[#0A0A0A] text-[#0A0A0A] dark:text-[#F5F5F3] pt-24 sm:pt-32 pb-24 border-b border-[#E5E5E5] dark:border-white/10 overflow-hidden">
+      {/* Subtle IIT Bombay Crest Watermark in Background */}
+      <div 
+        className="absolute -right-28 top-1/3 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[450px] h-[450px] sm:w-[650px] sm:h-[650px] lg:w-[800px] lg:h-[800px]"
+        aria-hidden="true"
+      >
+        <Image
+          src="/iitb/iitb-logo.png"
+          alt=""
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* 1. SECTION HEADER */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E5E5E5] dark:border-white/10 pb-6 mb-12 sm:mb-16">
           <div className="flex items-center gap-3">
             <span className="font-mono text-xs uppercase tracking-widest text-[#0D7377] font-semibold">
-              04 — Focus Area
+              04 — Focus Areas
             </span>
             <span className="h-1 w-1 rounded-full bg-[#0D7377]" />
             <span className="font-sans text-xs uppercase tracking-wider text-[#666666] dark:text-zinc-400">
-              Sector Theses & Value Chain Architectures
+              Sector Theses &amp; Value Chain Architectures
             </span>
           </div>
 
           <div className="font-mono text-[11px] sm:text-xs tracking-wider text-[#666666] dark:text-zinc-400 bg-[#F5F5F3] dark:bg-white/5 px-3 py-1 rounded">
-            6 DOMAINS · 8-DIMENSION ANALYTICAL FRAMEWORK
+            6 DOMAINS · SINE IIT BOMBAY INCUBATION MANDATE
           </div>
         </div>
 
-        {/* HERO TITLE */}
-        <div className="max-w-4xl space-y-6 mb-16 sm:mb-20">
-          <h2 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.12]">
-            Six sectors. One common condition: the hard part is the technology, and it has been proven but not yet productised.
-          </h2>
-          <p className="font-sans font-light text-lg sm:text-xl text-[#666666] dark:text-zinc-300 leading-relaxed max-w-3xl">
-            This is the intellectual centrepiece of Y-Point. We evaluate deeptech through rigorous analytical frameworks rather than high-level buzzwords.
-          </p>
+        {/* HERO TITLE & INSTITUTIONAL DILIGENCE ANCHOR */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16 sm:mb-20">
+          <div className="lg:col-span-8 space-y-6">
+            <h1 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.12]">
+              Six sectors. One common condition: the hard part is the technology, proven in the lab, ready to be productised.
+            </h1>
+            <p className="font-sans font-light text-lg sm:text-xl text-[#666666] dark:text-zinc-300 leading-relaxed max-w-3xl">
+              This is the intellectual centrepiece of Y-Point. We evaluate deeptech through rigorous engineering diligence alongside IIT Bombay faculty and domain operators, not high-level buzzwords.
+            </p>
+          </div>
+
+          {/* Institutional Anchor Card */}
+          <div className="lg:col-span-4">
+            <div className="group relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-black shadow-md">
+              <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src="/iitb/main-gate.jpg"
+                  alt="IIT Bombay Deeptech Diligence"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-85"
+                  sizes="(max-width: 1024px) 100vw, 30vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
+                
+                <div className="absolute top-3 left-3 flex items-center gap-2 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                  <div className="relative h-3.5 w-3.5 shrink-0">
+                    <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+                  </div>
+                  <span className="font-mono text-[9px] text-white tracking-wider font-semibold">
+                    IIT BOMBAY DILIGENCE
+                  </span>
+                </div>
+
+                <div className="absolute bottom-3 left-3 right-3 text-white space-y-1">
+                  <div className="font-mono text-[10px] text-[#00E5A3] font-semibold">
+                    ज्ञानं परमं ध्येयम्
+                  </div>
+                  <div className="font-sans font-medium text-xs text-white">
+                    17 Departments · 13 Specialized Centres
+                  </div>
+                  <p className="hidden sm:block font-sans text-[11px] text-white/70 font-light leading-snug">
+                    Verifying characterisation data, patent moats, and TRL progression directly with academic and industrial authorities.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* 2. INFOGRAPHIC: THE DEEPTECH HEXAGONAL MAP */}
+        {/* 2. INFOGRAPHIC: THE DEEPTECH DOMAIN MAP */}
         <div className="p-8 sm:p-10 rounded-xl border border-[#E5E5E5] dark:border-white/10 bg-[#F5F5F3]/50 dark:bg-white/[0.02] mb-16 space-y-6">
           <div className="flex items-center justify-between">
             <span className="font-mono text-xs uppercase tracking-widest text-[#0D7377] font-semibold">
@@ -350,48 +402,6 @@ export default function FocusAreaSection() {
 
             </div>
 
-            {/* Look For vs Avoid Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* What We Look For */}
-              <div className="p-6 rounded-lg border border-[#0D7377]/30 bg-[#0D7377]/5 dark:bg-[#0D7377]/10 space-y-4">
-                <div className="flex items-center gap-2">
-                  <span className="h-5 w-5 rounded-full bg-[#0D7377] flex items-center justify-center text-white">
-                    <Check className="h-3 w-3 stroke-[3]" />
-                  </span>
-                  <h4 className="font-mono text-xs uppercase tracking-wider text-[#0D7377] font-bold">
-                    WHAT WE LOOK FOR
-                  </h4>
-                </div>
-                <div className="space-y-2.5 font-sans text-xs sm:text-sm text-[#0A0A0A] dark:text-zinc-200">
-                  {active.lookFor.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2.5">
-                      <span className="text-[#0D7377] font-bold mt-0.5">+</span>
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* What We Avoid */}
-              <div className="p-6 rounded-lg border border-red-500/20 bg-red-500/5 dark:bg-red-500/10 space-y-4">
-                <div className="flex items-center gap-2">
-                  <span className="h-5 w-5 rounded-full bg-red-600 flex items-center justify-center text-white">
-                    <X className="h-3 w-3 stroke-[3]" />
-                  </span>
-                  <h4 className="font-mono text-xs uppercase tracking-wider text-red-600 dark:text-red-400 font-bold">
-                    WHAT WE AVOID
-                  </h4>
-                </div>
-                <div className="space-y-2.5 font-sans text-xs sm:text-sm text-[#0A0A0A] dark:text-zinc-200">
-                  {active.avoid.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2.5">
-                      <span className="text-red-500 font-bold mt-0.5">-</span>
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
 
             {/* Value Chain Infographic */}
             <div className="p-6 rounded-lg border border-[#E5E5E5] dark:border-white/10 bg-[#F5F5F3]/50 dark:bg-white/[0.02] space-y-4">
@@ -430,20 +440,20 @@ export default function FocusAreaSection() {
             NEXT SECTIONS:
           </span>
           <div className="flex items-center gap-6">
-            <a
-              href="#portfolio"
+            <Link
+              href="/portfolio"
               className="group inline-flex items-center gap-1.5 font-semibold text-[#0A0A0A] dark:text-white hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors"
             >
               <span>See Our Portfolio</span>
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
-            <a
-              href="#apply"
+            </Link>
+            <Link
+              href="/apply"
               className="group inline-flex items-center gap-1.5 font-semibold text-[#0A0A0A] dark:text-white hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors"
             >
               <span>Apply for Funding</span>
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
+            </Link>
           </div>
         </div>
 
