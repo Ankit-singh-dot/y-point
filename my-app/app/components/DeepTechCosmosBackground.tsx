@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 
 /**
  * DeepTechCosmosBackground
@@ -191,7 +192,19 @@ export default function DeepTechCosmosBackground() {
 
       {/* Atmospheric Radial Gradients */}
       <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full bg-[#0D7377]/10 dark:bg-[#0D7377]/15 blur-[120px] pointer-events-none animate-pulse-glow" />
-      <div className="absolute bottom-1/3 right-10 w-[500px] h-[500px] rounded-full bg-[#00E5A3]/5 dark:bg-[#00E5A3]/8 blur-[140px] pointer-events-none" />
+      {/* Subtle IIT Bombay Institutional Crest Watermark (Every page background, fixed, non-intrusive) */}
+      <div 
+        className="absolute right-0 top-1/3 -translate-y-1/2 translate-x-1/4 pointer-events-none select-none opacity-[0.025] dark:opacity-[0.035] w-[500px] h-[500px] sm:w-[650px] sm:h-[650px] lg:w-[850px] lg:h-[850px]"
+        aria-hidden="true"
+      >
+        <Image
+          src="/iitb/iitb-logo.png"
+          alt=""
+          fill
+          className="object-contain"
+          priority
+        />
+      </div>
     </div>
   );
 }
