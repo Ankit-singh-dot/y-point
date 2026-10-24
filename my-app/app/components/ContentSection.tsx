@@ -156,8 +156,21 @@ export default function ContentSection() {
   const activeVideo = sineVoicesEpisodes[selectedVideoIndex];
 
   return (
-    <section id="content" className="relative bg-white dark:bg-[#0A0A0A] text-[#0A0A0A] dark:text-[#F5F5F3] pt-24 sm:pt-32 pb-24 border-b border-[#E5E5E5] dark:border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+    <section id="content" className="relative bg-white dark:bg-[#0A0A0A] text-[#0A0A0A] dark:text-[#F5F5F3] pt-24 sm:pt-32 pb-24 border-b border-[#E5E5E5] dark:border-white/10 overflow-hidden">
+      {/* Subtle IIT Bombay Crest Watermark in Background */}
+      <div 
+        className="absolute -right-28 top-1/4 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[450px] h-[450px] sm:w-[650px] sm:h-[650px] lg:w-[800px] lg:h-[800px]"
+        aria-hidden="true"
+      >
+        <Image
+          src="/iitb/iitb-logo.png"
+          alt=""
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* 1. SECTION HEADER */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E5E5E5] dark:border-white/10 pb-6 mb-12 sm:mb-16">
@@ -182,14 +195,53 @@ export default function ContentSection() {
           </a>
         </div>
 
-        {/* HERO TITLE */}
-        <div className="max-w-4xl space-y-6 mb-16 sm:mb-20">
-          <h2 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.12]">
-            Signal from the Lab
-          </h2>
-          <p className="font-sans font-light text-lg sm:text-xl text-[#666666] dark:text-zinc-300 leading-relaxed max-w-3xl">
-            Unfiltered dialogues with deep technology founders, scientists, and institutional builders translating breakthrough physics, biology, and silicon from Indian laboratories to global category scale.
-          </p>
+        {/* HERO TITLE & SINE VOICES INSTITUTIONAL ANCHOR */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16 sm:mb-20">
+          <div className="lg:col-span-8 space-y-6">
+            <h1 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.12]">
+              Signal from the Lab
+            </h1>
+            <p className="font-sans font-light text-lg sm:text-xl text-[#666666] dark:text-zinc-300 leading-relaxed max-w-3xl">
+              Unfiltered dialogues with deep technology founders, scientists, and institutional builders translating breakthrough physics, biology, and silicon from Indian laboratories to global category scale.
+            </p>
+          </div>
+
+          {/* Institutional Anchor Card */}
+          <div className="lg:col-span-4">
+            <div className="group relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-black shadow-md">
+              <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src="/iitb/crest-plaque.jpg"
+                  alt="SINE IIT Bombay Voices"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-85"
+                  sizes="(max-width: 1024px) 100vw, 30vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
+                
+                <div className="absolute top-3 left-3 flex items-center gap-2 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                  <div className="relative h-3.5 w-3.5 shrink-0">
+                    <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+                  </div>
+                  <span className="font-mono text-[9px] text-white tracking-wider font-semibold">
+                    SINE · IIT BOMBAY
+                  </span>
+                </div>
+
+                <div className="absolute bottom-3 left-3 right-3 text-white space-y-1">
+                  <div className="font-mono text-[10px] text-[#00E5A3] font-semibold">
+                    ज्ञानं परमं ध्येयम्
+                  </div>
+                  <div className="font-sans font-medium text-xs text-white">
+                    Founders, Faculty &amp; Operators
+                  </div>
+                  <p className="hidden sm:block font-sans text-[11px] text-white/70 font-light leading-snug">
+                    Real discussions on university spinouts, TRL maturation, and building hardware winners from Powai.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* =========================================================================
@@ -199,11 +251,8 @@ export default function ContentSection() {
           
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-black/5 dark:border-white/5 pb-4">
             <div className="space-y-1">
-              <div className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-red-600 animate-pulse" />
-                <span className="font-mono text-xs uppercase tracking-widest text-[#0D7377] font-bold">
-                  Official Series · SINE Voices
-                </span>
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-[#0D7377] dark:text-[#00E5A3] font-semibold">
+                SINE Voices · Video Podcast Series
               </div>
               <h3 className="font-display font-light text-2xl sm:text-3xl text-[#0A0A0A] dark:text-white">
                 SINE IIT Bombay Video Podcasts
@@ -214,10 +263,10 @@ export default function ContentSection() {
               href={playlistUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-600 hover:bg-red-700 text-white font-mono text-xs uppercase tracking-wider font-semibold transition-all shadow-xs"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black text-white dark:bg-white dark:text-black font-sans text-xs uppercase tracking-wider font-semibold transition-all hover:opacity-90 shadow-sm"
             >
               <span>Play All on YouTube</span>
-              <ExternalLink className="h-3 w-3" />
+              <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </div>
 
@@ -257,7 +306,7 @@ export default function ContentSection() {
                   {activeVideo.title}
                 </h4>
 
-                <p className="font-sans text-xs sm:text-sm text-[#666] dark:text-zinc-300 leading-relaxed">
+                <p className="font-sans text-xs sm:text-sm text-[#666] dark:text-zinc-300 leading-relaxed line-clamp-2 sm:line-clamp-none">
                   {activeVideo.summary}
                 </p>
               </div>
@@ -272,7 +321,7 @@ export default function ContentSection() {
                 <span className="font-mono text-[11px] text-[#0D7377]">Click to Play</span>
               </div>
 
-              <div className="space-y-2.5 max-h-[500px] overflow-y-auto pr-1">
+              <div className="flex lg:flex-col overflow-x-auto lg:overflow-y-auto gap-2.5 pb-2.5 lg:pb-0 lg:max-h-[500px] scrollbar-none snap-x -mx-4 px-4 sm:mx-0 sm:px-0">
                 {sineVoicesEpisodes.map((ep, idx) => {
                   const isSelected = selectedVideoIndex === idx;
 
@@ -280,14 +329,14 @@ export default function ContentSection() {
                     <button
                       key={ep.id}
                       onClick={() => setSelectedVideoIndex(idx)}
-                      className={`w-full p-2.5 rounded-lg border text-left transition-all flex gap-3 items-center ${
+                      className={`w-[230px] sm:w-[260px] lg:w-full shrink-0 snap-start p-2.5 rounded-lg border text-left transition-all flex gap-3 items-center ${
                         isSelected
                           ? "bg-white dark:bg-[#161616] border-[#0D7377] ring-1 ring-[#0D7377] shadow-sm"
                           : "bg-white/60 dark:bg-[#101010] border-[#E5E5E5] dark:border-white/10 hover:border-black/20 dark:hover:border-white/20"
                       }`}
                     >
                       {/* Thumbnail with Play Overlay */}
-                      <div className="relative aspect-[16/9] w-28 shrink-0 rounded overflow-hidden bg-black border border-black/10 dark:border-white/10">
+                      <div className="relative aspect-[16/9] w-20 sm:w-24 shrink-0 rounded overflow-hidden bg-black border border-black/10 dark:border-white/10">
                         <img
                           src={ep.thumbnail}
                           alt={ep.title}
@@ -296,25 +345,22 @@ export default function ContentSection() {
                         <div className={`absolute inset-0 flex items-center justify-center transition-all ${
                           isSelected ? "bg-[#0D7377]/40" : "bg-black/30 hover:bg-black/10"
                         }`}>
-                          <div className={`h-6 w-6 rounded-full flex items-center justify-center ${
+                          <div className={`h-5 w-5 sm:h-6 sm:w-6 rounded-full flex items-center justify-center ${
                             isSelected ? "bg-[#0D7377] text-white" : "bg-white/80 text-black"
                           }`}>
-                            <Play className="h-2.5 w-2.5 fill-current ml-0.5" />
+                            <Play className="h-2 w-2 sm:h-2.5 sm:w-2.5 fill-current ml-0.5" />
                           </div>
                         </div>
                       </div>
 
                       {/* Episode Details */}
-                      <div className="space-y-1 min-w-0 flex-1">
+                      <div className="space-y-0.5 sm:space-y-1 min-w-0 flex-1">
                         <div className="flex items-center justify-between gap-1">
                           <span className="font-mono text-[9px] font-bold text-[#0D7377]">
                             {ep.epNumber}
                           </span>
-                          <span className="font-mono text-[9px] text-[#888] truncate">
-                            {ep.category}
-                          </span>
                         </div>
-                        <h5 className="font-sans font-bold text-xs text-[#0A0A0A] dark:text-white line-clamp-2 leading-snug">
+                        <h5 className="font-sans font-bold text-[11px] sm:text-xs text-[#0A0A0A] dark:text-white line-clamp-2 leading-snug">
                           {ep.title}
                         </h5>
                       </div>
