@@ -539,10 +539,10 @@ export default function PortfolioSection() {
           </span>
           <div className="flex items-center gap-6">
             <Link
-              href="/focus-areas"
+              href="/team"
               className="group inline-flex items-center gap-1.5 font-semibold text-[#0A0A0A] dark:text-white hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors"
             >
-              <span>Explore Our Investment Theses</span>
+              <span>Meet the Team</span>
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
             <Link
