@@ -56,10 +56,10 @@ export default function HomeClosingCta() {
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
           <Link
-            href="/focus-areas"
+            href="/portfolio"
             className="px-8 py-3.5 sm:px-9 sm:py-4 rounded-full border border-black/15 dark:border-white/15 hover:border-black dark:hover:border-white font-sans text-xs sm:text-sm uppercase tracking-[0.2em] text-zinc-700 dark:text-zinc-300 transition-all font-medium"
           >
-            <span>View Focus Areas</span>
+            <span>Explore Portfolio</span>
           </Link>
         </div>
 
