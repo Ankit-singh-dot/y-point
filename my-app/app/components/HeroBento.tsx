@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import Link from "next/link";
-import { Volume2, VolumeX, ArrowUpRight, Maximize2 } from "lucide-react";
+import { Volume2, VolumeX, Maximize2 } from "lucide-react";
 
 export default function HeroBento() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -56,19 +55,9 @@ export default function HeroBento() {
         />
       </div>
 
-      {/* 4. Subtle Vignette for Bottom Interface Readability on Desktop */}
-      <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
+      {/* Subtle Vignette for Bottom Interface Readability */}
+      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
 
-      {/* 5. Primary Action: "Pitch to Y-Point" Button - Positioned safely above bottom controls on mobile */}
-      <div className="absolute bottom-20 sm:bottom-12 inset-x-0 z-20 flex justify-center pointer-events-auto px-4">
-        <Link
-          href="/apply"
-          className="group px-7 py-3 sm:px-9 sm:py-3.5 rounded-full bg-white hover:bg-[#00E5A3] text-black font-sans text-xs sm:text-sm uppercase tracking-[0.2em] font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_8px_32px_rgba(255,255,255,0.25)] flex items-center gap-2"
-        >
-          <span>Pitch to Y-Point</span>
-          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </Link>
-      </div>
 
       {/* 6. Bottom Interface Controls: Socials, Sound Toggle & Fullscreen */}
       <div className="absolute bottom-5 inset-x-5 sm:inset-x-auto sm:right-8 sm:bottom-8 z-20 flex items-center justify-between sm:justify-end gap-2 sm:gap-2.5 pointer-events-auto">
