@@ -9,7 +9,7 @@ export default function HomeIntroAndAdvantage() {
   const metrics = [
     { value: "Pre-seed & Seed", label: "Investment stage", sub: "First institutional cheque" },
     { value: "TRL 4 +", label: "Technology maturity focus", sub: "Beyond theoretical concepts" },
-    { value: "6", label: "Focus Areas", sub: "Core deeptech domains" },
+    { value: "Deep Tech", label: "Investment thesis", sub: "Science & engineering IP" },
   ];
 
   const advantageCards = [
