@@ -127,10 +127,10 @@ export default function FocusAreasStackingBento() {
             </p>
           </div>
           <Link
-            href="/focus-areas"
+            href="/apply"
             className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-[#0D7377] dark:text-[#00E5A3] hover:underline pb-1 font-semibold"
           >
-            <span>Explore All Theses</span>
+            <span>Pitch Your Technology</span>
             <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>
@@ -209,10 +209,10 @@ export default function FocusAreasStackingBento() {
                         {sector.detail}
                       </span>
                       <Link
-                        href={`/focus-areas`}
+                        href="/apply"
                         className="group/link inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-[#0D7377] dark:text-[#00E5A3] font-bold hover:underline"
                       >
-                        <span>Read Thesis</span>
+                        <span>Pitch in this Domain</span>
                         <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                       </Link>
                     </div>
