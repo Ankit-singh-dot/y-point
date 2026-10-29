@@ -28,7 +28,6 @@ export default function Navbar() {
     { name: "About us", href: "/about" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Team", href: "/team" },
-    { name: "Focus Areas", href: "/focus-areas" },
     { name: "Content", href: "/insights" },
     { name: "Apply for funding", href: "/apply" },
   ];
@@ -113,7 +112,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Full Screen Overlay Menu - ONLY The 6 Requested Items */}
+      {/* Full Screen Overlay Menu - 5 Navigation Items */}
       <div 
         className={`fixed inset-0 z-[60] bg-white/98 dark:bg-[#050505]/98 backdrop-blur-3xl transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-center px-6 sm:px-16 lg:px-24 ${
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
