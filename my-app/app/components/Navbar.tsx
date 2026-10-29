@@ -50,7 +50,7 @@ export default function Navbar() {
               <div className="flex items-center px-3 sm:px-3.5 py-1.5 rounded-full bg-white/95 dark:bg-white/95 backdrop-blur-xl border border-black/10 dark:border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.12)]">
                 <div className="relative h-7 sm:h-7.5 md:h-8 w-auto flex items-center">
                   <Image 
-                    src="/logo-transparent.png" 
+                    src="/logo-transparent.webp" 
                     alt="Y-Point Logo" 
                     width={180} 
                     height={60} 

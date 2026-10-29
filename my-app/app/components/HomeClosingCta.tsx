@@ -12,7 +12,7 @@ export default function HomeClosingCta() {
       {/* Background Architectural Texture (Subtle, never hides or overlaps text) */}
       <div className="absolute inset-0 pointer-events-none select-none opacity-[0.06] dark:opacity-[0.08]">
         <Image
-          src="/iitb/campus-lawn.jpg"
+          src="/iitb/campus-lawn.webp"
           alt=""
           fill
           className="object-cover object-center"
@@ -27,7 +27,7 @@ export default function HomeClosingCta() {
         aria-hidden="true"
       >
         <Image
-          src="/iitb/iitb-logo.png"
+          src="/iitb/iitb-logo.webp"
           alt=""
           fill
           className="object-contain"

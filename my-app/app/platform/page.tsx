@@ -40,7 +40,7 @@ export default function PlatformPage() {
         aria-hidden="true"
       >
         <Image
-          src="/iitb/iitb-logo.png"
+          src="/iitb/iitb-logo.webp"
           alt=""
           fill
           className="object-contain"
@@ -94,7 +94,7 @@ export default function PlatformPage() {
         >
           <motion.div style={{ y: imageY, scale: imageScale }} className="absolute inset-0 origin-bottom">
             <Image
-              src="/iitb/campus-lawn.jpg"
+              src="/iitb/campus-lawn.webp"
               alt="IIT Bombay Academic & Incubation Campus"
               fill
               className="object-cover opacity-85"
@@ -109,7 +109,7 @@ export default function PlatformPage() {
           <div className="absolute top-4 sm:top-5 left-4 sm:left-5 right-4 sm:right-5 flex items-center justify-between">
             <div className="flex items-center gap-2 bg-black/60 backdrop-blur-md px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-white/20">
               <div className="relative h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0">
-                <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+                <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
               </div>
               <span className="font-mono text-[9px] sm:text-[11px] text-white tracking-wider font-semibold">
                 SINE · IIT BOMBAY
@@ -160,7 +160,7 @@ export default function PlatformPage() {
               {/* Institutional Visual Anchor */}
               <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-black shadow-md mt-6 hidden sm:block">
                 <Image
-                  src="/iitb/crest-plaque.jpg"
+                  src="/iitb/crest-plaque.webp"
                   alt="Historic IIT Bombay Bronze Crest"
                   fill
                   className="object-cover opacity-90"
@@ -296,7 +296,7 @@ export default function PlatformPage() {
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[350px] h-[350px]"
             aria-hidden="true"
           >
-            <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+            <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
           </div>
 
           <div className="relative space-y-3">

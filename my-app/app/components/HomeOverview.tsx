@@ -105,7 +105,7 @@ export default function HomeOverview() {
       icon: SiliconWaferIcon,
       quote: "Models are commoditising. The durable value is moving down the stack.",
       whyNow: "As foundation model APIs converge to near-zero margins, sovereign advantage belongs to domain-specific silicon, photonics interconnects, and physical AI systems that interact with hardware.",
-      image: "/sectors/ai-computing.jpg",
+      image: "/sectors/ai-computing.webp",
       chain: [
         { label: "Algorithms", isFocus: false },
         { label: "Domain Silicon", isFocus: true },
@@ -122,7 +122,7 @@ export default function HomeOverview() {
       icon: AdvancedManufacturingIcon,
       quote: "India will not win manufacturing on labour cost. It will win on automation and on silicon.",
       whyNow: "Global supply chain realignments demand automated yield verification, precision machine tool CNC control, and domestic fabless semiconductor IP with taped-out silicon precedents.",
-      image: "/sectors/semiconductor.jpg",
+      image: "/sectors/semiconductor.webp",
       chain: [
         { label: "Lab Synthesis", isFocus: false },
         { label: "MPW Tape-Out", isFocus: true },
@@ -139,7 +139,7 @@ export default function HomeOverview() {
       icon: MaterialsLatticeIcon,
       quote: "Every hard problem in energy, space and electronics is a materials problem wearing a disguise.",
       whyNow: "Thermal limits, battery densities, and aerospace weight envelopes cannot advance through software alone. Novel polymers, synthetic alloys, and 2D lattices unlock systemic breakthroughs.",
-      image: "/sectors/advanced-manufacturing.jpg",
+      image: "/sectors/advanced-manufacturing.webp",
       chain: [
         { label: "Crystal Modeling", isFocus: false },
         { label: "Pilot Synthesis", isFocus: true },
@@ -156,7 +156,7 @@ export default function HomeOverview() {
       icon: SpaceDefenceIcon,
       quote: "Sovereign capability became a commercial market, and the procurement door is finally open.",
       whyNow: "Initiatives like iDEX, DRDO procurement reforms, and IN-SPACe deregulation have turned sovereign national security requirements into predictable commercial contracts for deeptech suppliers.",
-      image: "/sectors/space-defence.jpg",
+      image: "/sectors/space-defence.webp",
       chain: [
         { label: "Lab PoC", isFocus: false },
         { label: "Mil-Spec Testing", isFocus: true },
@@ -173,7 +173,7 @@ export default function HomeOverview() {
       icon: CleanTechEnergyIcon,
       quote: "Decarbonising an industrialising economy is a different problem from decarbonising a rich one.",
       whyNow: "India cannot simply subsidize consumer EV luxuries; it requires radical thermal efficiency, heavy industrial motor retrofits, and high-temperature waste-heat capture engineered for tropical grids.",
-      image: "/sectors/climate-energy.jpg",
+      image: "/sectors/climate-energy.webp",
       chain: [
         { label: "Electrochem Bench", isFocus: false },
         { label: "Pilot Cell Stacks", isFocus: true },
@@ -190,7 +190,7 @@ export default function HomeOverview() {
       icon: LifeSciencesIcon,
       quote: "Indian clinical scale and Indian engineering cost is an advantage nobody else can assemble.",
       whyNow: "Cell and gene therapies designed in the West cost $400k+ per patient. By combining indigenous bioprocess engineering with Indian clinical volume, cures can be commercialized at 1/10th global cost.",
-      image: "/sectors/life-sciences.jpg",
+      image: "/sectors/life-sciences.webp",
       chain: [
         { label: "Vector Engineering", isFocus: false },
         { label: "Phase 1/2 Clinical Trials", isFocus: true },

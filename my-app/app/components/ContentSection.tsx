@@ -163,7 +163,7 @@ export default function ContentSection() {
         aria-hidden="true"
       >
         <Image
-          src="/iitb/iitb-logo.png"
+          src="/iitb/iitb-logo.webp"
           alt=""
           fill
           className="object-contain"
@@ -211,7 +211,7 @@ export default function ContentSection() {
             <div className="group relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-black shadow-md">
               <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden">
                 <Image
-                  src="/iitb/crest-plaque.jpg"
+                  src="/iitb/crest-plaque.webp"
                   alt="SINE IIT Bombay Voices"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-85"
@@ -221,7 +221,7 @@ export default function ContentSection() {
                 
                 <div className="absolute top-3 left-3 flex items-center gap-2 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
                   <div className="relative h-3.5 w-3.5 shrink-0">
-                    <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+                    <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
                   </div>
                   <span className="font-mono text-[9px] text-white tracking-wider font-semibold">
                     SINE · IIT BOMBAY

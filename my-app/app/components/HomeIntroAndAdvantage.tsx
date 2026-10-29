@@ -18,7 +18,7 @@ export default function HomeIntroAndAdvantage() {
       title: "Institutional foundation",
       description: "Launched by SINE, IIT Bombay, within a research and technology entrepreneurship ecosystem.",
       icon: Landmark,
-      bgImage: "/iitb/crest-plaque.jpg",
+      bgImage: "/iitb/crest-plaque.webp",
     },
     {
       num: "02",
@@ -49,7 +49,7 @@ export default function HomeIntroAndAdvantage() {
         aria-hidden="true"
       >
         <Image
-          src="/iitb/iitb-logo.png"
+          src="/iitb/iitb-logo.webp"
           alt=""
           fill
           className="object-contain"
@@ -111,7 +111,7 @@ export default function HomeIntroAndAdvantage() {
             <div className="group relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-black shadow-lg">
               <div className="relative aspect-[16/10] sm:aspect-[4/5] w-full overflow-hidden">
                 <Image
-                  src="/iitb/main-gate.jpg"
+                  src="/iitb/main-gate.webp"
                   alt="IIT Bombay Institutional Foundation"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90"
@@ -126,7 +126,7 @@ export default function HomeIntroAndAdvantage() {
                 <div className="absolute top-3 sm:top-4 left-3 sm:left-4 right-3 sm:right-4 flex items-center justify-between">
                   <div className="flex items-center gap-1.5 sm:gap-2 bg-black/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded-full border border-white/20">
                     <div className="relative h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0">
-                      <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+                      <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
                     </div>
                     <span className="font-mono text-[9px] sm:text-[10px] text-white tracking-wider font-semibold">
                       SINE · IIT BOMBAY

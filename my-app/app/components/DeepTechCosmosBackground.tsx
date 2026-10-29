@@ -198,7 +198,7 @@ export default function DeepTechCosmosBackground() {
         aria-hidden="true"
       >
         <Image
-          src="/iitb/iitb-logo.png"
+          src="/iitb/iitb-logo.webp"
           alt=""
           fill
           className="object-contain"

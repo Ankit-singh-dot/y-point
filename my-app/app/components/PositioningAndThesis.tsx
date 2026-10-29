@@ -55,7 +55,7 @@ export default function PositioningAndThesis() {
             <div className="group relative overflow-hidden rounded-2xl border border-[#232b3d] bg-[#0d1017] p-2 shadow-2xl transition-all hover:border-[#00e5a3]/50">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
                 <Image
-                  src="/sectors/semiconductor.jpg"
+                  src="/sectors/semiconductor.webp"
                   alt="Semiconductor fabrication cleanroom inspection"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"

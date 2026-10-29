@@ -29,13 +29,14 @@ export default function HeroBento() {
 
   return (
     <section className="relative w-full h-screen h-[100dvh] overflow-hidden bg-black flex flex-col justify-between items-center select-none">
-      {/* 1. Ambient Synchronized Cinema Glow for Mobile (Industry standard to illuminate letterbox without cropping) */}
+      {/* 1. Ambient Synchronized Cinema Glow for Mobile (Ultra-lightweight 3MB stream for background blur) */}
       <video
-        src="/Y-Point_Film_v2_kinetic_draft.mp4"
+        src="/Y-Point_Film_ambient.mp4"
         autoPlay
         loop
         muted
         playsInline
+        preload="metadata"
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover blur-3xl opacity-30 scale-110 pointer-events-none md:hidden"
       />

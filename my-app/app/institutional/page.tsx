@@ -28,7 +28,7 @@ export default function InstitutionalPage() {
         aria-hidden="true"
       >
         <Image
-          src="/iitb/iitb-logo.png"
+          src="/iitb/iitb-logo.webp"
           alt=""
           fill
           className="object-contain"
@@ -103,7 +103,7 @@ export default function InstitutionalPage() {
         <div className="relative rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/10 bg-[#FBFBFB] dark:bg-[#0c0f16] p-6 sm:p-10 lg:p-12 space-y-6 shadow-md overflow-hidden">
           {/* Transparent Crest Watermark - Zero hard cutoff edges */}
           <div className="absolute -right-10 -bottom-10 w-64 h-64 pointer-events-none select-none opacity-[0.035] dark:opacity-[0.045]">
-            <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+            <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
           </div>
 
           <div className="relative flex flex-col sm:flex-row sm:items-center justify-between border-b border-black/5 dark:border-white/10 pb-4 gap-2">

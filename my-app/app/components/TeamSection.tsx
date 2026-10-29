@@ -29,7 +29,7 @@ export default function TeamSection() {
     {
       name: "Saurabh Jain",
       role: "Partner / Fund Manager",
-      image: "/Saurabh_Jain_d1169fdf3d.png",
+      image: "/Saurabh_Jain_d1169fdf3d.webp",
       responsibility: "Leads semiconductors, computing, and industrial hardware diligence and portfolio support.",
       bullets: [
         "10+ years early-stage investing (ex-Refex Capital, Tracxn); evaluated 400+ deeptech opportunities.",
@@ -40,7 +40,7 @@ export default function TeamSection() {
     {
       name: "Saurabh Singh",
       role: "Partner / Investment Manager",
-      image: "/Saurabh_Singh_67047a2afb.jpeg",
+      image: "/Saurabh_Singh_67047a2afb.webp",
       responsibility: "Operator-led technical diligence, material science, and clean climate tech sourcing.",
       bullets: [
         "Former deeptech founder (3 ventures) with direct operational manufacturing and factory floor experience.",
@@ -69,7 +69,7 @@ export default function TeamSection() {
         aria-hidden="true"
       >
         <Image
-          src="/iitb/iitb-logo.png"
+          src="/iitb/iitb-logo.webp"
           alt=""
           fill
           className="object-contain"
@@ -111,7 +111,7 @@ export default function TeamSection() {
             <div className="p-6 rounded-2xl border border-black/10 dark:border-white/10 bg-[#F9F9F8] dark:bg-[#0c0f16] space-y-3">
               <div className="flex items-center gap-2">
                 <div className="relative h-4 w-4 shrink-0">
-                  <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+                  <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
                 </div>
                 <span className="font-mono text-[11px] uppercase tracking-wider text-[#0D7377] dark:text-[#00E5A3] font-semibold">
                   SINE IIT Bombay
@@ -200,7 +200,7 @@ export default function TeamSection() {
         <div className="relative p-8 sm:p-12 rounded-2xl border border-black/10 dark:border-white/10 bg-[#FBFBFB] dark:bg-[#0c0f16] space-y-4 mb-24 overflow-hidden shadow-sm">
           {/* Transparent Crest Watermark - Zero hard cutoff edges */}
           <div className="absolute -right-10 -bottom-10 w-64 h-64 pointer-events-none select-none opacity-[0.035] dark:opacity-[0.045]">
-            <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+            <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
           </div>
 
           <div className="relative space-y-2">

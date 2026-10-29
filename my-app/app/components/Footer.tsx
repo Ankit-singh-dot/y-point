@@ -29,7 +29,7 @@ export default function Footer() {
               <div className="flex items-center px-4 py-2 rounded-2xl bg-white border border-black/10 shadow-xs">
                 <div className="relative h-10 sm:h-12 md:h-14 w-auto flex items-center">
                   <Image 
-                    src="/logo-transparent.png" 
+                    src="/logo-transparent.webp" 
                     alt="Y-Point Logo" 
                     width={220} 
                     height={75} 

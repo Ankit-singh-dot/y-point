@@ -41,7 +41,7 @@ export default function LabToMarketPage() {
         aria-hidden="true"
       >
         <Image
-          src="/iitb/iitb-logo.png"
+          src="/iitb/iitb-logo.webp"
           alt=""
           fill
           className="object-contain"
@@ -95,7 +95,7 @@ export default function LabToMarketPage() {
         >
           <motion.div style={{ y: imageY, scale: imageScale }} className="absolute inset-0 origin-bottom">
             <Image
-              src="/iitb/main-gate.jpg"
+              src="/iitb/main-gate.webp"
               alt="From Lab to Market - IIT Bombay Translational Pipeline"
               fill
               className="object-cover opacity-85"
@@ -110,7 +110,7 @@ export default function LabToMarketPage() {
           <div className="absolute top-4 sm:top-5 left-4 sm:left-5 right-4 sm:right-5 flex items-center justify-between">
             <div className="flex items-center gap-2 bg-black/60 backdrop-blur-md px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-white/20">
               <div className="relative h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0">
-                <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+                <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
               </div>
               <span className="font-mono text-[9px] sm:text-[11px] text-white tracking-wider font-semibold">
                 SINE · IIT BOMBAY
@@ -157,7 +157,7 @@ export default function LabToMarketPage() {
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[350px] h-[350px]"
             aria-hidden="true"
           >
-            <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+            <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
           </div>
 
           <div className="relative space-y-3">

@@ -64,7 +64,7 @@ export default function ContactPage() {
         aria-hidden="true"
       >
         <Image
-          src="/iitb/iitb-logo.png"
+          src="/iitb/iitb-logo.webp"
           alt=""
           fill
           className="object-contain"
@@ -130,7 +130,7 @@ export default function ContactPage() {
         <div className="relative rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/10 bg-[#FBFBFB] dark:bg-[#0c0f16] p-6 sm:p-10 lg:p-12 space-y-8 overflow-hidden shadow-md">
           {/* Transparent Crest Watermark - Zero hard cutoff edges */}
           <div className="absolute -right-10 -bottom-10 w-64 h-64 pointer-events-none select-none opacity-[0.035] dark:opacity-[0.045]">
-            <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+            <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
           </div>
 
           <div className="relative flex items-center justify-between border-b border-black/5 dark:border-white/10 pb-5">
@@ -142,7 +142,7 @@ export default function ContactPage() {
             </div>
             <div className="flex items-center gap-2 font-mono text-xs text-[#0D7377] dark:text-[#00E5A3] font-semibold">
               <div className="relative h-4 w-4 shrink-0">
-                <Image src="/iitb/iitb-logo.png" alt="" fill className="object-contain" />
+                <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
               </div>
               <span>IIT Bombay Campus</span>
             </div>
