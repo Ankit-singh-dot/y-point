@@ -71,11 +71,10 @@ export default function Footer() {
 
             {/* Theses & Content */}
             <div className="space-y-4 sm:space-y-6">
-              <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-[#0D7377] font-semibold">02 · Theses</h4>
+              <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-[#0D7377] font-semibold">02 · Insights</h4>
               <ul className="space-y-3 font-sans text-sm">
-                <li><Link href="/#focus" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Focus Areas Map</Link></li>
-                <li><Link href="/#content" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Signal from the Lab</Link></li>
-                <li><Link href="/#content" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Podcast Series</Link></li>
+                <li><Link href="/insights" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Signal from the Lab</Link></li>
+                <li><Link href="/insights" className="text-black/70 dark:text-white/70 hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors">Podcast Series</Link></li>
               </ul>
             </div>
 
