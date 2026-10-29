@@ -40,7 +40,7 @@ export default function TeamSection() {
     {
       name: "Saurabh Singh",
       role: "Partner / Investment Manager",
-      image: "/Saurabh_Singh_67047a2afb.png",
+      image: "/Saurabh_Singh_67047a2afb.jpeg",
       responsibility: "Operator-led technical diligence, material science, and clean climate tech sourcing.",
       bullets: [
         "Former deeptech founder (3 ventures) with direct operational manufacturing and factory floor experience.",
@@ -64,7 +64,7 @@ export default function TeamSection() {
   return (
     <section id="team" className="relative py-24 sm:py-32 bg-white dark:bg-[#0A0A0A] text-[#0A0A0A] dark:text-white overflow-hidden">
       {/* Subtle IIT Bombay Crest Watermark in Background */}
-      <div 
+      <div
         className="absolute -right-28 top-1/4 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[450px] h-[450px] sm:w-[650px] sm:h-[650px] lg:w-[800px] lg:h-[800px]"
         aria-hidden="true"
       >
@@ -77,7 +77,7 @@ export default function TeamSection() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
-        
+
         {/* SUBTLE BREADCRUMB HEADER */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E5E5E5] dark:border-white/10 pb-6 mb-12 sm:mb-16">
           <div className="flex items-center gap-3">
@@ -228,10 +228,10 @@ export default function TeamSection() {
           </span>
           <div className="flex items-center gap-6">
             <Link
-              href="/focus-areas"
+              href="/portfolio"
               className="group inline-flex items-center gap-1.5 font-semibold text-[#0A0A0A] dark:text-white hover:text-[#0D7377] dark:hover:text-teal-400 transition-colors"
             >
-              <span>Explore Focus Areas</span>
+              <span>Explore Portfolio</span>
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
             <Link
