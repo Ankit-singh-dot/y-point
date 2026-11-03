@@ -22,7 +22,7 @@ export default function InstitutionalPage() {
 
   return (
     <>
-    <PhotoHero photo="entranceSign" layout="top" eyebrow="For institutions & partners" title="For Institutions and Partners." intro="Y-Point exists because of a structural gap in how India funds its own research." />
+    <PhotoHero photo="mainGate" eyebrow="For institutions & partners" title="For Institutions and Partners." intro="Y-Point exists because of a structural gap in how India funds its own research." />
     <div className="relative min-h-screen bg-white dark:bg-[#07090e] text-[#0A0A0A] dark:text-white pt-16 sm:pt-20 pb-20 sm:pb-28 lg:pb-36 overflow-hidden">
 
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
