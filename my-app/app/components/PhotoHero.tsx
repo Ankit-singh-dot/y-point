@@ -57,13 +57,14 @@ export function PhotoStage({
   const aspect = p.w / p.h;
   const frameStyle = {
     "--frame-w": `min(${FRAME_MAX_W}px, 40vw, calc(min(58svh, 580px) * ${aspect.toFixed(4)}))`,
+    "--frame-w-sm": `min(100%, 560px, calc(44svh * ${aspect.toFixed(4)}))`,
     "--frame-ar": `${p.w} / ${p.h}`,
   } as React.CSSProperties;
 
   return (
     <section className="relative z-10 w-full overflow-hidden text-white" style={{ minHeight, background: `rgb(${INK})` }}>
-      {/* Desktop backdrop: blurred photo, accent glow and a faint dot texture */}
-      <div aria-hidden="true" className="absolute inset-0 hidden lg:block">
+      {/* Backdrop: blurred photo, accent glow and a faint dot texture (blur hides missing resolution) */}
+      <div aria-hidden="true" className="absolute inset-0">
         <Image src={p.src} alt="" fill sizes="30vw" className="object-cover scale-125 blur-3xl saturate-125 opacity-60" />
         <div
           className="absolute inset-0"
@@ -81,53 +82,36 @@ export function PhotoStage({
           }}
         />
         <div
-          className="absolute right-[8%] top-1/2 h-[60vh] w-[45vw] -translate-y-1/2 rounded-full blur-[120px]"
+          className="absolute left-1/2 top-[30%] h-[40vh] w-[90vw] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[90px] lg:left-auto lg:right-[8%] lg:top-1/2 lg:h-[60vh] lg:w-[45vw] lg:translate-x-0 lg:blur-[120px]"
           style={{ background: `radial-gradient(closest-side, rgba(${ACCENT},0.18), transparent)` }}
         />
       </div>
 
       <div
-        className={`mx-auto flex max-w-7xl flex-col px-4 sm:px-8 lg:px-12 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-20 lg:text-left ${
-          top ? "items-center text-center" : "justify-end"
+        className={`mx-auto flex max-w-7xl flex-col justify-center gap-10 px-4 sm:px-8 lg:px-12 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-20 lg:text-left ${
+          top ? "items-center text-center" : ""
         }`}
-        style={{ minHeight, paddingTop, paddingBottom }}
+        style={{ minHeight, paddingTop: `min(${paddingTop}, 6.5rem)`, paddingBottom }}
       >
         <div className={`relative z-10 w-full ${top ? "max-w-3xl" : "max-w-2xl"}`}>{children}</div>
 
-        {/* Sharp photo: full-bleed on mobile; on desktop a rounded frame */}
-        <div className="absolute inset-0 lg:relative lg:inset-auto">
-          <figure
-            className="group absolute inset-0 m-0 lg:relative lg:inset-auto lg:w-(--frame-w) lg:aspect-(--frame-ar) lg:overflow-hidden lg:rounded-[1.75rem] lg:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.9)] lg:ring-1 lg:ring-white/10"
-            style={frameStyle}
-          >
-            <Image
-              src={p.src}
-              alt={p.alt}
-              fill
-              preload={preload}
-              sizes={`(min-width: 1024px) ${FRAME_MAX_W}px, 100vw`}
-              className="object-cover object-(--pos) lg:object-center lg:transition-transform lg:duration-[1.2s] lg:ease-out lg:group-hover:scale-[1.03]"
-              style={{ "--pos": p.position } as React.CSSProperties}
-            />
-            {/* Mobile reading scrim */}
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 lg:hidden"
-              style={{
-                background: top
-                  ? `linear-gradient(180deg, rgba(${INK},0.9) 0%, rgba(${INK},0.72) 34%, rgba(${INK},0.15) 56%, rgba(${INK},0) 72%, rgba(${INK},0.35) 100%)`
-                  : `linear-gradient(180deg, rgba(${INK},0.55) 0%, rgba(${INK},0.1) 30%, rgba(${INK},0.55) 60%, rgba(${INK},0.92) 100%)`,
-              }}
-            />
-            {/* Desktop: gentle vignette so the photo sits into the dark page */}
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 hidden lg:block"
-              style={{ boxShadow: `inset 0 0 80px rgba(${INK},0.35)` }}
-            />
-          </figure>
-
-        </div>
+        {/* Sharp photo in a rounded frame at its own aspect ratio, never stretched past its real detail.
+            Phones: above the text. Desktop: right of the text. */}
+        <figure
+          className="group relative order-first m-0 w-(--frame-w-sm) self-center aspect-(--frame-ar) overflow-hidden rounded-3xl shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)] ring-1 ring-white/10 lg:order-none lg:w-(--frame-w) lg:rounded-[1.75rem] lg:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.9)]"
+          style={frameStyle}
+        >
+          <Image
+            src={p.src}
+            alt={p.alt}
+            fill
+            preload={preload}
+            sizes={`(min-width: 1024px) ${FRAME_MAX_W}px, min(100vw, 560px)`}
+            className="object-cover transition-transform duration-[1.2s] ease-out lg:group-hover:scale-[1.03]"
+          />
+          {/* Gentle vignette so the photo sits into the dark page */}
+          <div aria-hidden="true" className="absolute inset-0" style={{ boxShadow: `inset 0 0 80px rgba(${INK},0.35)` }} />
+        </figure>
       </div>
 
       {scrollCue && (
