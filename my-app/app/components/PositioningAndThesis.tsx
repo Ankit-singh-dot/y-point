@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ShimmerImage from "./ShimmerImage";
 import Link from "next/link";
 import { ArrowUpRight, Clock, Award, Compass, Sparkles } from "lucide-react";
 
@@ -54,7 +55,7 @@ export default function PositioningAndThesis() {
           <div className="lg:col-span-5">
             <div className="group relative overflow-hidden rounded-2xl border border-[#232b3d] bg-[#0d1017] p-2 shadow-2xl transition-all hover:border-[#00e5a3]/50">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-                <Image
+                <ShimmerImage
                   src="/sectors/semiconductor.webp"
                   alt="Semiconductor fabrication cleanroom inspection"
                   fill
