@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Send, CheckCircle2, Lock } from "lucide-react";
 
@@ -54,89 +53,10 @@ export default function ApplySection() {
 
   return (
     <section id="apply" className="relative bg-white dark:bg-[#0A0A0A] text-[#0A0A0A] dark:text-[#F5F5F3] pt-24 sm:pt-32 pb-24 border-b border-[#E5E5E5] dark:border-white/10 overflow-hidden">
-      {/* Subtle IIT Bombay Crest Watermark in Background */}
-      <div 
-        className="absolute -right-28 top-1/4 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[450px] h-[450px] sm:w-[650px] sm:h-[650px] lg:w-[800px] lg:h-[800px]"
-        aria-hidden="true"
-      >
-        <Image
-          src="/iitb/iitb-logo.webp"
-          alt=""
-          fill
-          className="object-contain"
-        />
-      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         
-        {/* SUBTLE BREADCRUMB HEADER */}
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E5E5E5] dark:border-white/10 pb-6 mb-12 sm:mb-16">
-          <div className="flex items-center gap-3">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#0D7377] font-semibold">
-              Pitch to Us
-            </span>
-            <span className="h-1 w-1 rounded-full bg-[#0D7377]" />
-            <span className="font-sans text-xs uppercase tracking-wider text-[#666666] dark:text-zinc-400">
-              For Founders Building with Science
-            </span>
-          </div>
 
-          <div className="font-mono text-[11px] sm:text-xs tracking-wider text-[#666666] dark:text-zinc-400 bg-[#F5F5F3] dark:bg-white/5 px-3 py-1 rounded">
-            STAGE: PRE-SEED &amp; SEED · TRL 4–7 · SINE IIT BOMBAY
-          </div>
-        </div>
-
-        {/* HERO TITLE & INSTITUTIONAL SEED ANCHOR */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16 sm:mb-20">
-          <div className="lg:col-span-8 space-y-6">
-            <h1 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.12]">
-              Building a deeptech company?
-            </h1>
-            <p className="font-sans font-medium text-lg sm:text-xl text-[#0A0A0A] dark:text-white leading-snug">
-              We would like to understand what you&apos;re building.
-            </p>
-            <p className="font-sans font-light text-base sm:text-lg text-[#666666] dark:text-zinc-300 leading-relaxed max-w-3xl">
-              We invest in early-stage deeptech ventures developing technology-led solutions for significant markets. Tell us about the problem you are solving, the technology behind your solution, what you have validated so far and the milestones you are working towards.
-            </p>
-          </div>
-
-          {/* Institutional Anchor Card */}
-          <div className="lg:col-span-4">
-            <div className="group relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-black shadow-md">
-              <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden">
-                <Image
-                  src="/iitb/main-gate.webp"
-                  alt="IIT Bombay Main Gate"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-85"
-                  sizes="(max-width: 1024px) 100vw, 30vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
-                
-                <div className="absolute top-3 left-3 flex items-center gap-2 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
-                  <div className="relative h-3.5 w-3.5 shrink-0">
-                    <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
-                  </div>
-                  <span className="font-mono text-[9px] text-white tracking-wider font-semibold">
-                    SINE · IIT BOMBAY
-                  </span>
-                </div>
-
-                <div className="absolute bottom-3 left-3 right-3 text-white space-y-1">
-                  <div className="font-mono text-[10px] text-[#00E5A3] font-semibold">
-                    ज्ञानं परमं ध्येयम्
-                  </div>
-                  <div className="font-sans font-medium text-xs text-white">
-                    Pre-Seed &amp; Seed Investment
-                  </div>
-                  <p className="hidden sm:block font-sans text-[11px] text-white/70 font-light leading-snug">
-                    Typically ₹3–5 Cr initial investment with follow-on reserves, backed by IIT Bombay technical diligence.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* 1. WHAT WE LOOK FOR */}
         <div className="mb-20 space-y-8">
