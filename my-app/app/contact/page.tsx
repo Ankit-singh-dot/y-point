@@ -1,4 +1,5 @@
 import React from "react";
+import PhotoHero from "../components/PhotoHero";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -57,42 +58,12 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-white dark:bg-[#07090e] text-[#0A0A0A] dark:text-white py-20 sm:py-28 lg:py-36 overflow-hidden">
-      {/* Subtle IIT Bombay Crest Watermark in Background */}
-      <div 
-        className="absolute -right-28 top-1/4 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[450px] h-[450px] sm:w-[650px] sm:h-[650px] lg:w-[800px] lg:h-[800px]"
-        aria-hidden="true"
-      >
-        <Image
-          src="/iitb/iitb-logo.webp"
-          alt=""
-          fill
-          className="object-contain"
-        />
-      </div>
+    <>
+    <PhotoHero photo="mainGate" eyebrow="Contact" title="Contact & direct routes." intro="Routed inboxes, so your message reaches the right person first time." />
+    <div className="relative min-h-screen bg-white dark:bg-[#07090e] text-[#0A0A0A] dark:text-white pt-16 sm:pt-20 pb-20 sm:pb-28 lg:pb-36 overflow-hidden">
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
         
-        {/* Page Header */}
-        <div className="space-y-4">
-          <div className="flex items-center gap-3">
-            <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#0D7377] dark:text-[#00E5A3] font-semibold">
-              Routed Inboxes · SINE IIT Bombay
-            </span>
-            <span className="h-1 w-1 rounded-full bg-[#0D7377] dark:bg-[#00E5A3]" />
-            <span className="font-mono text-xs uppercase tracking-wider text-black/40 dark:text-white/40">
-              Direct Contact
-            </span>
-          </div>
-
-          <h1 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight text-[#0A0A0A] dark:text-white leading-[1.1]">
-            CONTACT &amp; DIRECT ROUTES
-          </h1>
-
-          <p className="text-zinc-600 dark:text-zinc-400 text-sm sm:text-base max-w-2xl leading-relaxed font-light">
-            We use routed inboxes so your inquiry reaches the right person immediately without languishing in a generic catch-all inbox.
-          </p>
-        </div>
 
         {/* Routes Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -128,10 +99,6 @@ export default function ContactPage() {
 
         {/* Registered Office Bento with Authentic IIT Bombay Visual Anchor */}
         <div className="relative rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/10 bg-[#FBFBFB] dark:bg-[#0c0f16] p-6 sm:p-10 lg:p-12 space-y-8 overflow-hidden shadow-md">
-          {/* Transparent Crest Watermark - Zero hard cutoff edges */}
-          <div className="absolute -right-10 -bottom-10 w-64 h-64 pointer-events-none select-none opacity-[0.035] dark:opacity-[0.045]">
-            <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
-          </div>
 
           <div className="relative flex items-center justify-between border-b border-black/5 dark:border-white/10 pb-5">
             <div className="flex items-center gap-3">
@@ -181,5 +148,6 @@ export default function ContactPage() {
 
       </div>
     </div>
+    </>
   );
 }
