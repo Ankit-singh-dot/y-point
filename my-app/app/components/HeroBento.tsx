@@ -28,7 +28,7 @@ export default function HeroBento() {
   };
 
   return (
-    <section className="relative w-full h-screen h-[100dvh] overflow-hidden bg-black flex flex-col justify-between items-center select-none">
+    <section className="relative w-full h-screen h-[100dvh] min-h-[100dvh] overflow-hidden bg-black flex flex-col justify-between items-center select-none">
       {/* 1. Ambient Synchronized Cinema Glow for Mobile (Ultra-lightweight 3MB stream for background blur) */}
       <video
         src="/Y-Point_Film_ambient.mp4"
