@@ -45,7 +45,7 @@ export default function HomeIntroAndAdvantage() {
       {/* =========================================================================
           1. FULL-FRAME: IIT Bombay Main Building
          ========================================================================= */}
-      <PhotoStage photo="mainBuilding" preload minHeight="100svh" scrollCue paddingTop="7rem" paddingBottom="clamp(3rem, 7vw, 6rem)">
+      <PhotoStage photo="mainBuilding" preload minHeight="100svh" paddingTop="7rem" paddingBottom="clamp(3rem, 7vw, 6rem)">
           <div className="space-y-5">
             <div className="font-mono text-xs uppercase tracking-[0.22em] text-[#00E5A3] font-semibold">
               SINE · IIT Bombay
