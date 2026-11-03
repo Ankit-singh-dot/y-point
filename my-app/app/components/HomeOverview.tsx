@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import ShimmerImage from "./ShimmerImage";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -702,7 +703,7 @@ export default function HomeOverview() {
 
             {/* Right: Technical Engineering Photography */}
             <div className="lg:col-span-5 relative aspect-[16/11] w-full rounded-xl overflow-hidden border border-black/10 dark:border-white/10 bg-black shadow-lg">
-              <Image
+              <ShimmerImage
                 src={activeSector.image}
                 alt={activeSector.name}
                 fill
@@ -710,8 +711,8 @@ export default function HomeOverview() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              <div className="absolute bottom-3 left-4 font-mono text-[10px] text-white/80 tracking-wider">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-3 left-4 font-mono text-[10px] text-white/80 tracking-wider pointer-events-none">
                 TECHNICAL PHOTOGRAPHY · SINE IIT BOMBAY
               </div>
             </div>
