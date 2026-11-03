@@ -86,26 +86,32 @@ export default function TeamSection() {
                 className="group rounded-2xl border border-black/10 dark:border-white/10 bg-[#F9F9F8] dark:bg-[#0c0f16] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-[#0D7377] hover:shadow-lg"
               >
                 <div>
-                  {/* Portrait Photograph */}
-                  <div className="relative aspect-[4/5] w-full bg-black/5 overflow-hidden">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                    <div className="absolute bottom-3 left-4 right-4 text-white">
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-teal-300 block">
-                        Y-Point Investment Team
-                      </span>
+                  {/* Portrait: small beside the name on phones (the source photos are ~300px wide), full-width from md up */}
+                  <div className="flex items-center gap-4 p-6 pb-0 md:block md:p-0">
+                    <div className="relative aspect-[4/5] w-24 shrink-0 overflow-hidden rounded-xl bg-black/5 md:w-full md:rounded-none">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 767px) 96px, (max-width: 1200px) 50vw, 25vw"
+                      />
+                      <div className="absolute inset-0 hidden bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 md:block" />
+                      <div className="absolute bottom-3 left-4 right-4 hidden text-white md:block">
+                        <span className="font-mono text-[10px] uppercase tracking-wider text-teal-300 block">
+                          Y-Point Investment Team
+                        </span>
+                      </div>
+                    </div>
+                    <div className="md:hidden">
+                      <h3 className="font-display font-medium text-xl text-[#0A0A0A] dark:text-white">{member.name}</h3>
+                      <div className="font-sans text-xs text-[#0D7377] dark:text-[#00E5A3] font-semibold mt-1">{member.role}</div>
                     </div>
                   </div>
 
                   {/* Bio Content */}
                   <div className="p-6 space-y-3">
-                    <div>
+                    <div className="hidden md:block">
                       <h3 className="font-display font-medium text-xl text-[#0A0A0A] dark:text-white">
                         {member.name}
                       </h3>
