@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
+import { shimmerDataUrl } from "../lib/shimmer";
 
 const INK = "5,7,10";
 const ACCENT = "0,229,163";
@@ -38,6 +41,7 @@ export function PhotoStage({
   children,
 }: StageProps) {
   const p = HERO_PHOTOS[photo];
+  const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <section 
@@ -45,14 +49,26 @@ export function PhotoStage({
     >
       {/* 1. Full-Bleed Ultra HD Flexible Background Photograph: Perfectly fits 100% of any screen */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
+        {/* Shimmer skeleton layer while background bytes stream in */}
+        {!isLoaded && (
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-0 shimmer-skeleton pointer-events-none transition-opacity duration-1000"
+          />
+        )}
         <Image
           src={p.src}
           alt={p.alt}
           fill
           priority={preload}
+          placeholder="blur"
+          blurDataURL={shimmerDataUrl(p.w, p.h)}
+          onLoad={() => setIsLoaded(true)}
           sizes="100vw"
           style={{ objectPosition: p.position }}
-          className="object-cover w-full h-full scale-100 transition-transform duration-1000 ease-out"
+          className={`object-cover w-full h-full transition-all duration-1000 ease-out ${
+            isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-[1.03]"
+          }`}
         />
 
         {/* 2. Top Scrim: Preserves navbar transparency and readability */}
