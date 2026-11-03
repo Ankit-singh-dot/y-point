@@ -63,69 +63,10 @@ export default function TeamSection() {
 
   return (
     <section id="team" className="relative py-24 sm:py-32 bg-white dark:bg-[#0A0A0A] text-[#0A0A0A] dark:text-white overflow-hidden">
-      {/* Subtle IIT Bombay Crest Watermark in Background */}
-      <div
-        className="absolute -right-28 top-1/4 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[450px] h-[450px] sm:w-[650px] sm:h-[650px] lg:w-[800px] lg:h-[800px]"
-        aria-hidden="true"
-      >
-        <Image
-          src="/iitb/iitb-logo.webp"
-          alt=""
-          fill
-          className="object-contain"
-        />
-      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
 
-        {/* SUBTLE BREADCRUMB HEADER */}
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E5E5E5] dark:border-white/10 pb-6 mb-12 sm:mb-16">
-          <div className="flex items-center gap-3">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#0D7377] font-semibold">
-              Team
-            </span>
-            <span className="h-1 w-1 rounded-full bg-[#0D7377]" />
-            <span className="font-sans text-xs uppercase tracking-wider text-[#666666] dark:text-zinc-400">
-              Fund Management &amp; Leadership
-            </span>
-          </div>
 
-          <div className="font-mono text-[11px] sm:text-xs tracking-wider text-[#666666] dark:text-zinc-400 bg-[#F5F5F3] dark:bg-white/5 px-3 py-1 rounded">
-            SINE IIT BOMBAY INVESTMENT ADVISORS
-          </div>
-        </div>
-
-        {/* HERO TITLE & INTRO WITH SINE ANCHOR */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16 sm:mb-20">
-          <div className="lg:col-span-8 space-y-6">
-            <h1 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.12]">
-              A team for technologically ambitious founders.
-            </h1>
-            <p className="font-sans font-light text-lg sm:text-xl text-[#666666] dark:text-zinc-300 leading-relaxed max-w-3xl">
-              Y-Point&apos;s investment approach combines investment judgment, technology evaluation and an understanding of the challenges involved in building innovation-led businesses.
-            </p>
-          </div>
-
-          {/* Institutional Anchor Badge */}
-          <div className="lg:col-span-4">
-            <div className="p-6 rounded-2xl border border-black/10 dark:border-white/10 bg-[#F9F9F8] dark:bg-[#0c0f16] space-y-3">
-              <div className="flex items-center gap-2">
-                <div className="relative h-4 w-4 shrink-0">
-                  <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
-                </div>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-[#0D7377] dark:text-[#00E5A3] font-semibold">
-                  SINE IIT Bombay
-                </span>
-              </div>
-              <div className="font-mono text-xs text-zinc-800 dark:text-zinc-200 font-bold">
-                ज्ञानं परमं ध्येयम्
-              </div>
-              <p className="font-sans text-xs text-zinc-600 dark:text-zinc-400 font-light leading-relaxed">
-                Operating directly from the 5th Floor of the RBTIC Building at IIT Bombay, bridging campus science and early-stage capital.
-              </p>
-            </div>
-          </div>
-        </div>
 
         {/* 1. FUND MANAGEMENT TEAM GRID */}
         <div className="mb-24 space-y-8">
@@ -198,10 +139,6 @@ export default function TeamSection() {
 
         {/* 2. INVESTMENT COMMITTEE NOTICE (Direct from Document) */}
         <div className="relative p-8 sm:p-12 rounded-2xl border border-black/10 dark:border-white/10 bg-[#FBFBFB] dark:bg-[#0c0f16] space-y-4 mb-24 overflow-hidden shadow-sm">
-          {/* Transparent Crest Watermark - Zero hard cutoff edges */}
-          <div className="absolute -right-10 -bottom-10 w-64 h-64 pointer-events-none select-none opacity-[0.035] dark:opacity-[0.045]">
-            <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
-          </div>
 
           <div className="relative space-y-2">
             <span className="font-mono text-xs uppercase tracking-widest text-[#0D7377] dark:text-[#00E5A3] font-semibold">
