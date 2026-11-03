@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import ShimmerImage from "./ShimmerImage";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -89,7 +90,7 @@ export default function TeamSection() {
                   {/* Portrait: small beside the name on phones (the source photos are ~300px wide), full-width from md up */}
                   <div className="flex items-center gap-4 p-6 pb-0 md:block md:p-0">
                     <div className="relative aspect-[4/5] w-24 shrink-0 overflow-hidden rounded-xl bg-black/5 md:w-full md:rounded-none">
-                      <Image
+                      <ShimmerImage
                         src={member.image}
                         alt={member.name}
                         fill
