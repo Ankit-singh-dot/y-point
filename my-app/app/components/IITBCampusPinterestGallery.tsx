@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import ShimmerImage from "./ShimmerImage";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -53,14 +54,14 @@ export default function IITBCampusPinterestGallery() {
           {/* Card 1: Main Gate — Institutional Foundation */}
           <div className="group relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-[#0c0f16] shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between">
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/5">
-              <Image
+              <ShimmerImage
                 src="/iitb/main-gate.webp"
                 alt="Main Gate, IIT Bombay"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
               
               <div className="absolute top-3.5 left-3.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/15 text-[10px] font-mono text-white/90">
                 IIT BOMBAY
@@ -92,14 +93,14 @@ export default function IITBCampusPinterestGallery() {
           {/* Card 2: Campus Corridors — The Translational Pipeline */}
           <div className="group relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-[#0c0f16] shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between">
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/5">
-              <Image
+              <ShimmerImage
                 src="/iitb/campus-lawn.webp"
                 alt="IIT Bombay Research Corridors"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
 
               <div className="absolute top-3.5 left-3.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/15 text-[10px] font-mono text-white/90">
                 TRANSLATION
@@ -131,14 +132,14 @@ export default function IITBCampusPinterestGallery() {
           {/* Card 3: Bronze Crest Plaque — SINE Venture Capital Arm */}
           <div className="group relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-[#0c0f16] shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between">
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/5">
-              <Image
+              <ShimmerImage
                 src="/iitb/crest-plaque.webp"
                 alt="IIT Bombay Historic Bronze Crest Plaque"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
 
               <div className="absolute top-3.5 left-3.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/15 text-[10px] font-mono text-white/90">
                 SINE IIT BOMBAY
