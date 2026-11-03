@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Play, ExternalLink, Video, BookOpen, FileText, Calendar, Check, Send } from "lucide-react";
@@ -157,92 +156,10 @@ export default function ContentSection() {
 
   return (
     <section id="content" className="relative bg-white dark:bg-[#0A0A0A] text-[#0A0A0A] dark:text-[#F5F5F3] pt-24 sm:pt-32 pb-24 border-b border-[#E5E5E5] dark:border-white/10 overflow-hidden">
-      {/* Subtle IIT Bombay Crest Watermark in Background */}
-      <div 
-        className="absolute -right-28 top-1/4 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.04] w-[450px] h-[450px] sm:w-[650px] sm:h-[650px] lg:w-[800px] lg:h-[800px]"
-        aria-hidden="true"
-      >
-        <Image
-          src="/iitb/iitb-logo.webp"
-          alt=""
-          fill
-          className="object-contain"
-        />
-      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         
-        {/* 1. SECTION HEADER */}
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E5E5E5] dark:border-white/10 pb-6 mb-12 sm:mb-16">
-          <div className="flex items-center gap-3">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#0D7377] font-semibold">
-              05 — Content &amp; Media
-            </span>
-            <span className="h-1 w-1 rounded-full bg-[#0D7377]" />
-            <span className="font-sans text-xs uppercase tracking-wider text-[#666666] dark:text-zinc-400">
-              SINE Voices &amp; Research Archive
-            </span>
-          </div>
 
-          <a
-            href={playlistUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 font-mono text-[11px] sm:text-xs tracking-wider text-[#0D7377] hover:underline bg-[#0D7377]/10 px-3 py-1 rounded"
-          >
-            <span>WATCH ON YOUTUBE PLAYLIST</span>
-            <ExternalLink className="h-3.5 w-3.5" />
-          </a>
-        </div>
-
-        {/* HERO TITLE & SINE VOICES INSTITUTIONAL ANCHOR */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16 sm:mb-20">
-          <div className="lg:col-span-8 space-y-6">
-            <h1 className="font-display font-light text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.12]">
-              Signal from the Lab
-            </h1>
-            <p className="font-sans font-light text-lg sm:text-xl text-[#666666] dark:text-zinc-300 leading-relaxed max-w-3xl">
-              Unfiltered dialogues with deep technology founders, scientists, and institutional builders translating breakthrough physics, biology, and silicon from Indian laboratories to global category scale.
-            </p>
-          </div>
-
-          {/* Institutional Anchor Card */}
-          <div className="lg:col-span-4">
-            <div className="group relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-black shadow-md">
-              <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden">
-                <Image
-                  src="/iitb/crest-plaque.webp"
-                  alt="SINE IIT Bombay Voices"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-85"
-                  sizes="(max-width: 1024px) 100vw, 30vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
-                
-                <div className="absolute top-3 left-3 flex items-center gap-2 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
-                  <div className="relative h-3.5 w-3.5 shrink-0">
-                    <Image src="/iitb/iitb-logo.webp" alt="" fill className="object-contain" />
-                  </div>
-                  <span className="font-mono text-[9px] text-white tracking-wider font-semibold">
-                    SINE · IIT BOMBAY
-                  </span>
-                </div>
-
-                <div className="absolute bottom-3 left-3 right-3 text-white space-y-1">
-                  <div className="font-mono text-[10px] text-[#00E5A3] font-semibold">
-                    ज्ञानं परमं ध्येयम्
-                  </div>
-                  <div className="font-sans font-medium text-xs text-white">
-                    Founders, Faculty &amp; Operators
-                  </div>
-                  <p className="hidden sm:block font-sans text-[11px] text-white/70 font-light leading-snug">
-                    Real discussions on university spinouts, TRL maturation, and building hardware winners from Powai.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* =========================================================================
             2. INTEGRATED YOUTUBE PLAYLIST HUB: SINE VOICES
